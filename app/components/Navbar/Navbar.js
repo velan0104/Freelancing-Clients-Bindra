@@ -1,11 +1,15 @@
 'use client';
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
+import DesktopMenu from './DesktopMenu';
+import MobileMenu from './MobileMenu';
+import { MessageCircle } from "lucide-react";
+import { CircleHelp } from "lucide-react";
+
 
 const Navbar = () => {
     const [scrollDirection, setScrollDirection] = useState("");
-    const [isMobile, setIsMobile] = useState(false);
 
-    // Handle scroll direction
     useEffect(() => {
         let lastScroll = 0;
 
@@ -30,31 +34,87 @@ const Navbar = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    const Menus = [
+        {
+            name: "Home",
+        },
+        {
+            name: "Our Story",
+        },
+        {
+            name: "Projects",
+            subMenu: [
+                {
+                    name: "Present Projects",
+                    desc: "Mumbai",
+                    icon: CircleHelp,
+                },
+                {
+                    name: "Past Projects",
+                    desc: "Mumbai",
+                    icon: MessageCircle,
+                }
+            ],
+            gridCols: 1,
+        },
+        // {
+        //   name: "Enterprise",
+        //   subMenuHeading: ["Overview", "Features"],
+        //   subMenu: [
+        //     {
+        //       name: "Enterprise",
+        //       desc: "Overview",
+        //       icon: ShieldPlus,
+        //     },
+        //     {
+        //       name: "Collaboration",
+        //       desc: "Design together",
+        //       icon: Users,
+        //     },
+        //     {
+        //       name: "Customers",
+        //       desc: "Stories",
+        //       icon: Dessert,
+        //     },
+        //     {
+        //       name: "Security",
+        //       desc: "Your site secured",
+        //       icon: Lock,
+        //     },
+        //   ],
+        //   gridCols: 2,
+        // },
+        {
+            name: "Our Impact",
+        },
+        {
+            name: "Contact",
+        },
+    ];
+
+
     return (
         <div>
-            <nav className={`fixed flex justify-between top-0 left-0 w-full py-5 px-16 text-center bg-white/40 z-[9999] transition-all duration-300 ease-in-out text-black 
-                ${scrollDirection === "scroll-down" ? "-translate-y-full" : ""}
-                ${scrollDirection === "scroll-up" ? "drop-shadow-[0_-10px_20px_rgba(170,170,170)] bg-white/40" : ""}`}>
-                <div className='flex gap-28'>
-                    <div>
-                        Bindra
+            <header className={`  h-16 w-full text-[15px] text-[#DAA520] fixed z-[999] bg-white/20 ${scrollDirection === "scroll-down" ? "-translate-y-full" : ""}
+        ${scrollDirection === "scroll-up" ? " bg-white/20" : ""}`}>
+                <div className='absolute top-0 h-16 w-full backdrop-blur z-0' />
+                <nav className="h-full flex justify-between items-center w-full px-6 md:px-8 lg:px-20 z-[999]">
+                    <div className="flex items-center gap-x-3 z-[999]">
+                        <h3 className="text-lg font-semibold">Bindra</h3>
                     </div>
-                    <div className='gap-10 hidden lg:flex'>
-                        {
-                            ["Our Story", "Our Impact", "Our Projects"].map((item, index) => (
-                                <h1 key={index}> {item} </h1>
-                            ))
-                        }
+
+                    <ul className="gap-x-1 lg:flex lg:items-center hidden">
+                        {Menus.map((menu) => (
+                            <DesktopMenu menu={menu} key={menu.name} />
+                        ))}
+                    </ul>
+                    <div className="flex gap-x-5 lg:hidden">
+                        <div className="lg:hidden">
+                            <MobileMenu Menus={Menus} />
+                        </div>
                     </div>
-                </div>
-                <div className='hidden lg:flex gap-10'>
-                    {
-                        ["Enquire", "Chat", "Search"].map((item, index) => (
-                            <h1 key={index}> {item} </h1>
-                        ))
-                    }
-                </div>
-            </nav>
+                </nav>
+            </header>
         </div>
     );
 };

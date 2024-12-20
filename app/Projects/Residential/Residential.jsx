@@ -1,13 +1,12 @@
 "use client";
 import React, { useEffect, useRef } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { ExpandableCardDemo } from "../../components/AnimatedCard";
 
 const ResidentialPage = () => {
   const presentRef = useRef(null);
   const pastRef = useRef(null);
   const futureRef = useRef(null);
-  const pathname = usePathname();
   const params = useSearchParams();
 
   useEffect(() => {

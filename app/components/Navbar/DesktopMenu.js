@@ -8,7 +8,6 @@ export default function DesktopMenu({ menu }) {
   const [isHover, toggleHover] = useState(false);
   const [pathName, setPathName] = useState("Home");
   const path = usePathname();
-  // console.log(path);
 
   useEffect(() => {
     switch (path) {

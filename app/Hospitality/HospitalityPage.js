@@ -45,7 +45,6 @@ const HospitalityPage = () => {
   gsap.registerPlugin(ScrollTrigger);
   const headingRef = useRef(null);
   const hotelRef = useRef([]);
-  console.log(splitText("world"));
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.set(".title > h1", { yPercent: 100 });

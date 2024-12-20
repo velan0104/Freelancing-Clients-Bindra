@@ -1,0 +1,54 @@
+import React, { useEffect, useState } from "react";
+import "./Carousel.css";
+
+const Carousel = () => {
+  const [items, setItems] = useState([
+    "https://plus.unsplash.com/premium_photo-1675827055694-010aef2cf08f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D",
+    "https://images.unsplash.com/photo-1530908295418-a12e326966ba?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D",
+    "https://images.unsplash.com/photo-1529419412599-7bb870e11810?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D",
+    "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bmF0dXJlfGVufDB8fDB8fHww",
+    "https://images.unsplash.com/photo-1508349937151-22b68b72d5b1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D",
+    "https://images.unsplash.com/photo-1508349937151-22b68b72d5b1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D",
+    "https://plus.unsplash.com/premium_photo-1675433344518-21eb72dfc7a5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bmF0dXJlfGVufDB8fDB8fHww",
+  ]);
+
+  const handleNext = () => {
+    // Move the first item to the end
+    setItems((prevItems) => [...prevItems.slice(1), prevItems[0]]);
+  };
+
+  const handlePrev = () => {
+    // Move the last item to the front
+    setItems((prevItems) => [
+      prevItems[prevItems.length - 1],
+      ...prevItems.slice(0, -1),
+    ]);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext(); // Automatically move to the next item every 3 seconds
+    }, 3000);
+
+    // Clear the interval when the component unmounts
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className=" flex flex-col gap-10">
+      <div className="box h-[50vh] md:h-[75vh] ">
+        {items.map((item, index) => (
+          <div key={index} className="item ">
+            <img src={item} />
+          </div>
+        ))}
+        {/* <div className="buttons absolute -bottom-0">
+          <span className="prev" onClick={handlePrev}></span>
+          <span className="next" onClick={handleNext}></span>
+        </div> */}
+      </div>
+    </div>
+  );
+};
+
+export default Carousel;

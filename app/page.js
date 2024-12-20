@@ -1,255 +1,236 @@
-'use client'
-import Image from 'next/image'
-import React, { useEffect, useRef } from 'react'
-import AnimatedSection from './components/AnimatedSection/AnimatedSection'
-import Button from './components/ResuableComponents/Button'
-import gsap from 'gsap'
+"use client";
+import Image from "next/image";
+import React, { useEffect, useRef, useState } from "react";
+import Button from "./components/Button";
+import gsap, { Power4 } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import "./style.css";
+import Link from "next/link";
+import splitText from "./lib/splitText";
+import Marquee from "./components/Marquee";
+import Domain from "./components/Domain/Domain";
+import Carousel from "./components/Carousel/Carousel";
 
 // #dbc33b
 // Gold - #ecd27d
 
 const page = () => {
+  gsap.registerPlugin(ScrollTrigger);
 
   const loaderRef = useRef(null);
   const heroRef = useRef(null);
+  const galleryRef = useRef(null);
+
+  const marqueeImages = [
+    "https://images.unsplash.com/photo-1593696140826-c58b021acf8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D",
+    "https://images.unsplash.com/photo-1713365860516-256d20dbb7e0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTMxfHxyZWFsJTIwZXN0YXRlfGVufDB8fDB8fHww",
+    "https://images.unsplash.com/photo-1628624747186-a941c476b7ef?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1560185009-5bf9f2849488?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjJ8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D",
+    "https://images.unsplash.com/photo-1628133287836-40bd5453bed1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzB8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D",
+    "https://images.unsplash.com/photo-1621293954908-907159247fc8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTZ8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D",
+    "https://images.unsplash.com/photo-1535581652167-3a26c90bbf86?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE2fHxyZWFsJTIwZXN0YXRlfGVufDB8fDB8fHww",
+    "https://images.unsplash.com/photo-1623784929309-703b81d39eec?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTU2fHxyZWFsJTIwZXN0YXRlfGVufDB8fDB8fHww",
+    "https://images.unsplash.com/photo-1708931418721-ebbeb1f69f1a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTI4fHxyZWFsJTIwZXN0YXRlfGVufDB8fDB8fHww",
+  ];
 
   useEffect(() => {
     const h3 = loaderRef.current.querySelectorAll("h3");
-    const hero = heroRef.current.querySelectorAll("span");
+    const hero = heroRef.current.querySelectorAll(".span");
     const tl = gsap.timeline();
-    tl.from(h3, {
-      x: 40,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.3
-    })
-    tl.to(h3, {
-      opacity: 0,
-      x: -40,
-      duration: 1,
-      stagger: 0.1,
-    })
-    tl.to(loaderRef.current, {
-      x: "-100%",
-      transition: "ease",
-      duration: 0.5,
-    })
-    tl.from(hero, {
-      y: -100,
-      opacity: 0,
-      stagger: 0.1,
-      duration: 1,
-      delay: -0.5,
-    })
-    tl.to(loaderRef.current, {
-      display: "none"
-    })
-  }, [])
+    const ctx = gsap.context(() => {
+      tl.fromTo(
+        h3,
+        { x: 40, opacity: 0 }, // Start hidden and offset
+        { x: 0, opacity: 1, duration: 1, stagger: 0.3 } // Animate to visible position
+      );
+      tl.to(h3, {
+        opacity: 0,
+        x: -40,
+        duration: 1,
+        stagger: 0.1,
+      });
+      tl.to(loaderRef.current, {
+        x: "-100%",
+        transition: "power2.inOut",
+        duration: 0.5,
+      });
+      tl.from(hero, {
+        y: 300,
+        opacity: 0,
+        stagger: 0.2,
+        duration: 3,
+        delay: -0.5,
+      });
+      tl.to(loaderRef.current, {
+        display: "none",
+      });
+    });
+
+    return () => ctx.revert();
+  }, []);
 
   return (
-    <div className='font-[nb]'>
-      <div ref={loaderRef} className='fixed top-0 bg-black h-[100vh] w-full flex justify-center items-center text-white font-semibold text-xl gap-1 z-[999] overflow-y-hidden' style={{ WebkitScrollSnapType: 'none' }}>
-        <h3> Tomorrow's </h3>
-        <h3> Brand, </h3>
-        <h3> Today </h3>
+    <div className="font-[nb] overflow-hidden">
+      <div
+        ref={loaderRef}
+        className="fixed top-0 bg-white h-[100vh] w-full flex justify-center items-center text-gold-1 font-semibold text-xl gap-1 z-[999] overflow-y-hidden"
+        style={{ WebkitScrollSnapType: "none" }}
+      >
+        <h3 className="z-10"> Tomorrow's </h3>
+        <h3 className="z-10"> Brand, </h3>
+        <h3 className="z-10"> Today </h3>
       </div>
-      <div>
-        <section className='h-[100vh] w-[100vw] bg-white overflow-x-hidden relative flex justify-center items-end'>
-          <video
-            className='w-[100%] h-[100%] object-cover'
-            src='https://videos.pexels.com/video-files/4770380/4770380-sd_640_360_30fps.mp4'
-            autoPlay
-            loop
-            muted
-          />
-          <h1 ref={heroRef} className='text-[15vw] text-white absolute'>
-            <span>L</span><span>I</span><span>F</span><span>E</span><span>S</span><span>T</span><span>Y</span><span>L</span><span>E</span>
+      <section className="h-[100vh] w-[100vw] bg-white overflow-x-hidden relative flex justify-center items-end">
+        <video
+          className="w-[100%] h-[100%] object-cover"
+          src="https://videos.pexels.com/video-files/4770380/4770380-sd_640_360_30fps.mp4"
+          autoPlay
+          loop
+          muted
+        />
+        <h1
+          ref={heroRef}
+          className="text-[15vw] text-gold-1 absolute font-bold top-1/2"
+        >
+          {splitText("LIFESTYLE")}
+        </h1>
+      </section>
+      <section className="w-[100vw] min-h-[100vh] mx-auto bg-white overflow-hidden pb-10">
+        <Marquee />
+        <div className="h-auto grid grid-cols-1 lg:grid-cols-[1fr_2fr] content-center  items-center ">
+          <div className="mx-auto w-[80%] space-y-5 text-center lg:text-left order-2 lg:order-1">
+            <h1 className="text-[4vw] font-bold"> Project name </h1>
+            <p className=" text-xl font-semibold">
+              {" "}
+              Lorem ipsum odor amet, consectetuer adipiscing elit. Non penatibus
+              arcu magna lectus eget erat mi dui dictum. Phasellus platea primis
+              auctor egestas himenaeos pretium maximus.{" "}
+            </p>
+            <button className="py-3 px-5 bg-gold-1 rounded-lg text-white">
+              {" "}
+              Brochure{" "}
+            </button>
+          </div>
+          <div className="order-1 lg:order-2">
+            <Carousel />
+          </div>
+        </div>
+      </section>
+      <Domain />
+      <section className=" w-[100vw] h-auto bg-white space-y-5 py-10">
+        <div>
+          <h1 className="text-5xl text-gold-1 font-bold text-center py-10">
+            {" "}
+            Current Projects{" "}
           </h1>
-        </section>
-        <AnimatedSection>
-          <section className="w-[100vw] h-auto mx-auto bg-white overflow-hidden">
-            <div className="grid grid-cols-1 md:grid-cols-2 content-center items-center w-[100%] my-20 gap-y-5">
-              <Image
-                className="w-[90%] h-auto mx-auto rounded-lg"
-                width={400}
-                height={300}
-                src="https://images.unsplash.com/photo-1494526585095-c41746248156?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cmVhbCUyMGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D"
-                alt="Hero2"
-              />
-              <div className="w-[80%] mx-auto space-y-4">
-                <h3 className="font-semibold text-[#daa520] text-3xl">
-                  Our Promise
-                </h3>
-                <h1 className="font-bold text-5xl overflow-hidden">
-                  Creating the world's finest developments
-                </h1>
-                <p className="text-xl text-gray-800 font-medium">
-                  Lodha is India’s leading real estate developer, delivering
-                  thoughtfully designed, premium properties that shape urban
-                  lifestyle.
-                </p>
-                <Button text={"Know More"} />
-              </div>
-            </div>
-          </section>
-        </AnimatedSection>
-        <AnimatedSection>
-          <section className='w-[100vw] h-auto lg:h-[100vh] grid grid-cols-1 lg:grid-cols-2 bg-[#daa520]/50 content-center items-center gap-y-5'>
-            <div className=''>
-              <div className='w-[80%] mx-auto space-y-4 py-10'>
-                <h3 className='font-semibold text-[#daa520] text-3xl'> Our Promise</h3>
-                <h1 className='font-bold text-5xl overflow-hidden'>
-                  Creating the world's finest developments
-                </h1>
-                <p className='text-xl text-gray-800 font-medium '>
-                  Lodha is India’s leading real estate developer, delivering thoughtfully designed, premium properties that shape urban lifestyle.
-                </p>
-                <Button text={"Know More"} />
-              </div>
-            </div>
-            <div className=' grid grid-cols-1 lg:grid-cols-2 w-full gap-y-5'>
-              <div
-                className='relative overflow-hidden h-fit w-[90%] rounded-lg'
-              >
+        </div>
+        <div className="w-full flex justify-center items-center gap-x-10 page3-content">
+          <div className=" box">
+            <video src="./videos/project1.mp4" autoPlay loop muted />
+            <Image
+              src="https://images.unsplash.com/photo-1565953522043-baea26b83b7e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nzl8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D"
+              alt=""
+              width={400}
+              height={500}
+              className="img "
+            />
+            <span className="absolute top-2/3 z-[999] text-white text-5xl font-bold left-10 h-fit overflow-hidden">
+              {" "}
+              Bindra One{" "}
+            </span>
+          </div>
+          <div className="w-[350px] relative box">
+            <video src="./videos/project2.mp4" autoPlay loop muted />
+            <Image
+              src="https://images.unsplash.com/photo-1560185127-59e4420e2c93?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D"
+              alt=""
+              width={400}
+              height={500}
+              className="img"
+            />
+            <span className="absolute top-2/3 z-[999] text-white text-5xl font-bold left-10 h-fit overflow-hidden">
+              {" "}
+              Navratan Apts.{" "}
+            </span>
+          </div>
+          <div className=" w-[350px] relative box">
+            <video src="./videos/project3.mp4" autoPlay muted />
+            <Image
+              src="https://images.unsplash.com/photo-1695222322544-8d389d2dc43d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA1fHxyZWFsJTIwZXN0YXRlfGVufDB8fDB8fHww"
+              alt=""
+              width={400}
+              height={500}
+              className="img"
+            />
+            <span className="absolute top-2/3 z-[999] text-white text-5xl font-bold left-10 h-fit overflow-hidden">
+              {" "}
+              Daffodil Apts.{" "}
+            </span>
+          </div>
+        </div>
+        <div className="flex justify-center">
+          <button className="py-3 px-5 bg-gold-1 text-white rounded-md">
+            {" "}
+            Know More{" "}
+          </button>
+        </div>
+      </section>
+      {/* Marquee Section */}
+      <section className="w-[100vw] h-auto">
+        <div className="border-b-2 border-gold-1 w-[90%] mx-auto ">
+          <h1 className="text-4xl md:text-7xl text-gold-1 font-semibold italic overflow-y-hidden">
+            {" "}
+            Our Works{" "}
+          </h1>
+        </div>
+        <div className="slider">
+          <div className="slide-track">
+            {marqueeImages.map((img, index) => (
+              <div key={index} className="slide">
                 <Image
-                  className='lg:w-[90%] h-[500px] mx-auto rounded-lg hover:scale-110 delay-500'
+                  src={img}
+                  alt=""
                   width={400}
-                  height={300}
-                  src="https://images.unsplash.com/photo-1723796994732-b375f31ef231?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDd8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D"
-                  alt='Hero3'
+                  height={400}
+                  className="img"
                 />
-                <span className='absolute bottom-20 left-1/2 text-white z-50 hover:underline'> Our Story </span>
               </div>
-              <div
-                className='relative overflow-hidden h-fit w-[90%] rounded-lg'
-              >
+            ))}
+            {marqueeImages.map((img, index) => (
+              <div key={index} className="slide">
                 <Image
-                  className='lg:w-[90%] h-fit mx-auto rounded-lg hover:scale-110 delay-500'
+                  src={img}
+                  alt={`img${index + 1}`}
                   width={400}
-                  height={300}
-                  src="https://images.unsplash.com/photo-1544207240-8b1025eb7aeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D"
-                  alt='Hero4'
+                  height={400}
+                  className="img"
                 />
-                <span className='absolute bottom-20 left-1/2 text-white z-50'> Our Impact </span>
               </div>
-            </div>
-          </section>
-        </AnimatedSection>
-        <AnimatedSection>
-          <section className='w-full lg:w-[90%] h-[100vh] mx-auto flex items-center flex-col gap-10 py-6  overflow-hidden'>
-            <div className='mx-auto text-center'>
-              <h1 className='text-[ecd27d] font-semibold text-xl'> Our Pride </h1>
-              <h1 className='font-bold text-3xl text-gray-800'> Iconic Projects </h1>
-            </div>
-            <div className='w-full lg:w-[90%] mx-auto flex gap-4'>
-              <div className='text-center'>
-                <div className='w-[300px] h-[400px] overflow-hidden rounded-lg'>
-                  <Image
-                    width={300}
-                    height={400}
-                    src="https://images.unsplash.com/photo-1631901999319-efd71a712378?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="hero5"
-                    className='hover:scale-110 delay-150 rounded-lg'
-                  />
-                </div>
-                <h1 className='py-4'> Atlanta </h1>
-              </div>
-              <div className='text-center'>
-                <div className='w-[300px] h-[400px] overflow-hidden rounded-lg'>
-                  <Image
-                    width={300}
-                    height={400}
-                    src="https://images.unsplash.com/photo-1631901999319-efd71a712378?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="hero5"
-                    className='hover:scale-110 delay-150 rounded-lg'
-                  />
-                </div>
-                <h1 className='py-4'> Atlanta </h1>
-              </div>
-              <div className='text-center'>
-                <div className='w-[300px] h-[400px] overflow-hidden rounded-lg'>
-                  <Image
-                    width={300}
-                    height={400}
-                    src="https://images.unsplash.com/photo-1631901999319-efd71a712378?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="hero5"
-                    className='hover:scale-110 delay-150 rounded-lg'
-                  />
-                </div>
-                <h1 className='py-4'> Atlanta </h1>
-              </div>
-              <div className='text-center'>
-                <div className='w-[300px] h-[400px] overflow-hidden rounded-lg'>
-                  <Image
-                    width={300}
-                    height={400}
-                    src="https://images.unsplash.com/photo-1631901999319-efd71a712378?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="hero5"
-                    className='hover:scale-110 delay-150 rounded-lg'
-                  />
-                </div>
-                <h1 className='py-4'> Atlanta </h1>
-              </div>
-            </div>
-            <div className=''>
-              <Button text={"Know More"} />
-            </div>
-          </section>
-        </AnimatedSection>
-        <AnimatedSection>
-          <section className='w-[100vw] h-auto mx-auto bg-[#daa520]/50'>
-            <div className='grid grid-cols-1 md:grid-cols-2 content-center items-center w-[100%] my-20 gap-y-5'>
-              <Image
-                className='w-[80%] h-auto mx-auto rounded-lg'
-                width={400}
-                height={300}
-                src="https://images.unsplash.com/photo-1494526585095-c41746248156?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cmVhbCUyMGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D"
-                alt='Hero2'
-              />
-              <div className='w-[80%] mx-auto space-y-4'>
-                <h3 className='font-semibold text-[#daa520] text-3xl'> Our Promise</h3>
-                <h1 className='font-bold text-5xl overflow-hidden'>
-                  Creating the world's finest developments
-                </h1>
-                <p className='text-xl text-gray-800 font-medium '>
-                  Lodha is India’s leading real estate developer, delivering thoughtfully designed, premium properties that shape urban lifestyle.
-                </p>
-                <Button text={"Know More"} />
-              </div>
-            </div>
-          </section>
-        </AnimatedSection>
-        <AnimatedSection>
-          <section className='py-10 space-y-5'>
-            <h1 className='text-center'> Our Brands </h1>
-            <div className='flex flex-wrap justify-center gap-7 lg:gap-10'>
-              <Image
-                className='h-[200px] w-[250px]'
-                width={300}
-                height={200}
-                alt="hero8"
-                src="https://images.unsplash.com/photo-1615915468538-0fbd857888ca?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGJyYW5jaCUyMGxvZ298ZW58MHx8MHx8fDA%3D"
-              />
-              <Image
-                className='h-[200px] w-[250px]'
-                width={300}
-                height={200}
-                alt="hero8"
-                src="https://images.unsplash.com/photo-1615915468538-0fbd857888ca?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGJyYW5jaCUyMGxvZ298ZW58MHx8MHx8fDA%3D"
-              />
-              <Image
-                className='h-[200px] w-[250px]'
-                width={300}
-                height={200}
-                alt="hero8"
-                src="https://images.unsplash.com/photo-1615915468538-0fbd857888ca?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGJyYW5jaCUyMGxvZ298ZW58MHx8MHx8fDA%3D"
-              />
-            </div>
-          </section>
-        </AnimatedSection>
-      </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="py-10 space-y-10">
+        <h1 className="text-center text-5xl text-gold-1 font-bold p-5">
+          {" "}
+          Our Brands{" "}
+        </h1>
+        <div className="flex flex-wrap justify-center items-center gap-7 lg:gap-10">
+          <Image
+            src="/images/bindra_logo.avif"
+            className="h-[200px] w-[250px]"
+            width={300}
+            height={200}
+            alt="hero8"
+          />
+          <div className="text-3xl font-bold text-gold-1 text-center">
+            <h1> Dream </h1>
+            <h1> Developers </h1>
+          </div>
+        </div>
+      </section>
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;

@@ -1,0 +1,155 @@
+.box {
+  top: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box .item {
+  margin: 20px;
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  width: 300px;
+  height: 400px;
+  background: #fff;
+  transition: 0.5s;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  transform-style: preserve-3d;
+  transform-origin: bottom;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  .box .item {
+    width: 225px;
+    height: 250px; /* Further limit width */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15); /* Soften shadow */
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 480px) {
+  .box .item {
+    width: 175px;
+    /* Full-width for mobile */
+    height: 250px;
+    border-radius: 15px; /* Slightly reduce border radius */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Softer shadow for mobile */
+    object-fit: cover;
+    overflow: hidden;
+  }
+}
+
+.box .item:nth-child(1) {
+  transform: translate3d(-250px, -40px, 0) scale(0.8);
+  z-index: 1;
+}
+
+@media (max-width: 480px) {
+  .box .item:nth-child(1),
+  .box .item:nth-child(7),
+  .box .item:nth-child(2),
+  .box .item:nth-child(6) {
+    visibility: hidden;
+  }
+}
+
+.box .item:nth-child(2) {
+  transform: translate3d(-250px, -40px, 0) scale(0.8);
+  z-index: 2;
+}
+.box .item:nth-child(3) {
+  transform: translate3d(-150px, -20px, 0) scale(0.9);
+  z-index: 3;
+}
+
+@media (max-width: 480px) {
+  .box .item:nth-child(3) {
+    transform: translate3d(-120px, -12px, 0) scale(0.9);
+    z-index: 3;
+  }
+}
+
+.box .item:nth-child(4) {
+  transform: translate3d(0px, 0, 0) scale(1);
+  z-index: 4;
+}
+.box .item:nth-child(5) {
+  transform: translate3d(150px, -25px, 0) scale(0.9);
+  z-index: 3;
+}
+
+@media (max-width: 480px) {
+  .box .item:nth-child(5) {
+    transform: translate3d(120px, -12px, 0) scale(0.9);
+    z-index: 3;
+  }
+}
+.box .item:nth-child(6) {
+  transform: translate3d(250px, -40px, 0) scale(0.8);
+  z-index: 2;
+  margin-bottom: 20px;
+}
+.box .item:nth-child(7) {
+  transform: translate3d(250px, 0, 0) scale(0.8);
+  z-index: -1;
+}
+
+.box .item img {
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  z-index: 1000;
+  bottom: -10;
+}
+
+.buttons span {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+}
+
+.buttons span:hover {
+  opacity: 1;
+}
+
+.buttons span::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #000;
+  border-left: 2px solid #000;
+  rotate: -45deg;
+}
+
+.buttons span:last-child::before {
+  content: "";
+  position: absolute;
+  left: initial;
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #000;
+  border-left: 2px solid #000;
+  rotate: 135deg;
+}

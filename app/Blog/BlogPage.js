@@ -14,7 +14,7 @@ const BlogPage = () => {
         {" "}
         Bindra Lifestyle{" "}
       </h1>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-16 py-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-5 md:px-8 lg:px-16 py-8">
         {Blogs.map((blog, index) => (
           <article
             key={index}

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -18,15 +19,18 @@ const Footer = () => {
               src="/images/bindra_logo.avif"
             />
             <div className="flex flex-col gap-4 text-lg md:text-xl">
-              <h1 className="font-bold "> Contact Us </h1>
-              <div className="flex justify-between gap-10 text-base md:text-lg">
-                <div>
-                  <h2> Email: </h2>
-                  <p> thevarvelan@gmail.com </p>
+              <h1 className="font-bold text-center md:text-left text-3xl">
+                {" "}
+                Contact Us{" "}
+              </h1>
+              <div className="flex justify-between gap-10 text-base md:text-lg flex-wrap items-center">
+                <div className="mx-auto text-center">
+                  <h2 className="font-semibold text-xl"> Email: </h2>
+                  <p className="text-lg"> thevarvelan@gmail.com </p>
                 </div>
-                <div>
-                  <h2> Telephone No: </h2>
-                  <p> +91 7831039132 </p>
+                <div className="mx-auto text-center">
+                  <h2 className="font-semibold text-xl"> Telephone No: </h2>
+                  <p className="text-lg"> +91 7831039132 </p>
                 </div>
               </div>
             </div>
@@ -35,33 +39,57 @@ const Footer = () => {
             <div className="flex gap-20 py-10 justify-evenly md:justify-normal ">
               <div className="flex flex-col gap-3">
                 <div>
-                  <p className="underline-effect"> Home </p>
+                  <Link href="/" className="underline-effect">
+                    {" "}
+                    Home{" "}
+                  </Link>
                 </div>
 
                 <div>
-                  <p className="underline-effect ">About Us</p>
+                  <Link href="/OurStory" className="underline-effect ">
+                    About Us
+                  </Link>
                 </div>
                 <div>
-                  <p className="underline-effect md:hidden"> Blogs </p>
+                  <Link href="/Blog" className="underline-effect md:hidden">
+                    {" "}
+                    Blogs{" "}
+                  </Link>
                 </div>
               </div>
               <div className="md:flex flex-col gap-3 hidden">
                 <div>
-                  <p className="underline-effect"> Blogs </p>
+                  <Link href="/Blog" className="underline-effect">
+                    {" "}
+                    Blogs{" "}
+                  </Link>
                 </div>
                 <div>
-                  <p className="underline-effect">Directors</p>
+                  <Link href={"/Directors"} className="underline-effect">
+                    Directors
+                  </Link>
                 </div>
               </div>
               <div className="flex flex-col gap-3">
                 <div className="md:hidden">
-                  <p className="underline-effect ">Directors</p>
+                  <Link href={"/Directors"} className="underline-effect ">
+                    Directors
+                  </Link>
                 </div>
                 <div>
-                  <p className="underline-effect"> Projects </p>
+                  <Link
+                    href={"/Projects/Residential"}
+                    className="underline-effect"
+                  >
+                    {" "}
+                    Projects{" "}
+                  </Link>
                 </div>
                 <div>
-                  <p className="underline-effect"> Hospitality </p>
+                  <Link href={"/Hospitality"} className="underline-effect">
+                    {" "}
+                    Hospitality{" "}
+                  </Link>
                 </div>
               </div>
             </div>

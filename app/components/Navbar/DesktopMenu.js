@@ -66,7 +66,7 @@ export default function DesktopMenu({ menu }) {
       onHoverEnd={() => toggleHover(false)}
       key={menu.name}
     >
-      <Link href={menu.link}>
+      {menu?.subMenu ? (
         <div>
           <span
             className={`flex items-center gap-1 cursor-pointer px-3 py-1 overflow-y-hidden text-md font-semibold text-gold-1 ${
@@ -81,7 +81,24 @@ export default function DesktopMenu({ menu }) {
             )}
           </span>
         </div>
-      </Link>
+      ) : (
+        <Link href={menu.link}>
+          <div>
+            <span
+              className={`flex items-center gap-1 cursor-pointer px-3 py-1 overflow-y-hidden text-md font-semibold text-gold-1 ${
+                pathName === menu.name
+                  ? " border-b-4 border-gold-1 "
+                  : " underline-effect-gold"
+              }`}
+            >
+              {menu.name}
+              {hasSubMenu && (
+                <ChevronDown className="mt-[0.6px] group-hover/link:rotate-180 duration-200 inline" />
+              )}
+            </span>
+          </div>
+        </Link>
+      )}
       {hasSubMenu && (
         <motion.div
           className="fixed top-16 backdrop-blur mt-2 bg-gray-500/50  shadow-lg rounded-lg p-4 overflow-hidden "

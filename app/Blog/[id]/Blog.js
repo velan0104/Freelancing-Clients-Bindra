@@ -11,7 +11,7 @@ const Blog = () => {
 
   return (
     <div className="mt-16 w-full mx-auto space-y-5">
-      <h1 className="text-[4vw] font-bold p-5 md:w-[90%] mx-auto text-center">
+      <h1 className="text-[6vw] md:text-[4vw] font-bold p-5 md:w-[90%] mx-auto text-center">
         {" "}
         {blogs[index].title}{" "}
       </h1>
@@ -26,7 +26,7 @@ const Blog = () => {
       </div>
       <div className="w-[85%] md:w-[80%] mx-auto pb-10">
         {blogs[index].para.map((par, index) => (
-          <div key={index}>
+          <div key={index} className="px-3">
             <h2 className="font-bold text-2xl"> {par?.heading} </h2>
             <div className="text-lg text-justify pb-5 pt-2 leading-6">
               {" "}

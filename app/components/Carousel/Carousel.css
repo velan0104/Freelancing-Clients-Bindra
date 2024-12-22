@@ -32,9 +32,9 @@
 
 @media (max-width: 480px) {
   .box .item {
-    width: 175px;
+    width: 240px;
     /* Full-width for mobile */
-    height: 250px;
+    height: 230px;
     border-radius: 15px; /* Slightly reduce border radius */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Softer shadow for mobile */
     object-fit: cover;
@@ -67,7 +67,7 @@
 
 @media (max-width: 480px) {
   .box .item:nth-child(3) {
-    transform: translate3d(-120px, -12px, 0) scale(0.9);
+    transform: translate3d(-50px, -12px, 0) scale(0.85);
     z-index: 3;
   }
 }
@@ -83,7 +83,7 @@
 
 @media (max-width: 480px) {
   .box .item:nth-child(5) {
-    transform: translate3d(120px, -12px, 0) scale(0.9);
+    transform: translate3d(50px, -12px, 0) scale(0.85);
     z-index: 3;
   }
 }

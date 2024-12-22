@@ -56,20 +56,36 @@ export default function MobileMenu({ Menus }) {
             const hasSubMenu = menu?.subMenu?.length > 0;
             return (
               <li key={i} className="">
-                <span
-                  className="flex items-center justify-between p-4 hover:bg-white/5 rounded-md cursor-pointer relative"
-                  onClick={() => {
-                    setClicked(isClicked ? i : null);
-                    hasSubMenu ?? router.push(menu.link);
-                  }}
-                >
-                  {menu.name}
-                  {hasSubMenu && (
-                    <ChevronDown
-                      className={`ml-auto ${isClicked && "rotate-180"} `}
-                    />
-                  )}
-                </span>
+                {menu?.subMenu ? (
+                  <span
+                    className="flex items-center justify-between p-4 hover:bg-white/5 rounded-md cursor-pointer relative"
+                    onClick={(prev) =>
+                      setOpenSubMenu({ submenu: true, ...prev })
+                    }
+                  >
+                    {menu.name}
+                    {hasSubMenu && (
+                      <ChevronDown
+                        className={`ml-auto ${isClicked && "rotate-180"} `}
+                      />
+                    )}
+                  </span>
+                ) : (
+                  <span
+                    className="flex items-center justify-between p-4 hover:bg-white/5 rounded-md cursor-pointer relative"
+                    onClick={() => {
+                      router.push(menu.link);
+                      toggleDrawer();
+                    }}
+                  >
+                    {menu.name}
+                    {hasSubMenu && (
+                      <ChevronDown
+                        className={`ml-auto ${isClicked && "rotate-180"} `}
+                      />
+                    )}
+                  </span>
+                )}
                 {hasSubMenu && (
                   <ul
                     className={`ml-5 ${
@@ -78,28 +94,16 @@ export default function MobileMenu({ Menus }) {
                   >
                     {menu?.subMenu.map((submenu) => (
                       <div key={submenu.name} className="group">
-                        <li className=" p-2 flex items-center hover:bg-white/5 rounded-md gap-x-2 cursor-pointer">
+                        <li
+                          className=" p-2 flex items-center hover:bg-white/5 rounded-md gap-x-2 cursor-pointer"
+                          onClick={() => {
+                            router.push(`${menu.link}${submenu.link}`);
+                            toggleDrawer();
+                          }}
+                        >
                           {submenu.icon && <submenu.icon />}
                           {submenu.name}
-                          {submenu?.subMenu && (
-                            <ChevronDown
-                              className={`ml-auto group-hover:rotate-180 `}
-                            />
-                          )}
                         </li>
-                        <ul
-                          className={`ml-8 ${
-                            openSubMenu.innerSubmenu
-                              ? "flex flex-col"
-                              : "hidden"
-                          }`}
-                        >
-                          {submenu?.subMenu?.map((menu, index) => (
-                            <li key={index} className="hover:bg-white/5 p-3">
-                              {menu.name}
-                            </li>
-                          ))}
-                        </ul>
                       </div>
                     ))}
                   </ul>

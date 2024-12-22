@@ -232,7 +232,7 @@ const Domain = () => {
               </figure>
             </div>
           </div>
-          <div className="gallery_ending relative w-full h-[100vh] uppercase flex flex-col items-center justify-center text-4xl md:text-6xl lg:text-7xl">
+          <div className="gallery_ending relative w-full h-[100vh] uppercase flex flex-col items-center justify-center text-2xl md:text-6xl lg:text-7xl">
             <div className="gallery_ending_title overflow-hidden">
               <h1 className="p-5">Design with Purpose.</h1>
             </div>

@@ -44,7 +44,7 @@ const Marquee = () => {
   }, []);
   return (
     <div className="w-[100vw]">
-      <section className="marquee relative bg-gold-1 text-[#eee] px-8 font-semibold text-xl md:text-4xl uppercase overflow-hidden">
+      <section className="marquee relative bg-gold-1 text-[#eee] px-2 md:px-8 font-semibold text-xl md:text-4xl uppercase overflow-hidden">
         <div className="marquee__inner flex w-full flex-auto ">
           {[
             "Modern Create Studio",
@@ -60,7 +60,7 @@ const Marquee = () => {
             >
               {content}
               <div
-                className={`arrow w-16 h-14 md:h-20 my-4 rotate-90 transition-all duration-1000 cubic-bezier(0.075, 0.02, 0.165, 1) flex justify-center items-center`}
+                className={`arrow w-16 h-14 md:h-20 my-2 lg:my-4 rotate-90 transition-all duration-1000 cubic-bezier(0.075, 0.02, 0.165, 1) flex justify-center items-center`}
               >
                 <ArrowBigDownIcon className="text-7xl" />
               </div>

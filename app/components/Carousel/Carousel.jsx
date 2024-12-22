@@ -36,7 +36,7 @@ const Carousel = () => {
 
   return (
     <div className=" flex flex-col gap-10">
-      <div className="box h-[50vh] md:h-[75vh] ">
+      <div className="box h-[45vh] md:h-[75vh] ">
         {items.map((item, index) => (
           <div key={index} className="item ">
             <img src={item} />

@@ -31,29 +31,29 @@ const ResidentialPage = () => {
         Bindra's{" "}
       </h1>
       <section ref={presentRef} className="h-auto">
-        <h1 className="m-10 text-3xl font-bold border-b-4 border-gold-1 text-gold-1 inline-block w-[90%] py-5">
+        <h1 className="my-10 text-3xl font-bold border-b-4 border-gold-1 text-gold-1 inline-block w-[90%] py-5 mx-5">
           {" "}
           PRESENT PROJECTS{" "}
         </h1>
-        <div className="mx-8">
+        <div className="mx-2">
           <ExpandableCardDemo />
         </div>
       </section>
       <section ref={pastRef} className="h-auto">
-        <h1 className="m-10 text-3xl font-bold border-b-4 border-gold-1 text-gold-1 inline-block w-[90%] py-5">
+        <h1 className="my-10 mx-5 text-3xl font-bold border-b-4 border-gold-1 text-gold-1 inline-block w-[90%] py-5">
           {" "}
           PAST PROJECTS{" "}
         </h1>
-        <div className="px-10">
+        <div className="mx-2">
           <ExpandableCardDemo />
         </div>
       </section>
       <section ref={futureRef} className="h-auto py-10">
-        <h1 className="m-10 text-3xl font-bold border-b-4 border-gold-1 text-gold-1 inline-block w-[90%] py-5">
+        <h1 className="my-10 mx-5  text-3xl font-bold border-b-4 border-gold-1 text-gold-1 inline-block w-[90%] py-5">
           {" "}
           FUTURE PROJECTS{" "}
         </h1>
-        <div className="px-10">
+        <div className="mx-2">
           <ExpandableCardDemo />
         </div>
       </section>

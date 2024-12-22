@@ -22,9 +22,8 @@ const BentroGrid = () => {
           duration: 2,
           scrollTrigger: {
             trigger: gridRef.current,
-            start: "top 30%",
+            start: "top 70%",
             end: "bottom 70%",
-            // markers: true,
             toggleActions: "play none none reset",
             // scrub: true,
           },

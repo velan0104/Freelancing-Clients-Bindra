@@ -117,13 +117,13 @@ const Navbar = () => {
             />
           </div>
 
-          <ul className="gap-x-2 lg:flex lg:items-center hidden">
+          <ul className="gap-x-2 md:flex lg:items-center hidden">
             {Menus.map((menu) => (
               <DesktopMenu menu={menu} key={menu.name} />
             ))}
           </ul>
-          <div className="flex gap-x-5 lg:hidden">
-            <div className="lg:hidden">
+          <div className="flex gap-x-5 md:hidden">
+            <div className="md:hidden">
               <MobileMenu Menus={Menus} />
             </div>
           </div>

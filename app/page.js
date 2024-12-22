@@ -1,12 +1,9 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
-import Button from "./components/Button";
 import gsap, { Power4 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./style.css";
-import Link from "next/link";
-import splitText from "./lib/splitText";
 import Marquee from "./components/Marquee";
 import Domain from "./components/Domain/Domain";
 import Carousel from "./components/Carousel/Carousel";
@@ -35,7 +32,9 @@ const page = () => {
 
   useEffect(() => {
     const h3 = loaderRef.current.querySelectorAll("h3");
-    const hero = heroRef.current.querySelectorAll(".span");
+    const hero = heroRef.current.querySelectorAll("h1 > .span");
+
+    gsap.set(hero, { yPercent: 100 });
     const tl = gsap.timeline();
     const ctx = gsap.context(() => {
       tl.fromTo(
@@ -54,12 +53,11 @@ const page = () => {
         transition: "power2.inOut",
         duration: 0.5,
       });
-      tl.from(hero, {
-        y: 300,
-        opacity: 0,
-        stagger: 0.2,
-        duration: 3,
-        delay: -0.5,
+      tl.to(".span", {
+        y: 0,
+        stagger: 0.05,
+        delay: 0.2,
+        duration: 0.1,
       });
       tl.to(loaderRef.current, {
         display: "none",
@@ -80,7 +78,10 @@ const page = () => {
         <h3 className="z-10"> Brand, </h3>
         <h3 className="z-10"> Today </h3>
       </div>
-      <section className="h-[100vh] w-[100vw] bg-white overflow-x-hidden relative flex justify-center items-end">
+      <section
+        ref={heroRef}
+        className="h-[100vh] w-[100vw] bg-white overflow-x-hidden relative flex justify-center items-end"
+      >
         <video
           className="w-[100%] h-[100%] object-cover"
           src="https://videos.pexels.com/video-files/4770380/4770380-sd_640_360_30fps.mp4"
@@ -89,18 +90,25 @@ const page = () => {
           muted
         />
         <h1
-          ref={heroRef}
-          className="text-[15vw] text-gold-1 absolute font-bold top-1/2"
+          className="hero text-[15vw] text-gold-1 absolute font-bold top-1/2 left-10 overflow-hidden"
+          style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" }}
         >
-          {splitText("LIFESTYLE")}
+          {["L", "I", "F", "E", "S", "T", "Y", "L", "E"].map((item, index) => (
+            <span key={index} className="span translate-y-[115px] duration-500">
+              {item}
+            </span>
+          ))}
         </h1>
       </section>
       <section className="w-[100vw] min-h-[100vh] mx-auto bg-white overflow-hidden pb-10">
         <Marquee />
         <div className="h-auto grid grid-cols-1 lg:grid-cols-[1fr_2fr] content-center  items-center ">
           <div className="mx-auto w-[80%] space-y-5 text-center lg:text-left order-2 lg:order-1">
-            <h1 className="text-[4vw] font-bold"> Project name </h1>
-            <p className=" text-xl font-semibold">
+            <h1 className="text-[6vw] md:text-[4vw] font-bold">
+              {" "}
+              Project name{" "}
+            </h1>
+            <p className="text-lg md:text-xl font-semibold">
               {" "}
               Lorem ipsum odor amet, consectetuer adipiscing elit. Non penatibus
               arcu magna lectus eget erat mi dui dictum. Phasellus platea primis
@@ -119,13 +127,13 @@ const page = () => {
       <Domain />
       <section className=" w-[100vw] h-auto bg-white space-y-5 py-10">
         <div>
-          <h1 className="text-5xl text-gold-1 font-bold text-center py-10">
+          <h1 className="text-4xl md:text-5xl text-gold-1 font-bold text-center py-10">
             {" "}
             Current Projects{" "}
           </h1>
         </div>
-        <div className="w-full flex justify-center items-center gap-x-10 page3-content">
-          <div className=" box">
+        <div className="w-full lg:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 content-center items-center gap-x-10 page3-content gap-5">
+          <div className=" box w-[350px] relative mx-auto">
             <video src="./videos/project1.mp4" autoPlay loop muted />
             <Image
               src="https://images.unsplash.com/photo-1565953522043-baea26b83b7e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nzl8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D"
@@ -134,12 +142,12 @@ const page = () => {
               height={500}
               className="img "
             />
-            <span className="absolute top-2/3 z-[999] text-white text-5xl font-bold left-10 h-fit overflow-hidden">
+            <span className="absolute top-2/3 z-[999] text-white text-5xl font-bold left-5 md:left-10 h-fit overflow-hidden text-center md:text-left">
               {" "}
               Bindra One{" "}
             </span>
           </div>
-          <div className="w-[350px] relative box">
+          <div className="w-[350px] relative box mx-auto">
             <video src="./videos/project2.mp4" autoPlay loop muted />
             <Image
               src="https://images.unsplash.com/photo-1560185127-59e4420e2c93?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D"
@@ -148,12 +156,12 @@ const page = () => {
               height={500}
               className="img"
             />
-            <span className="absolute top-2/3 z-[999] text-white text-5xl font-bold left-10 h-fit overflow-hidden">
+            <span className="absolute top-2/3 z-[999] text-white text-5xl font-bold left-5 md:left-10 h-fit overflow-hidden text-center md:text-left">
               {" "}
               Navratan Apts.{" "}
             </span>
           </div>
-          <div className=" w-[350px] relative box">
+          <div className=" w-[350px] relative box mx-auto cols-span-1 md:col-span-2 lg:col-span-1">
             <video src="./videos/project3.mp4" autoPlay muted />
             <Image
               src="https://images.unsplash.com/photo-1695222322544-8d389d2dc43d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA1fHxyZWFsJTIwZXN0YXRlfGVufDB8fDB8fHww"
@@ -162,7 +170,7 @@ const page = () => {
               height={500}
               className="img"
             />
-            <span className="absolute top-2/3 z-[999] text-white text-5xl font-bold left-10 h-fit overflow-hidden">
+            <span className="absolute top-2/3 z-[999] text-white text-5xl font-bold left-5 md:left-10 h-fit overflow-hidden text-center md:text-left">
               {" "}
               Daffodil Apts.{" "}
             </span>

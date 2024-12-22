@@ -4,7 +4,6 @@ import React, { useEffect, useRef } from "react";
 import Button from "../components/Button";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import splitText from "../lib/splitText";
 
 const hotels = [
   {
@@ -13,7 +12,7 @@ const hotels = [
       "Lorem ipsum odor amet, consectetuer adipiscing elit. Interdum iaculis sapien amet ullamcorper non turpis. At feugiat suspendisse diam sodales feugiat dui enim. Semper tellus leo quam commodo sodales felis quis tortor. Mollis eleifend cubilia suscipit; ornare aenean sapien. Varius penatibus libero hendrerit sociosqu eleifend placerat.",
     buttonText: "Visit site →",
     siteLink: "",
-    img: "https://images.unsplash.com/photo-1731091484289-ab997964d073?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "/images/Altruist.jpg",
   },
   {
     name: "Hello world",
@@ -21,7 +20,7 @@ const hotels = [
       "Lorem ipsum odor amet, consectetuer adipiscing elit. Interdum iaculis sapien amet ullamcorper non turpis. At feugiat suspendisse diam sodales feugiat dui enim. Semper tellus leo quam commodo sodales felis quis tortor. Mollis eleifend cubilia suscipit; ornare aenean sapien. Varius penatibus libero hendrerit sociosqu eleifend placerat.",
     buttonText: "Visit site →",
     siteLink: "",
-    img: "https://images.unsplash.com/photo-1731091484289-ab997964d073?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "/images/Bindra_Supremacy.jpg",
   },
   {
     name: "Hello world",
@@ -29,7 +28,7 @@ const hotels = [
       "Lorem ipsum odor amet, consectetuer adipiscing elit. Interdum iaculis sapien amet ullamcorper non turpis. At feugiat suspendisse diam sodales feugiat dui enim. Semper tellus leo quam commodo sodales felis quis tortor. Mollis eleifend cubilia suscipit; ornare aenean sapien. Varius penatibus libero hendrerit sociosqu eleifend placerat.",
     buttonText: "Visit site →",
     siteLink: "",
-    img: "https://images.unsplash.com/photo-1731091484289-ab997964d073?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "/images/Aralia_MIDC.jpg",
   },
   {
     name: "Hello world",
@@ -121,21 +120,25 @@ const HospitalityPage = () => {
         />
         <div
           ref={headingRef}
-          className=" text-white bottom-0 text-9xl absolute overflow-hidden"
+          className=" text-white top-1/2 md:top-10 absolute overflow-hidden leading-tight"
         >
-          {/* {["WORLD", "CLASS", "EXPERIENCE"].map((word, index) => (
-            <div key={index} className="title px-10 py-5 overflow-hidden">
-              {splitText(word)}
-            </div>
-          ))} */}
-          <div className="title overflow-hidden">
-            <h1 className="p-5"> WORLD </h1>
+          <div className="title px-10 py-3 overflow-hidden">
+            <h1 className="text-[12vw] md:text-[9vw] text-center md:text-left">
+              {" "}
+              WORLD{" "}
+            </h1>
           </div>
-          <div className="title px-10 py-5 overflow-hidden">
-            <h1 className="p-5"> CLASS </h1>
+          <div className="title px-10 py-3 overflow-hidden">
+            <h1 className="text-[12vw] md:text-[9vw] text-center md:text-left">
+              {" "}
+              CLASS{" "}
+            </h1>
           </div>
-          <div className="title px-10 py-5 overflow-hidden">
-            <h1 className="p-5"> EXPERIENCE </h1>
+          <div className="title px-10 py-3 overflow-hidden">
+            <h1 className="text-[12vw] md:text-[9vw] text-center md:text-left">
+              {" "}
+              EXPERIENCE{" "}
+            </h1>
           </div>
         </div>
       </section>

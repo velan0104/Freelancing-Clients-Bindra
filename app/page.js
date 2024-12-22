@@ -7,6 +7,7 @@ import "./style.css";
 import Marquee from "./components/Marquee";
 import Domain from "./components/Domain/Domain";
 import Carousel from "./components/Carousel/Carousel";
+import Button from "./components/Button";
 
 // #dbc33b
 // Gold - #ecd27d
@@ -127,7 +128,7 @@ const page = () => {
       <Domain />
       <section className=" w-[100vw] h-auto bg-white space-y-5 py-10">
         <div>
-          <h1 className="text-4xl md:text-5xl text-gold-1 font-bold text-center py-10">
+          <h1 className="text-4xl md:text-5xl text-gold-1 font-bold text-left p-5 border-b-4 border-b-gold-1 mx-5 md:mx-10">
             {" "}
             Current Projects{" "}
           </h1>

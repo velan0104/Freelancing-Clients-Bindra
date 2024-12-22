@@ -19,14 +19,14 @@ const Footer = () => {
               src="/images/bindra_logo.avif"
             />
             <div className="flex flex-col gap-4 text-lg md:text-xl">
-              <h1 className="font-bold text-center md:text-left text-3xl">
-                {" "}
-                Contact Us{" "}
-              </h1>
+              <h1 className="font-bold text-center text-3xl"> Contact Us </h1>
               <div className="flex justify-between gap-10 text-base md:text-lg flex-wrap items-center">
                 <div className="mx-auto text-center">
                   <h2 className="font-semibold text-xl"> Email: </h2>
-                  <p className="text-lg"> thevarvelan@gmail.com </p>
+                  <a href="mailto:thevarvelan@gmail.com" className="text-lg">
+                    {" "}
+                    thevarvelan@gmail.com{" "}
+                  </a>
                 </div>
                 <div className="mx-auto text-center">
                   <h2 className="font-semibold text-xl"> Telephone No: </h2>
@@ -51,13 +51,13 @@ const Footer = () => {
                   </Link>
                 </div>
                 <div>
-                  <Link href="/Blog" className="underline-effect md:hidden">
+                  <Link href="/Blog" className="underline-effect lg:hidden">
                     {" "}
                     Blogs{" "}
                   </Link>
                 </div>
               </div>
-              <div className="md:flex flex-col gap-3 hidden">
+              <div className="lg:flex flex-col gap-3 hidden">
                 <div>
                   <Link href="/Blog" className="underline-effect">
                     {" "}
@@ -71,7 +71,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="flex flex-col gap-3">
-                <div className="md:hidden">
+                <div className="lg:hidden">
                   <Link href={"/Directors"} className="underline-effect ">
                     Directors
                   </Link>

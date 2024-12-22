@@ -4,10 +4,30 @@ import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import "./Domain.css";
 import Lenis from "lenis";
+import Button from "../Button";
+import { useRouter } from "next/navigation";
 
 const Domain = () => {
   gsap.registerPlugin(ScrollTrigger);
+  const router = useRouter();
   const galleryRef = useRef(null);
+  const domainRef = useRef([]);
+  const domains = [
+    {
+      title: "Construction",
+      description:
+        "A Landmark Residential Development Spanning Approximately 6 Lacs Square Feet, Featuring 28 Meticulously Designed Buildings and Currently 90% Completed. A Testament to Modern Urban Living and Architectural Excellence.",
+      img: "https://images.unsplash.com/photo-1471623432079-b009d30b6729?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDY3fEZ6bzN6dU9ITjZ3fHxlbnwwfHx8fHw%3D",
+      cta: "/Projects/Residential",
+    },
+    {
+      title: "Hospitality",
+      description:
+        " A Visionary Developer with Over 29 Years of Expertise in Construction, Real Estate, and Hospitality, Crafting Transformative Spaces Across Mumbai's Landscape.",
+      img: "https://images.unsplash.com/photo-1471623432079-b009d30b6729?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDY3fEZ6bzN6dU9ITjZ3fHxlbnwwfHx8fHw%3D",
+      cta: "/Hospitality",
+    },
+  ];
   useEffect(() => {
     const gallery = galleryRef.current;
     const settings = {
@@ -37,7 +57,7 @@ const Domain = () => {
 
     const initLenis = () => {
       const lenis = new Lenis({
-        lerp: 0.05,
+        lerp: 0.02,
         smoothWheel: true,
       });
 
@@ -56,18 +76,19 @@ const Domain = () => {
         const headings = {
           title: element.querySelectorAll(".gallery_heading_title"),
           roles: element.querySelectorAll(".gallery_heading_roles > span"),
+          cases: element.querySelectorAll(".gallery_heading_cases > span"),
         };
 
         gsap.set(thumbnails, { yPercent: 100 });
         gsap.set(medias, { clipPath: "inset(0 0 0 0)" });
 
-        gsap.set([headings.title, headings.roles], {
+        gsap.set([headings.title, headings.roles, headings.cases], {
           yPercent: 0,
         });
 
         tlMain
           .to(thumbnails, {
-            duration: 2,
+            duration: 1,
             yPercent: -100,
           })
           .to(
@@ -86,7 +107,7 @@ const Domain = () => {
             ">-0.2"
           )
           .to(
-            [headings.title, headings.roles],
+            [headings.title, headings.roles, headings.cases],
             {
               yPercent: -100,
             },
@@ -105,12 +126,64 @@ const Domain = () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      domainRef.current.forEach((hotel) => {
+        // const img = hotel.querySelector(".img");
+        const mask = hotel.querySelector(".mask");
+        const content = hotel.querySelector(".content");
+        const p = content.querySelectorAll("p");
+
+        gsap.from(p, {
+          y: 50,
+          stagger: 0.2,
+          opacity: 0,
+          duration: 1,
+          ease: "power2.in",
+          scrollTrigger: {
+            trigger: hotel,
+            start: "top 50%",
+            end: "bottom bottom",
+            toggleActions: "play none none reset",
+          },
+        });
+
+        gsap.fromTo(
+          mask,
+          {
+            clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+            opacity: 0,
+          },
+          {
+            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+            opacity: 1,
+            duration: 2,
+            ease: "power1.in",
+            scrollTrigger: {
+              trigger: hotel,
+              start: "top 90%",
+              bottom: "bottom bottom",
+              scurb: 1,
+              // markers: true,
+              toggleActions: "play none none reset",
+            },
+          }
+        );
+      });
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      ctx.revert();
+    };
+  }, []);
   return (
     <div>
       <section className="w-[100vw]">
         <section
           ref={galleryRef}
-          className="gallery relative w-full h-[100vh] overflow-hidden"
+          className="gallery relative w-full h-[100vh] overflow-hidden md:block hidden"
         >
           <div className="gallery_container ">
             <div className="gallery_heading ">
@@ -131,12 +204,17 @@ const Domain = () => {
                   Living and Architectural Excellence.{" "}
                 </span>
               </div>
-              {/* <div className="gallery_heading_cases">
+              <div className="gallery_heading_cases">
                 <span className=" text-4xl inline-block p-2">
-                  {" "}
-                  Case Study - 01{" "}
+                  <button
+                    className="px-5 py-3 bg-gold-1 rounded-md text-lg cursor-pointer"
+                    onClick={() => router.push("/Projects/Residential")}
+                  >
+                    Know More
+                  </button>
                 </span>
-              </div> */}
+                {/* <Button text={"Know More"} onClick={"/Projects/Residential"} /> */}
+              </div>
             </div>
             <div className="gallery_thumbnail">
               <Image
@@ -190,12 +268,17 @@ const Domain = () => {
                   Transformative Spaces Across Mumbai's Landscape.
                 </span>
               </div>
-              {/* <div className="gallery_heading_cases">
+              <div className="gallery_heading_cases">
                 <span className=" text-4xl inline-block p-2">
-                  {" "}
-                  Case Study - 02{" "}
+                  <button
+                    className="px-5 py-3 bg-gold-1 rounded-md text-lg cursor-pointer"
+                    onClick={() => router.push("/Hospitality")}
+                  >
+                    Know More
+                  </button>
                 </span>
-              </div> */}
+              </div>
+              {/* <Button text={"Know More"} onClick={"/Hospitality"} /> */}
             </div>
             <div className="gallery_thumbnail">
               <Image
@@ -243,6 +326,54 @@ const Domain = () => {
               <h1 className="p-5">Drive Growth.</h1>
             </div>
           </div>
+        </section>
+        <section className="md:hidden">
+          <h1 className="text-4xl border-b-4 border-b-gold-1 text-gold-1 mx-4 p-3 font-bold">
+            {" "}
+            What we do{" "}
+          </h1>
+          {domains.map((domain, index) => (
+            <div
+              key={`hotel-${index}`}
+              ref={(el) => (domainRef.current[index] = el)}
+              className="grid grid-cols-1 md:grid-cols-2 py-10 mx-auto content-center items-center gap-y-5"
+            >
+              <div
+                className={`content w-[70%] mx-auto space-y-5 overflow-hidden text-center md:text-left ${
+                  index % 2 == 0 ? "order-2 md:order-1" : "order-2 "
+                }`}
+              >
+                <p className="text-gold-1 font-bold text-3xl">
+                  {" "}
+                  {domain.title}{" "}
+                </p>
+                <p>{domain.description}</p>
+                <p>
+                  <Button text={"Know More"} onClick={domain.cta} />
+                </p>
+              </div>
+              <div
+                className={`${
+                  index % 2 == 0 ? "order-1 md:order-2" : "order-1"
+                } overflow-hidden `}
+              >
+                <div
+                  className="mask w-[80%] h-[90%] overflow-hidden mx-auto"
+                  style={{
+                    clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+                  }}
+                >
+                  <Image
+                    src={domain.img}
+                    alt={"img" + index + 1}
+                    height={400}
+                    width={400}
+                    className="img w-full aspect-auto rounded-md mx-auto overflow-hidden"
+                  />
+                </div>
+              </div>
+            </div>
+          ))}
         </section>
       </section>
     </div>

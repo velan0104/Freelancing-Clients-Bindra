@@ -47,12 +47,12 @@ const Marquee = () => {
       <section className="marquee relative bg-gold-1 text-[#eee] px-2 md:px-8 font-semibold text-xl md:text-4xl uppercase overflow-hidden">
         <div className="marquee__inner flex w-full flex-auto ">
           {[
-            "Modern Create Studio",
-            "Modern Create Studio",
-            "Modern Create Studio",
-            "Modern Create Studio",
-            "Modern Create Studio",
-            "Modern Create Studio",
+            "Current Project",
+            "Current Project",
+            "Current Project",
+            "Current Project",
+            "Current Project",
+            "Current Project",
           ].map((content, index) => (
             <div
               key={index}

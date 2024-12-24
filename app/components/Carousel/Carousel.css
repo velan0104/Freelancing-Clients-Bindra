@@ -47,7 +47,7 @@
   z-index: 1;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 780px) {
   .box .item:nth-child(1),
   .box .item:nth-child(7),
   .box .item:nth-child(2),

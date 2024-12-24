@@ -94,7 +94,7 @@ const Domain = () => {
           .to(
             medias,
             {
-              duration: 2,
+              duration: 1.2,
               scale: 1.2,
             },
             "<-0.5"
@@ -262,7 +262,7 @@ const Domain = () => {
                 Hospitality
               </h2>
               <div className="gallery_heading_roles">
-                <span className="text-lg md:text-xl inline-block p-2 w-[90vw] md:w-[60vw]">
+                <span className="text-lg md:text-xl inline-block p-2 w-[90vdiw] md:w-[60vw]">
                   A Visionary Developer with Over 29 Years of Expertise in
                   Construction, Real Estate, and Hospitality, Crafting
                   Transformative Spaces Across Mumbai's Landscape.
@@ -317,13 +317,13 @@ const Domain = () => {
           </div>
           <div className="gallery_ending relative w-full h-[100vh] uppercase flex flex-col items-center justify-center text-2xl md:text-6xl lg:text-7xl">
             <div className="gallery_ending_title overflow-hidden">
-              <h1 className="p-5">Design with Purpose.</h1>
+              <h1 className="p-5"> Redefining urban living </h1>
             </div>
             <div className="gallery_ending_title overflow-hidden">
-              <h1 className="p-5">Elevate your Brand.</h1>
+              <h1 className="p-5"> with innovative Design </h1>
             </div>
             <div className="gallery_ending_title overflow-hidden">
-              <h1 className="p-5">Drive Growth.</h1>
+              <h1 className="p-5"> and unparalleled quality. </h1>
             </div>
           </div>
         </section>

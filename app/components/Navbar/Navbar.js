@@ -99,7 +99,7 @@ const Navbar = () => {
   return (
     <div className="relative">
       <header
-        className={`  h-16 w-full text-[15px] text-gold-1 fixed z-[999] bg-gray-300/50 ${
+        className={`  h-16 w-full text-[15px] text-gold-1 fixed z-[999] bg-white/20 ${
           scrollDirection === "scroll-down" ? "-translate-y-full" : ""
         }
         ${scrollDirection === "scroll-up" ? " bg-white/20" : ""}`}
@@ -123,7 +123,7 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="flex gap-x-5 md:hidden">
-            <div className="md:hidden">
+            <div className="mdp:hidden">
               <MobileMenu Menus={Menus} />
             </div>
           </div>

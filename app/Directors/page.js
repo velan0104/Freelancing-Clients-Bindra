@@ -6,7 +6,7 @@ export const metadata = {
 
 const page = () => {
   return (
-    <div className="my-20">
+    <div className="pt-20 bg-gray-100 pb-10">
       <h1 className="text-center font-semibold text-5xl md:text-7xl p-5">
         {" "}
         Directors{" "}

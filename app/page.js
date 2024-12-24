@@ -33,9 +33,9 @@ const page = () => {
 
   useEffect(() => {
     const h3 = loaderRef.current.querySelectorAll("h3");
-    const hero = heroRef.current.querySelectorAll("h1 > .span");
 
-    gsap.set(hero, { yPercent: 100 });
+    gsap.set(".title > h1", { yPercent: 100 });
+
     const tl = gsap.timeline();
     const ctx = gsap.context(() => {
       tl.fromTo(
@@ -54,12 +54,7 @@ const page = () => {
         transition: "power2.inOut",
         duration: 0.5,
       });
-      tl.to(".span", {
-        y: 0,
-        stagger: 0.05,
-        delay: 0.2,
-        duration: 0.1,
-      });
+      tl.to(".title > h1", { yPercent: 0, stagger: 0.2, duration: 2 });
       tl.to(loaderRef.current, {
         display: "none",
       });
@@ -72,11 +67,12 @@ const page = () => {
     <div className="font-[nb] overflow-hidden">
       <div
         ref={loaderRef}
-        className="fixed top-0 bg-white h-[100vh] w-full flex justify-center items-center text-gold-1 font-semibold text-xl gap-1 z-[999] overflow-y-hidden"
+        className="fixed bg-white h-[100vh] w-full flex justify-center items-center flex-wrap text-gold-1 font-semibold text-xl md:text-3xl gap-2 z-[999] overflow-y-hidden "
         style={{ WebkitScrollSnapType: "none" }}
       >
-        <h3 className="z-10"> Tomorrow's </h3>
-        <h3 className="z-10"> Brand, </h3>
+        <h3 className="z-10"> Building </h3>
+        <h3 className="z-10"> Tommorow's </h3>
+        <h3 className="z-10"> Landmarks </h3>
         <h3 className="z-10"> Today </h3>
       </div>
       <section
@@ -90,30 +86,27 @@ const page = () => {
           loop
           muted
         />
-        <h1
-          className="hero text-[15vw] text-gold-1 absolute font-bold top-1/2 left-10 overflow-hidden"
-          style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" }}
-        >
-          {["L", "I", "F", "E", "S", "T", "Y", "L", "E"].map((item, index) => (
+        <div className="title overflow-hidden absolute top-1/2 left-10 px-2">
+          <h1 className="hero text-[15vw] text-gold-1 font-bold ">
+            {/* {["L", "I", "F", "E", "S", "T", "Y", "L", "E"].map((item, index) => (
             <span key={index} className="span translate-y-[115px] duration-500">
               {item}
             </span>
-          ))}
-        </h1>
+          ))} */}
+            LIFESTYLE
+          </h1>
+        </div>
       </section>
       <section className="w-[100vw] min-h-[100vh] mx-auto bg-white overflow-hidden pb-10">
         <Marquee />
         <div className="h-auto grid grid-cols-1 lg:grid-cols-[1fr_2fr] content-center  items-center ">
           <div className="mx-auto w-[80%] space-y-5 text-center lg:text-left order-2 lg:order-1">
-            <h1 className="text-[6vw] md:text-[4vw] font-bold">
-              {" "}
-              Project name{" "}
-            </h1>
+            <h1 className="text-[6vw] md:text-[4vw] font-bold"> Bindra One </h1>
             <p className="text-lg md:text-xl font-semibold">
-              {" "}
-              Lorem ipsum odor amet, consectetuer adipiscing elit. Non penatibus
-              arcu magna lectus eget erat mi dui dictum. Phasellus platea primis
-              auctor egestas himenaeos pretium maximus.{" "}
+              We redefine modern living with a perfect blen of elegance,
+              convenience, and world-class amenitites. Located in the heart of
+              Mumbai, coupled with the vibrancy of urban life. Bindra One is
+              designed to exceed your expectations.
             </p>
             <button className="py-3 px-5 bg-gold-1 rounded-lg text-white">
               {" "}

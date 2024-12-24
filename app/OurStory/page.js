@@ -27,12 +27,12 @@ const page = () => {
   return (
     <div>
       <section className="w-[100vw] h-[100vh]">
-        <Image
-          className="h-[100vh] w-[100vw]"
-          width={400}
-          height={400}
-          src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="OurStoryHero"
+        <video
+          className="w-[100%] h-[100%] object-cover"
+          src="./videos/Bindra_logo.mp4"
+          autoPlay
+          loop
+          muted
         />
       </section>
       <section className="grid grid-cols-1 md:grid-cols-2 py-20 content-center items-center mx-auto gap-y-8 bg-gray-100 ">

@@ -123,12 +123,9 @@ export default function DesktopMenu({ menu }) {
                   </p>
                 )}
                 <div
-                  className="flex items-center gap-x-4 group/menubox justify-center"
+                  className="flex items-center gap-x-4 group/menubox justify-start"
                   onClick={() => router.push(`${menu.link}/${submenu?.link}`)}
                 >
-                  <div className="bg-white/5 w-fit p-2 rounded-md group-hover/menubox:bg-white group-hover/menubox:text-gray-900 duration-300">
-                    {submenu.icon && <submenu.icon />}
-                  </div>
                   <div>
                     <h6 className="font-semibold ">{submenu.name}</h6>
                     <p className="text-sm text-gray-900">{submenu.desc}</p>
@@ -141,16 +138,13 @@ export default function DesktopMenu({ menu }) {
                   {submenu?.subMenu?.map((submenus, index) => (
                     <div
                       key={index}
-                      className="group-hover:flex py-3 gap-5 hidden hover:bg-transparent/85"
+                      className="group-hover:flex py-3 gap-5 hidden hover:bg-transparent/10 px-5"
                       onClick={() =>
                         router.push(
                           `${menu.link}/${submenu?.link}?section=${submenus.link}`
                         )
                       }
                     >
-                      <div className="bg-white/5 w-fit p-2 rounded-md group-hover/menubox:bg-white group-hover/menubox:text-gray-900 duration-300">
-                        {submenus.icon && <submenus.icon />}
-                      </div>
                       <div>
                         <h6 className="font-semibold">{submenus.name}</h6>
                         <p className="text-sm text-gray-400">{submenus.desc}</p>

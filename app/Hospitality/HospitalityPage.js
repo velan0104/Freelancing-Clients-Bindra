@@ -7,34 +7,34 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const hotels = [
   {
-    name: "Hello world",
+    name: "Altruist",
     description:
       "Lorem ipsum odor amet, consectetuer adipiscing elit. Interdum iaculis sapien amet ullamcorper non turpis. At feugiat suspendisse diam sodales feugiat dui enim. Semper tellus leo quam commodo sodales felis quis tortor. Mollis eleifend cubilia suscipit; ornare aenean sapien. Varius penatibus libero hendrerit sociosqu eleifend placerat.",
-    buttonText: "Visit site →",
+    buttonText: "Visit →",
     siteLink: "",
     img: "/images/Altruist.jpg",
   },
   {
-    name: "Hello world",
+    name: "Bindra Supremacy",
     description:
       "Lorem ipsum odor amet, consectetuer adipiscing elit. Interdum iaculis sapien amet ullamcorper non turpis. At feugiat suspendisse diam sodales feugiat dui enim. Semper tellus leo quam commodo sodales felis quis tortor. Mollis eleifend cubilia suscipit; ornare aenean sapien. Varius penatibus libero hendrerit sociosqu eleifend placerat.",
-    buttonText: "Visit site →",
+    buttonText: "Visit →",
     siteLink: "",
     img: "/images/Bindra_Supremacy.jpg",
   },
   {
-    name: "Hello world",
+    name: "Aralia",
     description:
       "Lorem ipsum odor amet, consectetuer adipiscing elit. Interdum iaculis sapien amet ullamcorper non turpis. At feugiat suspendisse diam sodales feugiat dui enim. Semper tellus leo quam commodo sodales felis quis tortor. Mollis eleifend cubilia suscipit; ornare aenean sapien. Varius penatibus libero hendrerit sociosqu eleifend placerat.",
-    buttonText: "Visit site →",
+    buttonText: "Visit →",
     siteLink: "",
     img: "/images/Aralia_MIDC.jpg",
   },
   {
-    name: "Hello world",
+    name: "USHA 234",
     description:
       "Lorem ipsum odor amet, consectetuer adipiscing elit. Interdum iaculis sapien amet ullamcorper non turpis. At feugiat suspendisse diam sodales feugiat dui enim. Semper tellus leo quam commodo sodales felis quis tortor. Mollis eleifend cubilia suscipit; ornare aenean sapien. Varius penatibus libero hendrerit sociosqu eleifend placerat.",
-    buttonText: "Visit site →",
+    buttonText: "Visit →",
     siteLink: "",
     img: "https://images.unsplash.com/photo-1731091484289-ab997964d073?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
@@ -49,12 +49,6 @@ const HospitalityPage = () => {
       gsap.set(".title > h1", { yPercent: 100 });
 
       gsap.to(".title > h1", { yPercent: 0, stagger: 0.2, duration: 2 });
-      // gsap.from(headingRef.current.querySelectorAll(".span"), {
-      //   opacity: 0,
-      //   duration: 2,
-      //   stagger: 0.4,
-      //   ease: "power1.in",
-      // });
 
       hotelRef.current.forEach((hotel) => {
         // const img = hotel.querySelector(".img");

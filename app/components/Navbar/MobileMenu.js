@@ -60,13 +60,15 @@ export default function MobileMenu({ Menus }) {
                   <span
                     className="flex items-center justify-between p-4 hover:bg-white/5 rounded-md cursor-pointer relative"
                     onClick={(prev) =>
-                      setOpenSubMenu({ submenu: true, ...prev })
+                      setOpenSubMenu({ submenu: !openSubMenu.submenu, ...prev })
                     }
                   >
                     {menu.name}
                     {hasSubMenu && (
                       <ChevronDown
-                        className={`ml-auto ${isClicked && "rotate-180"} `}
+                        className={`ml-auto ${
+                          openSubMenu.submenu && "rotate-180"
+                        } `}
                       />
                     )}
                   </span>
@@ -81,7 +83,9 @@ export default function MobileMenu({ Menus }) {
                     {menu.name}
                     {hasSubMenu && (
                       <ChevronDown
-                        className={`ml-auto ${isClicked && "rotate-180"} `}
+                        className={`ml-auto ${
+                          openSubMenu.submenu && "rotate-180"
+                        } `}
                       />
                     )}
                   </span>
@@ -101,7 +105,6 @@ export default function MobileMenu({ Menus }) {
                             toggleDrawer();
                           }}
                         >
-                          {submenu.icon && <submenu.icon />}
                           {submenu.name}
                         </li>
                       </div>

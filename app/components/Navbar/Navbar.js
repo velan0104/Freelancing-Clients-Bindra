@@ -109,7 +109,7 @@ const Navbar = () => {
           <div className="flex items-center gap-x-3 z-[999]">
             {/* <h3 className="text-lg font-semibold">Bindra</h3> */}
             <Image
-              src="/images/bindra_logo.avif"
+              src="/images/bindra_logo.jpg"
               alt="logo"
               width={100}
               height={100}

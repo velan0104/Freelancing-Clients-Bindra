@@ -63,8 +63,8 @@ const ResidentialPage = () => {
 
 const PresentCard = [
   {
-    description: "Lana Del Rey",
-    title: "Summertime Sadness",
+    description: "Andheri-(E)",
+    title: "Bindra One",
     src: "https://images.unsplash.com/photo-1560185009-dddeb820c7b7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D",
     ctaText: "Visit",
     ctaLink: "https://ui.aceternity.com/templates",

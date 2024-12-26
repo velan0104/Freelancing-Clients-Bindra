@@ -31,12 +31,12 @@ const hotels = [
     img: "/images/Aralia_MIDC.jpg",
   },
   {
-    name: "USHA 234",
+    name: "Bindra ELite",
     description:
       "Lorem ipsum odor amet, consectetuer adipiscing elit. Interdum iaculis sapien amet ullamcorper non turpis. At feugiat suspendisse diam sodales feugiat dui enim. Semper tellus leo quam commodo sodales felis quis tortor. Mollis eleifend cubilia suscipit; ornare aenean sapien. Varius penatibus libero hendrerit sociosqu eleifend placerat.",
     buttonText: "Visit →",
     siteLink: "",
-    img: "https://images.unsplash.com/photo-1731091484289-ab997964d073?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "/images/Bindra_Elite.jpg",
   },
 ];
 
@@ -48,7 +48,7 @@ const HospitalityPage = () => {
     const ctx = gsap.context(() => {
       gsap.set(".title > h1", { yPercent: 100 });
 
-      gsap.to(".title > h1", { yPercent: 0, stagger: 0.2, duration: 2 });
+      gsap.to(".title > h1", { yPercent: 0, stagger: 0.2, duration: 1.5 });
 
       hotelRef.current.forEach((hotel) => {
         // const img = hotel.querySelector(".img");
@@ -60,11 +60,11 @@ const HospitalityPage = () => {
           y: 50,
           stagger: 0.2,
           opacity: 0,
-          duration: 1,
+          duration: 1.5,
           ease: "power2.in",
           scrollTrigger: {
             trigger: hotel,
-            start: "top 50%",
+            start: "top 70%",
             end: "bottom bottom",
             toggleActions: "play none none reset",
           },
@@ -79,11 +79,11 @@ const HospitalityPage = () => {
           {
             clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
             opacity: 1,
-            duration: 2,
+            duration: 1.5,
             ease: "power1.in",
             scrollTrigger: {
               trigger: hotel,
-              start: "top 90%",
+              start: "top 70%",
               bottom: "bottom bottom",
               scurb: 1,
               // markers: true,
@@ -104,9 +104,7 @@ const HospitalityPage = () => {
     <div>
       <section className="h-[100vh] w-[100vw] object-scale-down relative">
         <Image
-          src={
-            "https://images.unsplash.com/photo-1731091484289-ab997964d073?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          }
+          src={"/images/Aralia_Hero.jpg"}
           alt="HospitailyHeader"
           height={800}
           width={800}
@@ -114,7 +112,7 @@ const HospitalityPage = () => {
         />
         <div
           ref={headingRef}
-          className=" text-white top-1/2 md:top-10 absolute overflow-hidden leading-tight"
+          className=" text-white py-10 top-0 absolute overflow-hidden leading-tight h-[100vh] w-[100vw] bg-black/30"
         >
           <div className="title px-10 py-3 overflow-hidden">
             <h1 className="text-[12vw] md:text-[9vw] text-center md:text-left">

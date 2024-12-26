@@ -7,7 +7,8 @@ import "./style.css";
 import Marquee from "./components/Marquee";
 import Domain from "./components/Domain/Domain";
 import Carousel from "./components/Carousel/Carousel";
-import Button from "./components/Button";
+import CountUp from "./components/CountUp";
+import { useRouter } from "next/navigation";
 
 // #dbc33b
 // Gold - #ecd27d
@@ -17,22 +18,18 @@ const page = () => {
 
   const loaderRef = useRef(null);
   const heroRef = useRef(null);
-  const galleryRef = useRef(null);
+  const router = useRouter();
 
   const marqueeImages = [
-    "https://images.unsplash.com/photo-1593696140826-c58b021acf8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D",
-    "https://images.unsplash.com/photo-1713365860516-256d20dbb7e0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTMxfHxyZWFsJTIwZXN0YXRlfGVufDB8fDB8fHww",
-    "https://images.unsplash.com/photo-1628624747186-a941c476b7ef?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1560185009-5bf9f2849488?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjJ8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D",
-    "https://images.unsplash.com/photo-1628133287836-40bd5453bed1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzB8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D",
-    "https://images.unsplash.com/photo-1621293954908-907159247fc8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTZ8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D",
-    "https://images.unsplash.com/photo-1535581652167-3a26c90bbf86?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE2fHxyZWFsJTIwZXN0YXRlfGVufDB8fDB8fHww",
-    "https://images.unsplash.com/photo-1623784929309-703b81d39eec?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTU2fHxyZWFsJTIwZXN0YXRlfGVufDB8fDB8fHww",
-    "https://images.unsplash.com/photo-1708931418721-ebbeb1f69f1a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTI4fHxyZWFsJTIwZXN0YXRlfGVufDB8fDB8fHww",
+    "/images/Marquee_1.jpg",
+    "/images/Bindra_Supremacy.jpg",
+    "/images/Marquee_2.jpg",
+    "/images/Marquee_5.avif",
+    "/images/Marquee_3.jpg",
   ];
 
   useEffect(() => {
-    const h3 = loaderRef.current.querySelectorAll("h3");
+    const h3 = loaderRef.current.querySelectorAll("div > h3");
 
     gsap.set(".title > h1", { yPercent: 100 });
 
@@ -70,10 +67,12 @@ const page = () => {
         className="fixed bg-white h-[100vh] w-full flex justify-center items-center flex-wrap text-gold-1 font-semibold text-xl md:text-3xl gap-2 z-[999] overflow-y-hidden "
         style={{ WebkitScrollSnapType: "none" }}
       >
-        <h3 className="z-10"> Building </h3>
-        <h3 className="z-10"> Tommorow's </h3>
-        <h3 className="z-10"> Landmarks </h3>
-        <h3 className="z-10"> Today </h3>
+        <div className="flex gap-1 flex-wrap justify-center w-[90%]">
+          <h3 className="z-10"> Building </h3>
+          <h3 className="z-10"> Tommorow's </h3>
+          <h3 className="z-10"> Landmarks </h3>
+          <h3 className="z-10"> Today </h3>
+        </div>
       </div>
       <section
         ref={heroRef}
@@ -87,20 +86,13 @@ const page = () => {
           muted
         />
         <div className="title overflow-hidden absolute top-1/2 left-10 px-2">
-          <h1 className="hero text-[15vw] text-gold-1 font-bold ">
-            {/* {["L", "I", "F", "E", "S", "T", "Y", "L", "E"].map((item, index) => (
-            <span key={index} className="span translate-y-[115px] duration-500">
-              {item}
-            </span>
-          ))} */}
-            LIFESTYLE
-          </h1>
+          <h1 className="hero text-[15vw] text-gold-1 font-bold ">LIFESTYLE</h1>
         </div>
       </section>
       <section className="w-[100vw] min-h-[100vh] mx-auto bg-white overflow-hidden pb-10">
         <Marquee />
-        <div className="h-auto grid grid-cols-1 lg:grid-cols-[1fr_2fr] content-center  items-center ">
-          <div className="mx-auto w-[80%] space-y-5 text-center lg:text-left order-2 lg:order-1">
+        <div className="h-auto grid grid-cols-1 lg:grid-cols-[1fr_2fr] content-center  items-center pt-12">
+          <div className="mx-auto w-[80%] flex flex-col gap-3 text-center lg:text-left order-2 lg:order-1 h-auto">
             <h1 className="text-[6vw] md:text-[4vw] font-bold"> Bindra One </h1>
             <p className="text-lg md:text-xl font-semibold">
               We redefine modern living with a perfect blen of elegance,
@@ -108,10 +100,15 @@ const page = () => {
               Mumbai, coupled with the vibrancy of urban life. Bindra One is
               designed to exceed your expectations.
             </p>
-            <button className="py-3 px-5 bg-gold-1 rounded-lg text-white">
+            <a
+              href="/brochure/BINDRA_ONE.pdf"
+              className="py-3 px-5 w-fit h-fit bg-gold-1 rounded-lg text-white"
+              download
+              target="_blank"
+            >
               {" "}
               Brochure{" "}
-            </button>
+            </a>
           </div>
           <div className="order-1 lg:order-2">
             <Carousel />
@@ -121,16 +118,16 @@ const page = () => {
       <Domain />
       <section className=" w-[100vw] h-auto bg-white space-y-5 py-10">
         <div>
-          <h1 className="text-4xl md:text-5xl text-gold-1 font-bold text-left p-5 border-b-4 border-b-gold-1 mx-5 md:mx-10">
+          <h1 className="text-4xl md:text-5xl text-gold-1 font-bold text-left p-5 border-b-2 italic border-b-gold-1 mx-5 md:mx-10">
             {" "}
-            Current Projects{" "}
+            Reknown Projects{" "}
           </h1>
         </div>
         <div className="w-full lg:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 content-center items-center gap-x-10 page3-content gap-5">
           <div className=" box w-[350px] relative mx-auto">
             <video src="./videos/project1.mp4" autoPlay loop muted />
             <Image
-              src="https://images.unsplash.com/photo-1565953522043-baea26b83b7e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nzl8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D"
+              src="/images/bindra_one.jpg"
               alt=""
               width={400}
               height={500}
@@ -142,9 +139,9 @@ const page = () => {
             </span>
           </div>
           <div className="w-[350px] relative box mx-auto">
-            <video src="./videos/project2.mp4" autoPlay loop muted />
+            <video src="./videos/Lotus.MOV" autoPlay loop muted />
             <Image
-              src="https://images.unsplash.com/photo-1560185127-59e4420e2c93?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D"
+              src="/images/Lotus.jpg"
               alt=""
               width={400}
               height={500}
@@ -152,11 +149,11 @@ const page = () => {
             />
             <span className="absolute top-2/3 z-[999] text-white text-5xl font-bold left-5 md:left-10 h-fit overflow-hidden text-center md:text-left">
               {" "}
-              Navratan Apts.{" "}
+              Lotus.{" "}
             </span>
           </div>
           <div className=" w-[350px] relative box mx-auto cols-span-1 md:col-span-2 lg:col-span-1">
-            <video src="./videos/project3.mp4" autoPlay muted />
+            <video src="./videos/Daffodil.MOV" autoPlay muted />
             <Image
               src="https://images.unsplash.com/photo-1695222322544-8d389d2dc43d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA1fHxyZWFsJTIwZXN0YXRlfGVufDB8fDB8fHww"
               alt=""
@@ -171,7 +168,10 @@ const page = () => {
           </div>
         </div>
         <div className="flex justify-center">
-          <button className="py-3 px-5 bg-gold-1 text-white rounded-md">
+          <button
+            className="py-3 px-5 bg-gold-1 text-white rounded-md"
+            onClick={() => router.push(`/Projects/Residential?section=present`)}
+          >
             {" "}
             Know More{" "}
           </button>
@@ -212,14 +212,51 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section className="py-10 space-y-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 content-center items-center  w-full md:gap-10  lg:gap-14 flex-wrap">
+        <div className="flex flex-col items-center md:items-end md:border-r-4 border-gold-1 px-20">
+          <div className="flex justify-center items-center">
+            <CountUp
+              from={0}
+              to={100}
+              separator=","
+              direction="up"
+              duration={1}
+              className="count-up-text text-5xl py-2 p-1"
+            />
+            <span className="text-5xl font-bold py-2"> + </span>
+          </div>
+          <p className="text-3xl p-2 font-semibold"> Projects </p>
+        </div>
+        <div className=" w-[50%] h-1 bg-gold-1 mx-auto md:hidden" />
+        <div className="p-5 flex flex-col justify-center items-center">
+          <div className="flex text-center">
+            <CountUp
+              from={0}
+              to={50}
+              separator=","
+              direction="up"
+              duration={1}
+              className="count-up-text text-3xl md:text-5xl py-2 p-1"
+            />
+            <span className="text-3xl md:text-5xl font-bold py-2">
+              {" "}
+              + Million Sq.Ft.{" "}
+            </span>
+          </div>
+          <p className="text-2xl md:text-3xl text-center md:text-left p-2 font-semibold max-w-[500px]">
+            {" "}
+            of ONGOING, COMPLETED & UPCOMING PROJECTS{" "}
+          </p>
+        </div>
+      </div>
+      <section className="py-10 space-y-10 ">
         <h1 className="text-center text-5xl text-gold-1 font-bold p-5">
           {" "}
           Our Brands{" "}
         </h1>
         <div className="flex flex-wrap justify-center items-center gap-7 lg:gap-10">
           <Image
-            src="/images/bindra_logo.avif"
+            src="/images/bindra_logo.jpg"
             className="h-[200px] w-[250px]"
             width={300}
             height={200}

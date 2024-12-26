@@ -1,15 +1,16 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import "./Carousel.css";
+import Image from "next/image";
 
 const Carousel = () => {
   const [items, setItems] = useState([
     "/images/Bindra_One.png",
-    "./images/bindra_one_1.jpg",
-    "./images/bindra_one_2.jpg",
-    "./images/bindra_one_3.jpg",
-    "https://images.unsplash.com/photo-1508349937151-22b68b72d5b1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D",
-    "https://images.unsplash.com/photo-1508349937151-22b68b72d5b1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D",
-    "https://plus.unsplash.com/premium_photo-1675433344518-21eb72dfc7a5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bmF0dXJlfGVufDB8fDB8fHww",
+    "/images/bindra_one_2.jpg",
+    "/images/bindra_one_4.jpg",
+    "/images/bindra_one_1.jpg",
+    "/images/bindra_one_3.jpg",
+    "/images/bindra_one_2.jpg",
   ]);
 
   const handleNext = () => {
@@ -38,10 +39,17 @@ const Carousel = () => {
     <div className=" flex flex-col gap-10">
       <div className="box h-[45vh] md:h-[75vh] ">
         {items.map((item, index) => (
-          <div key={index} className="item ">
-            <img
+          <div key={index} className={` item `}>
+            <Image
               src={item}
-              className={`bg-gray-900 ${index === 0 ? " h-[40vh]" : "m-0"}`}
+              className={`${
+                item === "/images/Bindra_One.png"
+                  ? "max-h-[90%] aspect-auto max-w-[90%]  m-[5%]c"
+                  : "p-0"
+              }`}
+              alt={`img-${index + 1}`}
+              width={400}
+              height={400}
             />
           </div>
         ))}

@@ -16,7 +16,7 @@ const Footer = () => {
               width={150}
               height={150}
               alt="hero8"
-              src="/images/bindra_logo.avif"
+              src="/images/bindra_logo.jpg"
             />
             <div className="flex flex-col gap-4 text-lg md:text-xl">
               <h1 className="font-bold text-center text-3xl"> Contact Us </h1>
@@ -110,12 +110,12 @@ const Footer = () => {
       </div>
 
       <div className="m-5">
-        <div className="flex justify-between md:justify-end items-center px-10 pt-5 border-t-4 border-black">
+        <div className="flex justify-between md:justify-end items-center px-10 pt-3 border-t-4 border-black">
           <div className="">
-            <div className="flex mx-auto justify-evenly md:justify-end gap-4 items-center pb-3">
+            <div className="flex mx-auto justify-evenly md:justify-end gap-4 items-center pb-1">
               <a href="#" className="text-black hover:text-gray-900">
                 <svg
-                  className="w-6 h-6"
+                  className="w-8 h-8"
                   aria-hidden="true"
                   fill="currentColor"
                   viewBox="0 0 24 24"
@@ -129,7 +129,7 @@ const Footer = () => {
               </a>
               <a href="#" className="text-black hover:text-gray-900">
                 <svg
-                  className="w-6 h-6"
+                  className="w-7 h-7"
                   aria-hidden="true"
                   fill="currentColor"
                   viewBox="0 0 24 24"
@@ -147,7 +147,7 @@ const Footer = () => {
                   // enableBackground="new 0 0 1668.56 1221.19"
                   viewBox="0 0 1668.56 1221.19"
                   id="twitter-x"
-                  className="w-10 h-10"
+                  className="w-11 h-11"
                 >
                   <circle
                     cx="834.28"
@@ -168,7 +168,7 @@ const Footer = () => {
               <a href="#" className="text-black hover:text-gray-900">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className=" w-7 h-7"
+                  className=" w-8 h-8"
                   viewBox="0 0 24 24"
                 >
                   <path

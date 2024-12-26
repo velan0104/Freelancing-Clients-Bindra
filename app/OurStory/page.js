@@ -35,11 +35,11 @@ const page = () => {
           muted
         />
       </section>
-      <section className="grid grid-cols-1 md:grid-cols-2 py-20 content-center items-center mx-auto gap-y-8 bg-gray-100 ">
+      <section className=" grid grid-cols-1 md:grid-cols-2 py-20 content-center items-center mx-auto gap-y-8 bg-gray-100 ">
         <div>
           <Image
-            className="w-[80%] md:w-[70%] h-auto mx-auto rounded-lg"
-            src="https://images.unsplash.com/photo-1569152811536-fb47aced8409?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTh8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D"
+            className=" w-[80%] md:w-[70%] mx-auto rounded-lg  max-h-[350px]"
+            src="/images/Lotus.jpg"
             width={300}
             height={300}
             alt="hero10"
@@ -76,7 +76,7 @@ const page = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-[90%] mx-auto">
               <Image
                 className="col-span-2 rounded-xl mx-auto w-full h-[300px] hidden lg:block"
-                src="https://images.unsplash.com/photo-1558036117-15d82a90b9b1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cmVhbCUyMGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D"
+                src="/images/Residential_1.JPG"
                 width={500}
                 height={300}
                 alt="img1"
@@ -92,7 +92,7 @@ const page = () => {
               </div>
               <Image
                 className="w-[80%] lg:w-full h-full rounded-xl md:order-2 mx-auto"
-                src="https://images.unsplash.com/photo-1560184897-ae75f418493e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D"
+                src="/images/Residential.JPG"
                 width={400}
                 height={400}
                 alt="img2"
@@ -101,7 +101,7 @@ const page = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-5 w-[90%] mx-auto">
               <Image
                 className="w-[80%] lg:w-full h-full rounded-xl md:order-2 lg:order-1 mx-auto"
-                src="https://images.unsplash.com/photo-1560184897-ae75f418493e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D"
+                src="/images/Commercial.JPG"
                 width={400}
                 height={400}
                 alt="img2"
@@ -116,7 +116,7 @@ const page = () => {
               </div>
               <Image
                 className="w-[80%] mx-auto lg:w-full h-full rounded-xl"
-                src="https://images.unsplash.com/photo-1560184897-ae75f418493e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D"
+                src="/images/Clubhouse.jpg"
                 width={400}
                 height={400}
                 alt="img2"
@@ -142,7 +142,7 @@ const page = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-y-5">
           <Image
             className="w-[80%] md:w-[70%] h-auto mx-auto rounded-lg"
-            src="https://images.unsplash.com/photo-1569152811536-fb47aced8409?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTh8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D"
+            src="/images/rose.jpg"
             width={300}
             height={300}
             alt="hero10"

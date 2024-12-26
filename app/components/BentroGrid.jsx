@@ -21,9 +21,9 @@ const BentroGrid = () => {
           scale: 1,
           duration: 2,
           scrollTrigger: {
-            trigger: gridRef.current,
+            trigger: ".gridContainer",
             start: "top 70%",
-            end: "bottom 70%",
+            end: "bottom bottom",
             toggleActions: "play none none reset",
             // scrub: true,
           },
@@ -35,7 +35,7 @@ const BentroGrid = () => {
   }, []);
 
   return (
-    <section className="min-h-screen h-auto w-full bg-gray-100 py-10 hidden md:block">
+    <section className="gridContainer min-h-screen h-auto w-full bg-gray-100 py-10 hidden md:block">
       <div
         ref={gridRef}
         className="grid grid-rows-4 grid-cols-4 gap-2 lg:w-[90%] mx-auto"

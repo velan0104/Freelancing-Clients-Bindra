@@ -31,6 +31,7 @@ const page = () => {
   useEffect(() => {
     const h3 = loaderRef.current.querySelectorAll("div > h3");
 
+    gsap.set("h3", { opacity: 0 });
     gsap.set(".title > h1", { yPercent: 100 });
 
     const tl = gsap.timeline();
@@ -80,19 +81,23 @@ const page = () => {
       >
         <video
           className="w-[100%] h-[100%] object-cover"
-          src="https://videos.pexels.com/video-files/4770380/4770380-sd_640_360_30fps.mp4"
+          src="./videos/Landing.mp4"
           autoPlay
           loop
           muted
         />
-        <div className="title overflow-hidden absolute top-1/2 left-10 px-2">
-          <h1 className="hero text-[15vw] text-gold-1 font-bold ">LIFESTYLE</h1>
+        <div className="h-full w-full bg-black/30 absolute top-0 left-0">
+          <div className="title overflow-hidden absolute top-1/2 left-10 px-2 ">
+            <h1 className="hero text-[15vw] text-gold-1 font-bold ">
+              LIFESTYLE
+            </h1>
+          </div>
         </div>
       </section>
       <section className="w-[100vw] min-h-[100vh] mx-auto bg-white overflow-hidden pb-10">
         <Marquee />
         <div className="h-auto grid grid-cols-1 lg:grid-cols-[1fr_2fr] content-center  items-center pt-12">
-          <div className="mx-auto w-[80%] flex flex-col gap-3 text-center lg:text-left order-2 lg:order-1 h-auto">
+          <div className="mx-auto w-[80%] flex flex-col gap-3 text-center lg:text-left order-2 lg:order-1 h-auto items-center">
             <h1 className="text-[6vw] md:text-[4vw] font-bold"> Bindra One </h1>
             <p className="text-lg md:text-xl font-semibold">
               We redefine modern living with a perfect blen of elegance,
@@ -125,7 +130,7 @@ const page = () => {
         </div>
         <div className="w-full lg:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 content-center items-center gap-x-10 page3-content gap-5">
           <div className=" box w-[350px] relative mx-auto">
-            <video src="./videos/project1.mp4" autoPlay loop muted />
+            <video src="./videos/project2.mp4" autoPlay loop muted />
             <Image
               src="/images/bindra_one.jpg"
               alt=""
@@ -212,44 +217,46 @@ const page = () => {
           </div>
         </div>
       </section>
-      <div className="grid grid-cols-1 md:grid-cols-2 content-center items-center  w-full md:gap-10  lg:gap-14 flex-wrap">
-        <div className="flex flex-col items-center md:items-end md:border-r-4 border-gold-1 px-20">
-          <div className="flex justify-center items-center">
-            <CountUp
-              from={0}
-              to={100}
-              separator=","
-              direction="up"
-              duration={1}
-              className="count-up-text text-5xl py-2 p-1"
-            />
-            <span className="text-5xl font-bold py-2"> + </span>
+      <div className="flex justify-center w-full">
+        <div className="flex flex-col md:flex-row">
+          <div className="flex flex-col items-center md:items-end md:border-r-4 border-gold-1 px-20">
+            <div className="flex justify-center items-center">
+              <CountUp
+                from={0}
+                to={100}
+                separator=","
+                direction="up"
+                duration={1}
+                className="count-up-text text-5xl py-2 p-1"
+              />
+              <span className="text-5xl font-bold py-2"> + </span>
+            </div>
+            <p className="text-3xl p-2 font-semibold"> Projects </p>
           </div>
-          <p className="text-3xl p-2 font-semibold"> Projects </p>
-        </div>
-        <div className=" w-[50%] h-1 bg-gold-1 mx-auto md:hidden" />
-        <div className="p-5 flex flex-col justify-center items-center">
-          <div className="flex text-center">
-            <CountUp
-              from={0}
-              to={50}
-              separator=","
-              direction="up"
-              duration={1}
-              className="count-up-text text-3xl md:text-5xl py-2 p-1"
-            />
-            <span className="text-3xl md:text-5xl font-bold py-2">
+          <div className=" w-[50%] h-1 bg-gold-1 mx-auto md:hidden" />
+          <div className="p-5 flex flex-col justify-center items-center">
+            <div className="flex text-center">
+              <CountUp
+                from={0}
+                to={50}
+                separator=","
+                direction="up"
+                duration={1}
+                className="count-up-text text-3xl md:text-5xl py-2 p-1"
+              />
+              <span className="text-3xl md:text-5xl font-bold py-2">
+                {" "}
+                + Million Sq.Ft.{" "}
+              </span>
+            </div>
+            <p className="text-2xl md:text-3xl text-center md:text-left p-2 font-semibold max-w-[500px]">
               {" "}
-              + Million Sq.Ft.{" "}
-            </span>
+              of ONGOING, COMPLETED & UPCOMING PROJECTS{" "}
+            </p>
           </div>
-          <p className="text-2xl md:text-3xl text-center md:text-left p-2 font-semibold max-w-[500px]">
-            {" "}
-            of ONGOING, COMPLETED & UPCOMING PROJECTS{" "}
-          </p>
         </div>
       </div>
-      <section className="py-10 space-y-10 ">
+      <section className="py-10 space-y-10">
         <h1 className="text-center text-5xl text-gold-1 font-bold p-5">
           {" "}
           Our Brands{" "}

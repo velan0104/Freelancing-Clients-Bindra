@@ -2,12 +2,52 @@
 import React, { useEffect, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 import { ExpandableCardDemo } from "../../components/AnimatedCard";
+import Slider from "../../components/Slider/Slider";
 
 const ResidentialPage = () => {
   const presentRef = useRef(null);
   const pastRef = useRef(null);
   const futureRef = useRef(null);
   const params = useSearchParams();
+
+  const ImageSlider = [
+    {
+      img: "https://images.unsplash.com/photo-1731432246387-1bc4274a5a12?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0fHx8ZW58MHx8fHx8",
+      title: "Slide 01",
+      description:
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, sed. Alias, sint?",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGFyY2hpdGVjdHVyZXxlbnwwfHwwfHx8MA%3D%3D",
+      title: "Slide 02",
+      description:
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, sed. Alias, sint?",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1451976426598-a7593bd6d0b2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fGFyY2hpdGVjdHVyZXxlbnwwfHwwfHx8MA%3D%3D",
+      title: "Slide 03",
+      description:
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, sed. Alias, sint?",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1735436313893-97fd977ab651?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEyfE04alZiTGJUUndzfHxlbnwwfHx8fHw%3D",
+      title: "Slide 04",
+      description:
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, sed. Alias, sint?",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1496564203457-11bb12075d90?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTF8fGFyY2hpdGVjdHVyZXxlbnwwfHwwfHx8MA%3D%3D",
+      title: "Slide 05",
+      description:
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, sed. Alias, sint?",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1496564203457-11bb12075d90?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTF8fGFyY2hpdGVjdHVyZXxlbnwwfHwwfHx8MA%3D%3D",
+      title: "Slide 06",
+      description:
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, sed. Alias, sint?",
+    },
+  ];
 
   useEffect(() => {
     const param = params.get("section");
@@ -25,18 +65,18 @@ const ResidentialPage = () => {
   };
 
   return (
-    <div className="h-full w-[100vw]">
+    <div className="">
       <h1 className="mt-16 text-center text-5xl font-bold text-gold-1 p-5">
         {" "}
         Bindra's{" "}
       </h1>
-      <section ref={presentRef} className="h-auto mx-auto w-[95%]">
-        <h1 className="my-8 text-3xl font-bold border-b-4 border-gold-1 text-gold-1 inline-block w-[95%] py-5 mx-5">
+      <section ref={presentRef} className="">
+        <h1 className="mt-4 text-3xl font-bold border-b-4 border-gold-1 text-gold-1 inline-block w-[90%] mx-[5%] py-5">
           {" "}
           PRESENT PROJECTS{" "}
         </h1>
-        <div className="mx-2 ">
-          <ExpandableCardDemo cards={PresentCard} />
+        <div className="">
+          <Slider ImageSlider={ImageSlider} />
         </div>
       </section>
       <section ref={pastRef} className="h-auto mx-auto w-[95%]">

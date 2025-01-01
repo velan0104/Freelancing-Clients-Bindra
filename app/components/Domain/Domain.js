@@ -3,7 +3,6 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import "./Domain.css";
-import Lenis from "lenis";
 import Button from "../Button";
 import { useRouter } from "next/navigation";
 

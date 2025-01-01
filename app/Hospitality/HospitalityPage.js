@@ -112,7 +112,7 @@ const HospitalityPage = () => {
         />
         <div
           ref={headingRef}
-          className=" text-white py-10 top-0 absolute overflow-hidden leading-tight h-[100vh] w-[100vw] bg-black/30"
+          className=" text-white py-10 top-0 flex flex-col justify-center absolute overflow-hidden leading-tight h-[100vh] w-[100vw] bg-black/30"
         >
           <div className="title px-10 py-3 overflow-hidden">
             <h1 className="text-[12vw] md:text-[9vw] text-center md:text-left">

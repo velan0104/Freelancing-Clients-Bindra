@@ -22,7 +22,7 @@ const page = () => {
 
   const marqueeImages = [
     "/images/Marquee_1.jpg",
-    "/images/Bindra_Supremacy.jpg",
+    "/images/Hotels/Bindra_Supremacy.jpg",
     "/images/Marquee_2.jpg",
     "/images/Marquee_5.avif",
     "/images/Marquee_3.jpg",
@@ -97,7 +97,7 @@ const page = () => {
       <section className="w-[100vw] min-h-[100vh] mx-auto bg-white overflow-hidden pb-10">
         <Marquee />
         <div className="h-auto grid grid-cols-1 lg:grid-cols-[1fr_2fr] content-center  items-center pt-12">
-          <div className="mx-auto w-[80%] flex flex-col gap-3 text-center lg:text-left order-2 lg:order-1 h-auto items-center">
+          <div className="mx-auto w-[80%] flex flex-col gap-3 text-center lg:text-left order-2 lg:order-1 h-auto items-center md:items-start">
             <h1 className="text-[6vw] md:text-[4vw] font-bold"> Bindra One </h1>
             <p className="text-lg md:text-xl font-semibold">
               We redefine modern living with a perfect blen of elegance,
@@ -123,7 +123,7 @@ const page = () => {
       <Domain />
       <section className=" w-[100vw] h-auto bg-white space-y-5 py-10">
         <div>
-          <h1 className="text-4xl md:text-5xl text-gold-1 font-bold text-left p-5 border-b-2 italic border-b-gold-1 mx-5 md:mx-10">
+          <h1 className="text-4xl md:text-5xl text-gold-1 font-bold text-left p-5 border-b-2 italic border-b-gold-1 mx-3 md:mx-10">
             {" "}
             Reknown Projects{" "}
           </h1>
@@ -132,7 +132,7 @@ const page = () => {
           <div className=" box w-[350px] relative mx-auto">
             <video src="./videos/project2.mp4" autoPlay loop muted />
             <Image
-              src="/images/bindra_one.jpg"
+              src="/images/Bindra_One/bindra_one.jpg"
               alt=""
               width={400}
               height={500}
@@ -158,7 +158,7 @@ const page = () => {
             </span>
           </div>
           <div className=" w-[350px] relative box mx-auto cols-span-1 md:col-span-2 lg:col-span-1">
-            <video src="./videos/Daffodil.MOV" autoPlay muted />
+            <video src="./videos/Daffodil.mov" autoPlay muted />
             <Image
               src="https://images.unsplash.com/photo-1695222322544-8d389d2dc43d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA1fHxyZWFsJTIwZXN0YXRlfGVufDB8fDB8fHww"
               alt=""
@@ -218,8 +218,8 @@ const page = () => {
         </div>
       </section>
       <div className="flex justify-center w-full">
-        <div className="flex flex-col md:flex-row">
-          <div className="flex flex-col items-center md:items-end md:border-r-4 border-gold-1 px-20">
+        <div className="flex flex-col md:flex-row items-center gap-5">
+          <div className="flex flex-col items-center md:items-end border-4 border-gold-1 rounded-lg px-20 md:py-10">
             <div className="flex justify-center items-center">
               <CountUp
                 from={0}
@@ -234,8 +234,8 @@ const page = () => {
             <p className="text-3xl p-2 font-semibold"> Projects </p>
           </div>
           <div className=" w-[50%] h-1 bg-gold-1 mx-auto md:hidden" />
-          <div className="p-5 flex flex-col justify-center items-center">
-            <div className="flex text-center">
+          <div className="p-5 flex flex-col justify-center items-center border-4 border-gold-1 rounded-lg">
+            <div className="flex text-center ">
               <CountUp
                 from={0}
                 to={50}

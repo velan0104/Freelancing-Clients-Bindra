@@ -5,12 +5,12 @@ import Image from "next/image";
 
 const Carousel = () => {
   const [items, setItems] = useState([
-    "/images/Bindra_One.png",
-    "/images/bindra_one_2.jpg",
-    "/images/bindra_one_4.jpg",
-    "/images/bindra_one_1.jpg",
-    "/images/bindra_one_3.jpg",
-    "/images/bindra_one_2.jpg",
+    "/images/Bindra_One/Bindra_One.png",
+    "/images/Bindra_One/bindra_one_2.jpg",
+    "/images/Bindra_One/bindra_one_4.jpg",
+    "/images/Bindra_One/bindra_one_1.jpg",
+    "/images/Bindra_One/bindra_one_3.jpg",
+    "/images/Bindra_One/bindra_one_2.jpg",
   ]);
 
   const handleNext = () => {

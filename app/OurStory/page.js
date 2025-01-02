@@ -6,24 +6,6 @@ export const metadata = {
 };
 
 const page = () => {
-  const stories = [
-    {
-      img: "https://images.unsplash.com/photo-1558036117-15d82a90b9b1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cmVhbCUyMGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D",
-      title: " Residential Spaces ",
-      content:
-        "Thoughtfully designed homes that offer comfort and a sense of belonging.",
-    },
-    {
-      img: "https://images.unsplash.com/photo-1560184897-ae75f418493e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D",
-      title: "Commercial Complexes",
-      content: "Purpose-built infrastructure to support thriving businesses.",
-    },
-    {
-      img: "https://images.unsplash.com/photo-1592595896551-12b371d546d5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D",
-      title: "Clubhouses and Hotels",
-      content: "Creating destinations where leisure meets elegance.",
-    },
-  ];
   return (
     <div>
       <section className="w-[100vw] h-[100vh]">
@@ -101,7 +83,7 @@ const page = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-5 w-[90%] mx-auto">
               <Image
                 className="w-[80%] lg:w-full h-full rounded-xl md:order-2 lg:order-1 mx-auto"
-                src="/images/Commercial.JPG"
+                src="/images/Commercial/Commercial.JPG"
                 width={400}
                 height={400}
                 alt="img2"

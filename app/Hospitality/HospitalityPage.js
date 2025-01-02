@@ -4,39 +4,40 @@ import React, { useEffect, useRef } from "react";
 import Button from "../components/Button";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 
 const hotels = [
   {
     name: "Altruist",
     description:
-      "Lorem ipsum odor amet, consectetuer adipiscing elit. Interdum iaculis sapien amet ullamcorper non turpis. At feugiat suspendisse diam sodales feugiat dui enim. Semper tellus leo quam commodo sodales felis quis tortor. Mollis eleifend cubilia suscipit; ornare aenean sapien. Varius penatibus libero hendrerit sociosqu eleifend placerat.",
+      "Altruist Andheri offers well-appointed rooms and exceptional hospitality in the heart of Andheri, making it a preferred choice for travelers seeking comfort and accessibility.",
     buttonText: "Visit →",
     siteLink: "",
-    img: "/images/Altruist.jpg",
+    img: "/images/Hotels/Altruist.jpg",
   },
   {
     name: "Bindra Supremacy",
     description:
-      "Lorem ipsum odor amet, consectetuer adipiscing elit. Interdum iaculis sapien amet ullamcorper non turpis. At feugiat suspendisse diam sodales feugiat dui enim. Semper tellus leo quam commodo sodales felis quis tortor. Mollis eleifend cubilia suscipit; ornare aenean sapien. Varius penatibus libero hendrerit sociosqu eleifend placerat.",
+      "Located in Andheri East, Mumbai, Bindra's Supremacy offers cozy rooms ideal for both business and leisure travelers, with close proximity to Chhatrapati Shivaji Maharaj International Airport.",
     buttonText: "Visit →",
-    siteLink: "",
-    img: "/images/Bindra_Supremacy.jpg",
+    siteLink: "https://hotelbindrasupremacy.com/",
+    img: "/images/Hotels/Bindra_Supremacy.jpg",
   },
   {
     name: "Aralia",
     description:
-      "Lorem ipsum odor amet, consectetuer adipiscing elit. Interdum iaculis sapien amet ullamcorper non turpis. At feugiat suspendisse diam sodales feugiat dui enim. Semper tellus leo quam commodo sodales felis quis tortor. Mollis eleifend cubilia suscipit; ornare aenean sapien. Varius penatibus libero hendrerit sociosqu eleifend placerat.",
+      "Situated in the MIDC area, Aralia provides comfortable accommodations with modern amenities, catering to business travelers seeking convenience and quality service.",
     buttonText: "Visit →",
-    siteLink: "",
-    img: "/images/Aralia_MIDC.jpg",
+    siteLink: "https://araliahotels.com/aralia-midc/",
+    img: "/images/Hotels/Aralia_MIDC.jpg",
   },
   {
     name: "Bindra ELite",
     description:
-      "Lorem ipsum odor amet, consectetuer adipiscing elit. Interdum iaculis sapien amet ullamcorper non turpis. At feugiat suspendisse diam sodales feugiat dui enim. Semper tellus leo quam commodo sodales felis quis tortor. Mollis eleifend cubilia suscipit; ornare aenean sapien. Varius penatibus libero hendrerit sociosqu eleifend placerat.",
+      "Bindra Elite is a boutique hotel known for its elegant design and personalized services, providing guests with a luxurious stay experience in a prime location.",
     buttonText: "Visit →",
     siteLink: "",
-    img: "/images/Bindra_Elite.jpg",
+    img: "/images/Hotels/Bindra_Elite.jpg",
   },
 ];
 
@@ -45,6 +46,8 @@ const HospitalityPage = () => {
   const headingRef = useRef(null);
   const hotelRef = useRef([]);
   useEffect(() => {
+    if (!hotelRef.current || hotelRef.current.length === 0) return;
+
     const ctx = gsap.context(() => {
       gsap.set(".title > h1", { yPercent: 100 });
 
@@ -86,7 +89,6 @@ const HospitalityPage = () => {
               start: "top 70%",
               bottom: "bottom bottom",
               scurb: 1,
-              // markers: true,
               toggleActions: "play none none reset",
             },
           }
@@ -95,16 +97,15 @@ const HospitalityPage = () => {
     });
 
     return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
       ctx.revert();
     };
-  }, []);
+  }, [hotelRef.current]);
 
   return (
     <div>
       <section className="h-[100vh] w-[100vw] object-scale-down relative">
         <Image
-          src={"/images/Aralia_Hero.jpg"}
+          src={"/images/hotels/Aralia_Hero.jpg"}
           alt="HospitailyHeader"
           height={800}
           width={800}
@@ -150,7 +151,9 @@ const HospitalityPage = () => {
               <p className="text-gold-1 font-bold text-3xl"> {hotel.name} </p>
               <p>{hotel.description}</p>
               <p>
-                <Button text={hotel.buttonText} />
+                <Link href={hotel.siteLink} target="_blank">
+                  <Button text={hotel.buttonText} />
+                </Link>
               </p>
             </div>
             <div

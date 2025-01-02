@@ -90,20 +90,8 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-}
-
-.buttons span::before {
-  content: "";
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  border-top: 4px solid #fff;
-  border-left: 4px solid #fff;
-  transform: rotate(315deg) translate(2px, 2px);
-}
-
-.buttons span:nth-child(2)::before {
-  transform: rotate(135deg) translate(2px, 2px);
+  color: white;
+  font-size: 20px;
 }
 
 .buttons span:active {

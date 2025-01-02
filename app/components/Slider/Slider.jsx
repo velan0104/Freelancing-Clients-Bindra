@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef, useEffect } from "react";
 import "./slider.css";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const Slider = ({ ImageSlider }) => {
   const sliderRef = useRef(null);
@@ -54,9 +55,13 @@ const Slider = ({ ImageSlider }) => {
             </div>
           ))}
         </div>
-        <div className="buttons">
-          <span className="prev" onClick={handlePrev}></span>
-          <span className="next" onClick={handleNext}></span>
+        <div className="buttons text-white">
+          <span className="prev bg-black" onClick={handlePrev}>
+            <ChevronLeft />
+          </span>
+          <span className="next bg-black" onClick={handleNext}>
+            <ChevronRight />
+          </span>
         </div>
       </div>
     </div>

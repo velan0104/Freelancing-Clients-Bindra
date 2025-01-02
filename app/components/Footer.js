@@ -127,7 +127,11 @@ const Footer = () => {
                   ></path>
                 </svg>
               </a>
-              <a href="#" className="text-black hover:text-gray-900">
+              <a
+                href="https://www.instagram.com/bindragroup?igsh=MTdmM3NzcWozZDFlMA=="
+                className="text-black hover:text-gray-900"
+                target="_blank"
+              >
                 <svg
                   className="w-7 h-7"
                   aria-hidden="true"

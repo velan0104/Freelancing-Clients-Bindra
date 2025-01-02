@@ -27,7 +27,7 @@ const Domain = () => {
       title: "Hospitality",
       description:
         " A Visionary Developer with Over 29 Years of Expertise in Construction, Real Estate, and Hospitality, Crafting Transformative Spaces Across Mumbai's Landscape.",
-      img: "/images/Hospitality.jpg",
+      img: "/images/Hotels/Hospitality.jpg",
       cta: "/Hospitality",
     },
   ];

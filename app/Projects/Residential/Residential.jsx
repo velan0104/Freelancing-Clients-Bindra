@@ -13,27 +13,49 @@ const ResidentialPage = () => {
   const ImageSlider = [
     {
       img: "/images/Bindra_One/bindra_one_5.jpeg",
-      title: "Slide 01",
-      description:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, sed. Alias, sint?",
+      title: "Bindra One",
+      description: "Currently C and D Wing work is going on",
     },
     {
       img: "/images/Bindra_One/bindra_one_4.jpg",
-      title: "Slide 03",
-      description:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, sed. Alias, sint?",
+      title: "Bindra One",
+      description: () => (
+        <a href="/brochure/WING_C.pdf" target="_blank" download>
+          <button
+            style={{
+              background: "#daa520",
+              padding: "15px 10px ",
+              borderRadius: "5px",
+            }}
+          >
+            {" "}
+            WING C Floor Plan →{" "}
+          </button>
+        </a>
+      ),
     },
     {
       img: "/images/Bindra_One/bindra_one_1.jpg",
-      title: "Slide 04",
-      description:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, sed. Alias, sint?",
+      title: "Bindra One",
+      description: () => (
+        <a href="/brochure/WING_D.pdf" download>
+          <button
+            style={{
+              background: "#daa520",
+              padding: "15px 10px ",
+              borderRadius: "5px",
+            }}
+          >
+            {" "}
+            WING D Floor Plan →{" "}
+          </button>
+        </a>
+      ),
     },
     {
       img: "/images/Bindra_One/bindra_one_3.jpg",
-      title: "Slide 05",
-      description:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, sed. Alias, sint?",
+      title: "Bindra One",
+      description: "Soon E-Wing work will also start",
     },
   ];
 
@@ -82,70 +104,127 @@ const ResidentialPage = () => {
 
 const PastCard = [
   {
-    description: "Lana Del Rey",
-    title: "Summertime Sadness",
-    src: "https://images.unsplash.com/photo-1560185009-dddeb820c7b7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D",
+    description: "Navratan Apts.",
+    title: "Navratan Apts.",
+    src: "/images/Navratan.JPG",
     ctaText: "Visit",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
       return (
         <p>
-          Lana Del Rey, an iconic American singer-songwriter, is celebrated for
-          her melancholic and cinematic music style. Born Elizabeth Woolridge
-          Grant in New York City, she has captivated audiences worldwide with
-          her haunting voice and introspective lyrics. <br /> <br />
-        </p>
-      );
-    },
-  },
-  {
-    description: "Babbu Maan",
-    title: "Mitran Di Chhatri",
-    src: "https://images.unsplash.com/photo-1560185009-dddeb820c7b7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D",
-    ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
-    content: () => {
-      return (
-        <p>
-          Babu Maan, a legendary Punjabi singer, is renowned for his soulful
-          voice and profound lyrics that resonate deeply with his audience. Born
-          in the village of Khant Maanpur in Punjab, India, he has become a
-          cultural icon in the Punjabi music industry. <br /> <br />
+          Navratan offers spacious 2 BHK flats with modern interiors. Residents
+          can enjoy a landscaped garden, a community hall for events, and ample
+          parking space. The building's strategic location provides easy access
+          to nearby schools, hospitals, and shopping centers. <br /> <br />
         </p>
       );
     },
   },
 
   {
-    description: "Metallica",
-    title: "For Whom The Bell Tolls",
-    src: "https://images.unsplash.com/photo-1560185009-dddeb820c7b7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D",
+    description: "Tulip Apts",
+    title: "Tulip Apts",
+    src: "/images/Tulip.jpg",
     ctaText: "Visit",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
       return (
         <p>
-          Metallica, an iconic American heavy metal band, is renowned for their
-          powerful sound and intense performances that resonate deeply with
-          their audience. Formed in Los Angeles, California, they have become a
-          cultural icon in the heavy metal music industry. <br /> <br />
+          Featuring contemporary architecture, Tulip Building provides
+          well-designed 1 and 2 BHK apartments. Amenities include a dedicated
+          turf area for sports enthusiasts, a fully equipped gymnasium, and a
+          children's play area. The building ensures security with CCTV
+          surveillance and intercom facilities. <br /> <br />
         </p>
       );
     },
   },
   {
-    description: "Lord Himesh",
-    title: "Aap Ka Suroor",
-    src: "https://images.unsplash.com/photo-1560185009-dddeb820c7b7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D",
+    description: "Orchid Apts",
+    title: "Orchid Apts",
+    src: "/images/Orchid.jpg",
     ctaText: "Visit",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
       return (
         <p>
-          Himesh Reshammiya, a renowned Indian music composer, singer, and
-          actor, is celebrated for his distinctive voice and innovative
-          compositions. Born in Mumbai, India, he has become a prominent figure
-          in the Bollywood music industry. <br /> <br />
+          Orchid offers premium 2 BHK apartments with high-quality fittings and
+          finishes. Residents have access to a state-of-the-art fitness center,
+          a multipurpose court, and a serene meditation area. The building
+          ensures a safe environment with 24/7 security personnel and fire
+          safety systems. <br /> <br />
+        </p>
+      );
+    },
+  },
+  {
+    description: "Lotus Apts",
+    title: "Lotus Apts",
+    src: "/images/Lotus_2.jpg",
+    ctaText: "Visit",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        <p>
+          This 13-storey tower offers compact 1 and 2 BHK apartments, designed
+          to maximize space and comfort. Residents have access to a turf area,
+          ideal for sports and recreational activities. The building is equipped
+          with modern amenities, including high-speed elevators, 24/7 water
+          supply, and power backup, ensuring a convenient lifestyle. <br />{" "}
+          <br />
+        </p>
+      );
+    },
+  },
+  {
+    description: "Rose Apts",
+    title: "Rose Apts",
+    src: "/images/Rose.JPG",
+    ctaText: "Visit",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        <p>
+          Rose Building comprises well-appointed 1 and 2 BHK apartments.
+          Amenities include a library, an indoor games room, and a dedicated
+          children's play zone. The building's proximity to public transport
+          facilities makes commuting convenient for residents. <br /> <br />
+        </p>
+      );
+    },
+  },
+  {
+    description: "Daffodils Apts",
+    title: "Daffodils Apts",
+    src: "/images/Daffodil.jpg",
+    ctaText: "Visit",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        <p>
+          Daffodils features 1 and 2 BHK apartments designed for optimal
+          ventilation and natural light. Amenities include a swimming pool, a
+          jogging track, and a clubhouse for social gatherings. The building is
+          equipped with rainwater harvesting systems, promoting sustainable
+          living. <br /> <br />
+        </p>
+      );
+    },
+  },
+  {
+    description: "Marigold Apts",
+    title: "Marigold Apts",
+    src: "/images/Marigold.jpg",
+    ctaText: "Visit",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        <p>
+          Marigold offers thoughtfully designed 1 BHK apartments, perfect for
+          small families. Residents can enjoy a community hall, landscaped open
+          spaces, and a well-maintained lobby area. The building incorporates
+          energy-efficient lighting and waste management systems, contributing
+          to an eco-friendly lifestyle <br /> <br />
         </p>
       );
     },

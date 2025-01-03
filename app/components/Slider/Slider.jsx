@@ -48,10 +48,18 @@ const Slider = ({ ImageSlider }) => {
                 "--img": `url(${item.img})`,
               }}
             >
-              <div className="content">
-                <h2> {item.title} </h2>
-                <p>{item.description}</p>
-              </div>
+              {item.title && (
+                <div className="content">
+                  <h2> {item?.title} </h2>
+                  {item.description && (
+                    <p>
+                      {typeof item.description === "function"
+                        ? item.description()
+                        : item.description}
+                    </p>
+                  )}
+                </div>
+              )}
             </div>
           ))}
         </div>

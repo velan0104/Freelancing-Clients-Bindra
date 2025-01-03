@@ -59,8 +59,6 @@ const Domain = () => {
           leftContainerRef.current.forEach((div, index) => {
             div.style.backgroundColor =
               index == progress ? "#fcecc2" : "transparent";
-            // div.querySelector("button").style.visibility =
-            //   index == progress ? "visible" : "hidden";
           });
         },
       })
@@ -72,7 +70,6 @@ const Domain = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       domainRef.current.forEach((hotel) => {
-        // const img = hotel.querySelector(".img");
         const mask = hotel.querySelector(".mask");
         const content = hotel.querySelector(".content");
         const p = content.querySelectorAll("p");
@@ -163,7 +160,7 @@ const Domain = () => {
                 <img
                   key={idx}
                   ref={(el) => (imagesRef.current[idx] = el)}
-                  className="w-[90%] h-full absolute top-0 left-1/2 transform -translate-x-1/2 opacity-0 rounded-xl shadow-lg shadow-[#7442ed]"
+                  className="w-[90%] h-[95%] absolute top-0 left-1/2 transform -translate-x-1/2 opacity-0 rounded-xl shadow-lg shadow-gold-1"
                   src={domain.img}
                   alt=""
                 />

@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "../hooks/useOutsideClick";
 import "../style.css";
 
-export function ExpandableCardDemo({cards}) {
+export function ExpandableCardDemo({ cards }) {
   const [active, setActive] = useState(null);
   const id = useId();
   const ref = useRef(null);
@@ -59,7 +59,7 @@ export function ExpandableCardDemo({cards}) {
                   duration: 0.05,
                 },
               }}
-              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6"
+              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-neutral-800 rounded-full h-6 w-6"
               onClick={() => setActive(null)}
             >
               <CloseIcon />
@@ -67,7 +67,7 @@ export function ExpandableCardDemo({cards}) {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+              className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-gray-900 sm:rounded-3xl overflow-hidden"
             >
               <motion.div
                 layoutId={`image-${active.title}-${id}`}
@@ -130,13 +130,13 @@ export function ExpandableCardDemo({cards}) {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className=" mx-auto w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start gap-4">
+      <ul className=" mx-auto w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start gap-6 mb-8">
         {cards.map((card, index) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
             key={card.title}
             onClick={() => setActive(card)}
-            className="p-4 flex flex-col  hover:bg-gray-200 rounded-xl cursor-pointer"
+            className="p-4 flex flex-col bg-gray-100 hover:bg-gray-200 rounded-xl cursor-pointer "
           >
             <div className="flex gap-4 flex-col  w-full">
               <motion.div layoutId={`image-${card.title}-${id}`}>
@@ -145,7 +145,7 @@ export function ExpandableCardDemo({cards}) {
                   height={300}
                   src={card.src}
                   alt={card.title}
-                  className="h-[300px] w-fit  rounded-lg object-cover object-top"
+                  className="h-[300px] w-full  rounded-lg object-cover aspect-video object-center"
                 />
               </motion.div>
               <div className="flex justify-center items-center flex-col">
@@ -202,5 +202,3 @@ export const CloseIcon = () => {
     </motion.svg>
   );
 };
-
-

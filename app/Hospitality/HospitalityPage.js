@@ -105,7 +105,7 @@ const HospitalityPage = () => {
     <div>
       <section className="h-[100vh] w-[100vw] object-scale-down relative">
         <Image
-          src={"/images/hotels/Aralia_Hero.jpg"}
+          src={"/images/Hotels/Aralia_Hero.jpg"}
           alt="HospitailyHeader"
           height={800}
           width={800}

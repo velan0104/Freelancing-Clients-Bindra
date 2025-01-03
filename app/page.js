@@ -160,7 +160,7 @@ const page = () => {
           <div className=" w-[350px] relative box mx-auto cols-span-1 md:col-span-2 lg:col-span-1">
             <video src="./videos/Daffodil.mov" autoPlay muted />
             <Image
-              src="https://images.unsplash.com/photo-1695222322544-8d389d2dc43d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA1fHxyZWFsJTIwZXN0YXRlfGVufDB8fDB8fHww"
+              src="/images/Daffodil.jpg"
               alt=""
               width={400}
               height={500}
@@ -219,30 +219,30 @@ const page = () => {
       </section>
       <div className="flex justify-center w-full">
         <div className="flex flex-col md:flex-row items-center gap-5">
-          <div className="flex flex-col items-center md:items-end border-4 border-gold-1 rounded-lg px-20 md:py-10">
-            <div className="flex justify-center items-center">
+          <div className="flex flex-col items-center md:items-end border-r-4 border-gold-1 px-20 md:py-10">
+            <div className="flex justify-center items-center font-bold">
               <CountUp
                 from={0}
                 to={100}
                 separator=","
                 direction="up"
                 duration={1}
-                className="count-up-text text-5xl py-2 p-1"
+                className="count-up-text text-5xl py-2 p-1 font-bold"
               />
               <span className="text-5xl font-bold py-2"> + </span>
             </div>
             <p className="text-3xl p-2 font-semibold"> Projects </p>
           </div>
           <div className=" w-[50%] h-1 bg-gold-1 mx-auto md:hidden" />
-          <div className="p-5 flex flex-col justify-center items-center border-4 border-gold-1 rounded-lg">
-            <div className="flex text-center ">
+          <div className="p-5 flex flex-col justify-center items-center">
+            <div className="flex text-center font-bold">
               <CountUp
                 from={0}
                 to={50}
                 separator=","
                 direction="up"
                 duration={1}
-                className="count-up-text text-3xl md:text-5xl py-2 p-1"
+                className="count-up-text text-3xl md:text-5xl py-2 p-1 font-bold"
               />
               <span className="text-3xl md:text-5xl font-bold py-2">
                 {" "}

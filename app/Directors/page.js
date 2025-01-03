@@ -21,14 +21,14 @@ const page = () => {
               width={300}
               height={400}
               alt="Name"
-              className="rounded-md max-h-[400px] aspect-auto mx-auto"
+              className="rounded-md w-[400px] max-h-[400px] aspect-auto mx-auto"
             />
             <div className="text-center font-bold text-xl">
               <h1> {name} </h1>
             </div>
-            <p className="text-justify text-lg">
+            <div className="text-justify text-lg">
               {typeof content === "function" ? content() : content}
-            </p>
+            </div>
           </div>
         </div>
       ))}

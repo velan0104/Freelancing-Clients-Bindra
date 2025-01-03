@@ -81,7 +81,7 @@ const BentroGrid = () => {
         </div>
         <div className="imgGrid rounded-md row-span-2 bg-blue-300">
           <Image
-            src={"/images/Pentunia.jpg"}
+            src={"/images/Pentunia.JPG"}
             height={400}
             width={300}
             alt="img1"
@@ -99,7 +99,7 @@ const BentroGrid = () => {
         </div>
         <div className="imgGrid rounded-md  bg-blue-300">
           <Image
-            src={"/images/Commercial/Commercial_1.jpg"}
+            src={"/images/Commercial/Commercial_1.JPG"}
             height={400}
             width={300}
             alt="img1"
@@ -109,7 +109,7 @@ const BentroGrid = () => {
         <div className="imgGrid rounded-md col-span-2 ">
           <div className="flex justify-between items-center bg-gold-1/50 text-6xl font-bold ">
             <Image
-              src={"/images/Bindra_One/bindra_one_4.jpg"}
+              src={"/images/Bindra_One/bindra_one_4.JPG"}
               height={400}
               width={300}
               alt="img1"

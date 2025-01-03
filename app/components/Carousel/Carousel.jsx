@@ -7,10 +7,10 @@ const Carousel = () => {
   const [items, setItems] = useState([
     "/images/Bindra_One/Bindra_One.png",
     "/images/Bindra_One/bindra_one_2.jpg",
-    "/images/Bindra_One/bindra_one_4.jpg",
+    "/images/Bindra_One/bindra_one_4.JPG",
     "/images/Bindra_One/bindra_one_1.jpg",
     "/images/Bindra_One/bindra_one_3.jpg",
-    "/images/Bindra_One/bindra_one_2.jpg",
+    "/images/Bindra_One/bindra_one_5.jpeg",
   ]);
 
   const handleNext = () => {

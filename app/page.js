@@ -144,7 +144,7 @@ const page = () => {
             </span>
           </div>
           <div className="w-[350px] relative box mx-auto">
-            <video src="/videos/Lotus.MOV" autoPlay loop muted />
+            <video src="/videos/Lotus.mp4" autoPlay loop muted />
             <Image
               src="/images/Lotus.jpg"
               alt=""
@@ -158,7 +158,7 @@ const page = () => {
             </span>
           </div>
           <div className=" w-[350px] relative box mx-auto cols-span-1 md:col-span-2 lg:col-span-1">
-            <video src="/videos/Daffodil.mov" autoPlay muted />
+            <video src="/videos/Daffodil.mp4" autoPlay muted />
             <Image
               src="/images/Daffodil.jpg"
               alt=""

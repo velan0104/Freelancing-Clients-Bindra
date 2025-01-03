@@ -124,7 +124,7 @@ const page = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-y-5">
           <Image
             className="w-[80%] md:w-[70%] h-auto mx-auto rounded-lg"
-            src="/images/Rose.jpg"
+            src="/images/Rose.JPG"
             width={300}
             height={300}
             alt="hero10"

@@ -59,7 +59,7 @@ export function ExpandableCardDemo({ cards }) {
                   duration: 0.05,
                 },
               }}
-              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-neutral-800 rounded-full h-6 w-6"
+              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-gray-100 rounded-full h-6 w-6"
               onClick={() => setActive(null)}
             >
               <CloseIcon />

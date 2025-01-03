@@ -130,7 +130,7 @@ const page = () => {
         </div>
         <div className="w-full lg:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 content-center items-center gap-x-10 page3-content gap-5">
           <div className=" box w-[350px] relative mx-auto">
-            <video src="./videos/project2.mp4" autoPlay loop muted />
+            <video src="/videos/project2.mp4" autoPlay loop muted />
             <Image
               src="/images/Bindra_One/bindra_one.jpg"
               alt=""
@@ -144,7 +144,7 @@ const page = () => {
             </span>
           </div>
           <div className="w-[350px] relative box mx-auto">
-            <video src="./videos/Lotus.MOV" autoPlay loop muted />
+            <video src="/videos/Lotus.MOV" autoPlay loop muted />
             <Image
               src="/images/Lotus.jpg"
               alt=""
@@ -158,7 +158,7 @@ const page = () => {
             </span>
           </div>
           <div className=" w-[350px] relative box mx-auto cols-span-1 md:col-span-2 lg:col-span-1">
-            <video src="./videos/Daffodil.mov" autoPlay muted />
+            <video src="/videos/Daffodil.mov" autoPlay muted />
             <Image
               src="/images/Daffodil.jpg"
               alt=""
@@ -219,7 +219,7 @@ const page = () => {
       </section>
       <div className="flex justify-center w-full">
         <div className="flex flex-col md:flex-row items-center gap-5">
-          <div className="flex flex-col items-center md:items-end border-r-4 border-gold-1 px-20 md:py-10">
+          <div className="flex flex-col items-center md:items-end md:border-r-4 border-gold-1 px-20 md:py-10">
             <div className="flex justify-center items-center font-bold">
               <CountUp
                 from={0}

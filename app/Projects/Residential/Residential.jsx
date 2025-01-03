@@ -17,7 +17,7 @@ const ResidentialPage = () => {
       description: "Currently C and D Wing work is going on",
     },
     {
-      img: "/images/Bindra_One/bindra_one_4.jpg",
+      img: "/images/Bindra_One/bindra_one_4.JPG",
       title: "Bindra One",
       description: () => (
         <a href="/brochure/WING_C.pdf" target="_blank" download>
@@ -108,7 +108,7 @@ const PastCard = [
     title: "Navratan Apts.",
     src: "/images/Navratan.JPG",
     ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "https://maps.app.goo.gl/zn7rAVvS548eakyN6",
     content: () => {
       return (
         <p>
@@ -126,7 +126,7 @@ const PastCard = [
     title: "Tulip Apts",
     src: "/images/Tulip.jpg",
     ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "https://maps.app.goo.gl/GookqjTReRfExYeh9",
     content: () => {
       return (
         <p>
@@ -144,7 +144,7 @@ const PastCard = [
     title: "Orchid Apts",
     src: "/images/Orchid.jpg",
     ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "https://maps.app.goo.gl/LMwXRJSs1kfmyz4o7",
     content: () => {
       return (
         <p>
@@ -162,7 +162,7 @@ const PastCard = [
     title: "Lotus Apts",
     src: "/images/Lotus_2.jpg",
     ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "https://maps.app.goo.gl/qKavGeV5eFbkGVYm7",
     content: () => {
       return (
         <p>
@@ -198,7 +198,7 @@ const PastCard = [
     title: "Daffodils Apts",
     src: "/images/Daffodil.jpg",
     ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "https://maps.app.goo.gl/vs5BHZ9WiCofnhDJ7",
     content: () => {
       return (
         <p>

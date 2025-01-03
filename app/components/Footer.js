@@ -25,12 +25,12 @@ const Footer = () => {
                   <h2 className="font-semibold text-xl"> Email: </h2>
                   <a href="mailto:thevarvelan@gmail.com" className="text-lg">
                     {" "}
-                    thevarvelan@gmail.com{" "}
+                    bindras@bindras.com
                   </a>
                 </div>
                 <div className="mx-auto text-center">
                   <h2 className="font-semibold text-xl"> Telephone No: </h2>
-                  <p className="text-lg"> +91 7831039132 </p>
+                  <p className="text-lg">022-28360241</p>
                 </div>
               </div>
             </div>
@@ -184,7 +184,7 @@ const Footer = () => {
               </a>
             </div>
             <p className="text-center">
-              © 2021 SomeCompany, Inc. All rights reserved.
+              © 1980 Bindra, Inc. All rights reserved.
             </p>
           </div>
         </div>

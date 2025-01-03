@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Button from "../components/Button";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -12,7 +12,7 @@ const hotels = [
     description:
       "Altruist Andheri offers well-appointed rooms and exceptional hospitality in the heart of Andheri, making it a preferred choice for travelers seeking comfort and accessibility.",
     buttonText: "Visit →",
-    siteLink: "",
+    siteLink: "https://maps.app.goo.gl/bNCUuP9maCwAeBiV8",
     img: "/images/Hotels/Altruist.jpg",
   },
   {
@@ -36,7 +36,7 @@ const hotels = [
     description:
       "Bindra Elite is a boutique hotel known for its elegant design and personalized services, providing guests with a luxurious stay experience in a prime location.",
     buttonText: "Visit →",
-    siteLink: "",
+    siteLink: "https://maps.app.goo.gl/bNCUuP9maCwAeBiV8",
     img: "/images/Hotels/Bindra_Elite.jpg",
   },
 ];
@@ -45,8 +45,15 @@ const HospitalityPage = () => {
   gsap.registerPlugin(ScrollTrigger);
   const headingRef = useRef(null);
   const hotelRef = useRef([]);
+  const [isInitialized, setIsInitialized] = useState(false);
+
   useEffect(() => {
-    if (!hotelRef.current || hotelRef.current.length === 0) return;
+    if (hotelRef.current.length === hotels.length) {
+      setIsInitialized(true);
+    }
+  }, [hotelRef.current]);
+  useEffect(() => {
+    if (!isInitialized) return;
 
     const ctx = gsap.context(() => {
       gsap.set(".title > h1", { yPercent: 100 });
@@ -54,7 +61,6 @@ const HospitalityPage = () => {
       gsap.to(".title > h1", { yPercent: 0, stagger: 0.2, duration: 1.5 });
 
       hotelRef.current.forEach((hotel) => {
-        // const img = hotel.querySelector(".img");
         const mask = hotel.querySelector(".mask");
         const content = hotel.querySelector(".content");
         const p = content.querySelectorAll("p");
@@ -98,8 +104,9 @@ const HospitalityPage = () => {
 
     return () => {
       ctx.revert();
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
-  }, [hotelRef.current]);
+  }, [isInitialized]);
 
   return (
     <div>

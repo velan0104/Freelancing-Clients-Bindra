@@ -103,8 +103,8 @@ const HospitalityPage = () => {
     });
 
     return () => {
-      ctx.revert();
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      ctx.revert();
     };
   }, [isInitialized]);
 

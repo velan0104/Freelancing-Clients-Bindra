@@ -262,15 +262,18 @@ const page = () => {
         <div className="flex flex-wrap justify-center items-center gap-7 lg:gap-10">
           <Image
             src="/images/bindra_logo.jpg"
-            className="h-[200px] w-[250px]"
+            className="h-[200px] w-[250px] rounded-md"
             width={300}
             height={200}
             alt="hero8"
           />
-          <div className="text-3xl font-bold text-gold-1 text-center">
-            <h1 className="p-[2px]"> Dream </h1>
-            <h1 className="p-[2px]"> Developers </h1>
-          </div>
+          <Image
+            src="/images/Dream_developers.png"
+            className="h-[200px] w-[250px] rounded-md"
+            width={300}
+            height={200}
+            alt="hero8"
+          />
         </div>
       </section>
     </div>

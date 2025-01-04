@@ -245,8 +245,7 @@ const page = () => {
                 className="count-up-text text-3xl md:text-5xl py-2 p-1 font-bold"
               />
               <span className="text-3xl md:text-5xl font-bold py-2">
-                {" "}
-                + Million Sq.Ft.{" "}
+                + Million Sq.Ft.
               </span>
             </div>
             <p className="text-2xl md:text-3xl text-center md:text-left p-2 font-semibold max-w-[500px]">
@@ -258,8 +257,7 @@ const page = () => {
       </div>
       <section className="py-10 space-y-10">
         <h1 className="text-center text-5xl text-gold-1 font-bold p-5">
-          {" "}
-          Our Brands{" "}
+          Our Brands
         </h1>
         <div className="flex flex-wrap justify-center items-center gap-7 lg:gap-10">
           <Image

@@ -99,6 +99,7 @@
 }
 
 .content {
+  margin: "0px auto";
   position: relative;
   padding: 40px;
   max-width: 600px;
@@ -107,6 +108,7 @@
   transform: translateY(40px);
   z-index: 1000;
   opacity: 0;
+  bottom: 10%;
 }
 
 .content h2 {
@@ -133,10 +135,11 @@
   }
 
   .sliders .slides {
+    position: absolute;
     width: 100px;
     height: 100px;
-    bottom: 45px;
     top: initial;
+    bottom: 30%;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
   }
 
@@ -180,5 +183,13 @@
   .buttons span:nth-child(2) {
     right: 0%;
     transform: translateX(200%);
+  }
+
+  .content h2 {
+    text-align: center;
+  }
+
+  .content p {
+    text-align: center;
   }
 }

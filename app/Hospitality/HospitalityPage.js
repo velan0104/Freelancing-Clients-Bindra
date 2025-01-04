@@ -48,13 +48,6 @@ const HospitalityPage = () => {
   const [isInitialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
-    if (hotelRef.current.length === hotels.length) {
-      setIsInitialized(true);
-    }
-  }, [hotelRef.current]);
-  useEffect(() => {
-    if (!isInitialized) return;
-
     const ctx = gsap.context(() => {
       gsap.set(".title > h1", { yPercent: 100 });
 
@@ -106,7 +99,7 @@ const HospitalityPage = () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
       ctx.revert();
     };
-  }, [isInitialized]);
+  }, []);
 
   return (
     <div>

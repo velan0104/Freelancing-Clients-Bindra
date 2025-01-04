@@ -43,7 +43,7 @@ export function ExpandableCardDemo({ cards }) {
       </AnimatePresence>
       <AnimatePresence>
         {active && typeof active === "object" ? (
-          <div className="fixed inset-0  grid place-items-center z-[100]">
+          <div className="fixed inset-0  grid place-items-center z-[100] overflow-y-hidden ">
             <motion.button
               key={`button-${active.title}-${id}`}
               layout
@@ -59,7 +59,7 @@ export function ExpandableCardDemo({ cards }) {
                   duration: 0.05,
                 },
               }}
-              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-gray-100 rounded-full h-6 w-6"
+              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-gray-100 rounded-full h-6 w-6 mt-16"
               onClick={() => setActive(null)}
             >
               <CloseIcon />
@@ -67,7 +67,7 @@ export function ExpandableCardDemo({ cards }) {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-gray-900 sm:rounded-3xl overflow-hidden"
+              className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-gray-900 sm:rounded-3xl overflow-y-hidden"
             >
               <motion.div
                 layoutId={`image-${active.title}-${id}`}

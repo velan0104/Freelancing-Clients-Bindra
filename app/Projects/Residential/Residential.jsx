@@ -179,7 +179,7 @@ const PastCard = [
   {
     description: "Rose Apts",
     title: "Rose Apts",
-    src: "/images/Rose.JPG",
+    src: "/images/Rose.jpg",
     ctaText: "Visit",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {

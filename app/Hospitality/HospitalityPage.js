@@ -45,7 +45,6 @@ const HospitalityPage = () => {
   gsap.registerPlugin(ScrollTrigger);
   const headingRef = useRef(null);
   const hotelRef = useRef([]);
-  const [isInitialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
     const ctx = gsap.context(() => {

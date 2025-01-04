@@ -21,7 +21,7 @@ const page = () => {
               width={300}
               height={400}
               alt="Name"
-              className="rounded-md w-[400px] max-h-[400px] aspect-auto mx-auto"
+              className="rounded-md w-[400px] max-h-[400px] aspect-auto mx-4 md:mx-auto "
             />
             <div className="text-center font-bold text-xl">
               <h1> {name} </h1>

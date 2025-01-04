@@ -98,7 +98,7 @@ const HospitalityPage = () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
       ctx.revert();
     };
-  }, [hotelRef.current[0]?.content]);
+  }, []);
 
   return (
     <div>

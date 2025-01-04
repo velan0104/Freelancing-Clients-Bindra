@@ -49,7 +49,7 @@ const Slider = ({ ImageSlider }) => {
               }}
             >
               {item.title && (
-                <div className="content z-[99999]">
+                <div className="content">
                   <h2> {item?.title} </h2>
                   {item.description && (
                     <div>

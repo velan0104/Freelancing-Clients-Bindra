@@ -118,6 +118,7 @@
 
 .content > div {
   color: #fff;
+  font-weight: bold;
 }
 
 .sliders .slides:nth-child(1) .content,
@@ -152,22 +153,26 @@
   .sliders .slides:nth-child(3) {
     bottom: 0px;
     left: 0;
+    height: 100px;
   }
 
   .sliders .slides:nth-child(4) {
     bottom: 0px;
     left: 120px;
+    height: 100px;
   }
 
   .sliders .slides:nth-child(5) {
     bottom: 0px;
     left: 240px;
+    height: 100px;
   }
 
   .sliders .slides:nth-child(6) {
     bottom: 0px;
     left: 360px;
     opacity: 0;
+    height: 100px;
   }
 
   .buttons {
@@ -189,7 +194,7 @@
     text-align: center;
   }
 
-  .content p {
+  .content > div {
     text-align: center;
   }
 }

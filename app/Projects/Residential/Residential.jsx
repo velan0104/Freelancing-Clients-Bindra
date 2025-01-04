@@ -14,7 +14,11 @@ const ResidentialPage = () => {
     {
       img: "/images/Bindra_One/bindra_one_5.jpeg",
       title: "Bindra One",
-      description: "Currently C and D Wing work is going on",
+      description: () => (
+        <div style={{ fontWeight: "bold" }}>
+          <strong>Currently C and D Wing work is going on</strong>
+        </div>
+      ),
     },
     {
       img: "/images/Bindra_One/bindra_one_4.JPG",
@@ -25,6 +29,7 @@ const ResidentialPage = () => {
             background: "#daa520",
             padding: "15px 10px ",
             borderRadius: "5px",
+            zIndex: "10000",
           }}
         >
           <a href="/brochure/WING_C.pdf" download>
@@ -53,7 +58,11 @@ const ResidentialPage = () => {
     {
       img: "/images/Bindra_One/bindra_one_3.jpg",
       title: "Bindra One",
-      description: "Soon E-Wing work will also start",
+      description: () => (
+        <div>
+          <strong> Soon E-Wing work will also start</strong>
+        </div>
+      ),
     },
   ];
 
@@ -85,6 +94,31 @@ const ResidentialPage = () => {
         </h1>
         <div className="">
           <Slider ImageSlider={ImageSlider} />
+        </div>
+        <div className="md:hidden flex flex-col justify-center items-center gap-2 text-white">
+          <button
+            style={{
+              background: "#daa520",
+              padding: "15px 10px ",
+              borderRadius: "5px",
+              zIndex: "10000",
+            }}
+          >
+            <a href="/brochure/WING_C.pdf" download>
+              WING C Floor Plan →
+            </a>
+          </button>
+          <button
+            style={{
+              background: "#daa520",
+              padding: "15px 10px ",
+              borderRadius: "5px",
+            }}
+          >
+            <a href="/brochure/WING_D.pdf" download>
+              WING D Floor Plan →
+            </a>
+          </button>
         </div>
       </section>
       <section ref={pastRef} className="h-auto mx-auto w-[95%]">

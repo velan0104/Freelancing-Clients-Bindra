@@ -20,36 +20,34 @@ const ResidentialPage = () => {
       img: "/images/Bindra_One/bindra_one_4.JPG",
       title: "Bindra One",
       description: () => (
-        <a href="/brochure/WING_C.pdf" target="_blank" download>
-          <button
-            style={{
-              background: "#daa520",
-              padding: "15px 10px ",
-              borderRadius: "5px",
-            }}
-          >
-            {" "}
-            WING C Floor Plan →{" "}
-          </button>
-        </a>
+        <button
+          style={{
+            background: "#daa520",
+            padding: "15px 10px ",
+            borderRadius: "5px",
+          }}
+        >
+          <a href="/brochure/WING_C.pdf" download>
+            WING C Floor Plan →
+          </a>
+        </button>
       ),
     },
     {
       img: "/images/Bindra_One/bindra_one_1.jpg",
       title: "Bindra One",
       description: () => (
-        <a href="/brochure/WING_D.pdf" download>
-          <button
-            style={{
-              background: "#daa520",
-              padding: "15px 10px ",
-              borderRadius: "5px",
-            }}
-          >
-            {" "}
-            WING D Floor Plan →{" "}
-          </button>
-        </a>
+        <button
+          style={{
+            background: "#daa520",
+            padding: "15px 10px ",
+            borderRadius: "5px",
+          }}
+        >
+          <a href="/brochure/WING_D.pdf" download>
+            WING D Floor Plan →
+          </a>
+        </button>
       ),
     },
     {

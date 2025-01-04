@@ -108,7 +108,7 @@
   transform: translateY(40px);
   z-index: 1000;
   opacity: 0;
-  bottom: 10%;
+  bottom: 15%;
 }
 
 .content h2 {
@@ -116,7 +116,7 @@
   color: #fff;
 }
 
-.content p {
+.content > div {
   color: #fff;
 }
 

@@ -49,14 +49,14 @@ const Slider = ({ ImageSlider }) => {
               }}
             >
               {item.title && (
-                <div className="content">
+                <div className="content z-[99999]">
                   <h2> {item?.title} </h2>
                   {item.description && (
-                    <p>
+                    <div>
                       {typeof item.description === "function"
                         ? item.description()
                         : item.description}
-                    </p>
+                    </div>
                   )}
                 </div>
               )}

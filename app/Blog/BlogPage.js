@@ -10,7 +10,7 @@ const BlogPage = () => {
 
   return (
     <div className="mt-16 h-auto bg-gray-100">
-      <h1 className="text-center font-semibold text-[4vw] text-gold-1">
+      <h1 className="text-center font-semibold text-[7vw] pt-5 md:text-[4vw] text-gold-1">
         {" "}
         Bindra Lifestyle{" "}
       </h1>

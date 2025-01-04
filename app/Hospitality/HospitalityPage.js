@@ -41,10 +41,17 @@ const hotels = [
   },
 ];
 
+gsap.registerPlugin(ScrollTrigger);
 const HospitalityPage = () => {
-  gsap.registerPlugin(ScrollTrigger);
   const headingRef = useRef(null);
   const hotelRef = useRef([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    if (hotelRef.current[0]?.content) {
+      setIsLoading(true);
+    }
+  }, [isLoading, hotelRef.current]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -55,7 +62,7 @@ const HospitalityPage = () => {
       hotelRef.current.forEach((hotel) => {
         const mask = hotel.querySelector(".mask");
         const content = hotel.querySelector(".content");
-        const p = content.querySelectorAll("p");
+        const p = content.querySelectorAll(".content > div");
 
         gsap.from(p, {
           y: 50,
@@ -143,22 +150,20 @@ const HospitalityPage = () => {
             className="grid grid-cols-1 md:grid-cols-2 py-10 mx-auto content-center items-center gap-y-5"
           >
             <div
-              className={`${index % 2 == 0 ? "order-2 md:order-1" : "order-2"}`}
+              className={`content w-[70%] mx-auto space-y-5 overflow-hidden text-center md:text-left ${
+                index % 2 == 0 ? "order-2 md:order-1" : "order-2"
+              }
+                `}
             >
-              <div
-                className={`content w-[70%] mx-auto space-y-5 overflow-hidden text-center md:text-left 
-                }`}
-              >
-                <p className="text-gold-1 font-bold text-3xl p-1">
-                  {" "}
-                  {hotel.name}{" "}
-                </p>
-                <p>{hotel.description}</p>
-                <p>
-                  <Link href={hotel.siteLink} target="_blank">
-                    <Button text={hotel.buttonText} />
-                  </Link>
-                </p>
+              <div className="text-gold-1 font-bold text-3xl p-1">
+                {" "}
+                {hotel.name}{" "}
+              </div>
+              <div>{hotel.description}</div>
+              <div>
+                <Link href={hotel.siteLink} target="_blank">
+                  <Button text={hotel.buttonText} />
+                </Link>
               </div>
             </div>
 

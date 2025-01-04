@@ -10,7 +10,7 @@ const page = () => {
       <h1 className=" py-4 text-4xl font-bold border-b-4 border-gold-1 text-gold-1 text-center w-[90%] mx-[5%] uppercase">
         Directors
       </h1>
-      {Directors.map(({ img, name, content }, index) => (
+      {Directors.map(({ img, name = "", content }, index) => (
         <div
           key={index}
           className="flex items-center justify-center mx-auto py-5 max-w-[800px] px-8"
@@ -106,7 +106,7 @@ const Directors = [
       "Mr. King Bindra, also a director at Bindra Group, complements his brother’s leadership with a keen eye for strategy and growth. He plays a pivotal role in identifying new opportunities and driving the company's vision for future developments. King's emphasis on maintaining strong relationships with stakeholders and enhancing operational efficiency ensures the group's consistent success.",
   },
   {
-    name: "Board of Directors",
+    name: "",
     img: "/images/Directors/Director_4.jpg",
     content:
       "Together, Amardeep and King Bindra bring youthful energy and strategic foresight to the Bindra Group, propelling their father’s vision of creating sustainable, community-focused developments into the future. Their leadership ensures that the Bindra Group continues to excel in real estate and social contributions alike.",

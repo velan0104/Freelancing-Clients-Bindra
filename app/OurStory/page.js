@@ -28,7 +28,9 @@ const page = () => {
           />
         </div>
         <div className="w-[80%] mx-auto space-y-3">
-          <h3 className="text-gold-1 font-semibold text-3xl">About Bindra</h3>
+          <h3 className="text-gold-1 font-semibold text-3xl p-1">
+            About Bindra
+          </h3>
           <h1 className="font-bold text-xl">
             {" "}
             29 Years of Excellence in Construction{" "}
@@ -116,15 +118,15 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section className="py-5 bg-gray-100">
+      <section className="py-14 bg-gray-100">
         <h1 className="text-center font-bold text-5xl pb-10">
           {" "}
           Building the Future
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-y-5">
           <Image
-            className="w-[80%] md:w-[70%] h-auto mx-auto rounded-lg"
-            src="/images/Rose.jpg"
+            className="w-[80%] md:w-[70%] h-auto mx-auto rounded-lg max-h-[350px] object-cover object-bottom"
+            src="/images/Lotus.jpg"
             width={300}
             height={300}
             alt="hero10"

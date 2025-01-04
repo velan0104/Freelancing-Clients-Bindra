@@ -3,7 +3,7 @@ import Link from "next/link";
 const Blogs = [
   // Blog 1
   {
-    img: "https://images.unsplash.com/photo-1733227337809-6b7d33bfecd3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyNXx8fGVufDB8fHx8fA%3D%3D",
+    img: "/images/Lotus.jpg",
     title:
       " Transforming Andheri (E): A 29-Year Journey of Quality Construction",
     description: () => (
@@ -200,7 +200,7 @@ const Blogs = [
   },
   //  Blog 2
   {
-    img: "https://images.unsplash.com/photo-1733227337809-6b7d33bfecd3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyNXx8fGVufDB8fHx8fA%3D%3D",
+    img: "/images/Residential.JPG",
     title:
       " A Deep Dive into Bindra Complex: A Masterpiece in Urban Development ",
     description: () => (
@@ -419,7 +419,7 @@ const Blogs = [
   },
   //   Blog 3
   {
-    img: "https://images.unsplash.com/photo-1733227337809-6b7d33bfecd3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyNXx8fGVufDB8fHx8fA%3D%3D",
+    img: "/images/Pentunia.JPG",
     title:
       " The Importance of Quality in Construction: ISO Certification Explained ",
     description: () => (
@@ -650,7 +650,7 @@ const Blogs = [
   },
   // Blog 4
   {
-    img: "https://images.unsplash.com/photo-1733227337809-6b7d33bfecd3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyNXx8fGVufDB8fHx8fA%3D%3D",
+    img: "/images/Bindra_One/bindra_one.jpg",
     title:
       " Commercial Real Estate in Andheri East: Why It’s a Thriving Investment ",
     description: () => (
@@ -880,7 +880,7 @@ const Blogs = [
   },
   //   Blog 5
   {
-    img: "https://images.unsplash.com/photo-1733227337809-6b7d33bfecd3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyNXx8fGVufDB8fHx8fA%3D%3D",
+    img: "/images/Orchid.jpg",
     title: "Sustainable Urban Living: How Bindra Complex is Shaping the Future",
     description: () => (
       <div className="">
@@ -1170,7 +1170,7 @@ const Blogs = [
   },
   //   Blog 6
   {
-    img: "https://images.unsplash.com/photo-1733227337809-6b7d33bfecd3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyNXx8fGVufDB8fHx8fA%3D%3D",
+    img: "/images/Tulip.jpg",
     title: "Top 5 Reasons to Live and Work in Andheri East",
     description: () => (
       <div className="">

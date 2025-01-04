@@ -18,7 +18,7 @@ const BlogPage = () => {
         {Blogs.map((blog, index) => (
           <article
             key={index}
-            className="overflow-hidden rounded-lg shadow transition hover:shadow-lg cursor-pointer"
+            className="overflow-hidden rounded-lg shadow transition hover:shadow-lg cursor-pointer bg-white"
             onClick={() => router.push(`${currentUrl}/${index + 1}`)}
           >
             <Image

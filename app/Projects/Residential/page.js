@@ -5,11 +5,7 @@ export const metadata = {
   title: "Residential Projects ",
 };
 const page = () => {
-  return (
-    <Suspense fallback={<div> Loading... </div>}>
-      <ResidentialPage />
-    </Suspense>
-  );
+  return <ResidentialPage />;
 };
 
 export default page;

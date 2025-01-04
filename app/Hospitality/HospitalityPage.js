@@ -32,7 +32,7 @@ const hotels = [
     img: "/images/Hotels/Aralia_MIDC.jpg",
   },
   {
-    name: "Bindra ELite",
+    name: "Bindra Elite",
     description:
       "Bindra Elite is a boutique hotel known for its elegant design and personalized services, providing guests with a luxurious stay experience in a prime location.",
     buttonText: "Visit →",
@@ -98,7 +98,7 @@ const HospitalityPage = () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
       ctx.revert();
     };
-  }, []);
+  }, [hotelRef.current[0]?.content]);
 
   return (
     <div>
@@ -115,19 +115,19 @@ const HospitalityPage = () => {
           className=" text-white py-10 top-0 flex flex-col justify-center absolute overflow-hidden leading-tight h-[100vh] w-[100vw] bg-black/30"
         >
           <div className="title px-10 py-3 overflow-hidden">
-            <h1 className="text-[12vw] md:text-[9vw] text-center md:text-left">
+            <h1 className="text-[12vw] md:text-[9vw] text-center md:text-left p-1">
               {" "}
               WORLD{" "}
             </h1>
           </div>
           <div className="title px-10 py-3 overflow-hidden">
-            <h1 className="text-[12vw] md:text-[9vw] text-center md:text-left">
+            <h1 className="text-[12vw] md:text-[9vw] text-center md:text-left p-1">
               {" "}
               CLASS{" "}
             </h1>
           </div>
           <div className="title px-10 py-3 overflow-hidden">
-            <h1 className="text-[12vw] md:text-[9vw] text-center md:text-left">
+            <h1 className="text-[12vw] md:text-[9vw] text-center md:text-left p-1">
               {" "}
               EXPERIENCE{" "}
             </h1>
@@ -143,18 +143,25 @@ const HospitalityPage = () => {
             className="grid grid-cols-1 md:grid-cols-2 py-10 mx-auto content-center items-center gap-y-5"
           >
             <div
-              className={`content w-[70%] mx-auto space-y-5 overflow-hidden text-center md:text-left ${
-                index % 2 == 0 ? "order-2 md:order-1" : "order-2 "
-              }`}
+              className={`${index % 2 == 0 ? "order-2 md:order-1" : "order-2"}`}
             >
-              <p className="text-gold-1 font-bold text-3xl"> {hotel.name} </p>
-              <p>{hotel.description}</p>
-              <p>
-                <Link href={hotel.siteLink} target="_blank">
-                  <Button text={hotel.buttonText} />
-                </Link>
-              </p>
+              <div
+                className={`content w-[70%] mx-auto space-y-5 overflow-hidden text-center md:text-left 
+                }`}
+              >
+                <p className="text-gold-1 font-bold text-3xl p-1">
+                  {" "}
+                  {hotel.name}{" "}
+                </p>
+                <p>{hotel.description}</p>
+                <p>
+                  <Link href={hotel.siteLink} target="_blank">
+                    <Button text={hotel.buttonText} />
+                  </Link>
+                </p>
+              </div>
             </div>
+
             <div
               className={`${
                 index % 2 == 0 ? "order-1 md:order-2" : "order-1"

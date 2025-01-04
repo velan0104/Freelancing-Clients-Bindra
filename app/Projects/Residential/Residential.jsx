@@ -179,9 +179,9 @@ const PastCard = [
   {
     description: "Rose Apts",
     title: "Rose Apts",
-    src: "/images/Rose.jpg",
+    src: "/images/Residential.JPG",
     ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "https://maps.app.goo.gl/F5Fz4iGWDQ3qtzpk7",
     content: () => {
       return (
         <p>
@@ -216,7 +216,7 @@ const PastCard = [
     title: "Marigold Apts",
     src: "/images/Marigold.jpg",
     ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "https://maps.app.goo.gl/F5Fz4iGWDQ3qtzpk7",
     content: () => {
       return (
         <p>

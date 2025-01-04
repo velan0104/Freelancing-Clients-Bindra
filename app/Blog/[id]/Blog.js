@@ -20,7 +20,7 @@ const Blog = () => {
           src={blogs[index].img}
           height={400}
           width={400}
-          className="mx-auto rounded-md"
+          className="mx-auto rounded-md max-h-[300px] max-w-[400px] object-cover"
           alt={`img-${index + 1}`}
         />
       </div>

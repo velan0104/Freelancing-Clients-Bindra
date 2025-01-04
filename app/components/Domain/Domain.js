@@ -137,7 +137,7 @@ const Domain = () => {
                     ref={(el) => (leftContainerRef.current[idx] = el)}
                     className="mr-6 py-5 rounded-xl flex flex-col space-y-3 px-10 w-[90%]"
                   >
-                    <h1 className="lg:font-bold lg:text-3xl md:font-semibold md:text-xl">
+                    <h1 className="lg:font-bold lg:text-3xl md:font-semibold md:text-xl  p-[2px] ">
                       {domain.title}
                     </h1>
                     <p className="font-medium lg:text-xl md:text-lg">
@@ -184,7 +184,7 @@ const Domain = () => {
                   index % 2 == 0 ? "order-2 md:order-1" : "order-2 "
                 }`}
               >
-                <p className="text-gold-1 font-bold text-3xl">
+                <p className="text-gold-1 font-bold text-3xl p-2">
                   {" "}
                   {domain.title}{" "}
                 </p>

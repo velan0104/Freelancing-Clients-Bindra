@@ -19,7 +19,10 @@ const Footer = () => {
               src="/images/bindra_logo.jpg"
             />
             <div className="flex flex-col gap-4 text-lg md:text-xl">
-              <h1 className="font-bold text-center text-3xl"> Contact Us </h1>
+              <h1 className="font-bold text-center text-3xl p-1">
+                {" "}
+                Contact Us{" "}
+              </h1>
               <div className="flex justify-between gap-10 text-base md:text-lg flex-wrap items-center">
                 <div className="mx-auto text-center">
                   <h2 className="font-semibold text-xl"> Email: </h2>
@@ -36,7 +39,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex justify-center">
-            <div className="flex gap-20 py-10 justify-evenly md:justify-normal ">
+            <div className="flex gap-20 py-10 justify-evenly md:justify-normal font-semibold">
               <div className="flex flex-col gap-3">
                 <div>
                   <Link href="/" className="underline-effect">

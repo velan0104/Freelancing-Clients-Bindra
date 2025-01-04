@@ -44,26 +44,6 @@ export function ExpandableCardDemo({ cards }) {
       <AnimatePresence>
         {active && typeof active === "object" ? (
           <div className="fixed inset-0  grid place-items-center z-[100] overflow-y-hidden ">
-            <motion.button
-              key={`button-${active.title}-${id}`}
-              layout
-              initial={{
-                opacity: 0,
-              }}
-              animate={{
-                opacity: 1,
-              }}
-              exit={{
-                opacity: 0,
-                transition: {
-                  duration: 0.05,
-                },
-              }}
-              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-gray-100 rounded-full h-6 w-6 mt-16"
-              onClick={() => setActive(null)}
-            >
-              <CloseIcon />
-            </motion.button>
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
@@ -126,6 +106,26 @@ export function ExpandableCardDemo({ cards }) {
                   </motion.div>
                 </div>
               </div>
+              <motion.button
+                key={`button-${active.title}-${id}`}
+                layout
+                initial={{
+                  opacity: 0,
+                }}
+                animate={{
+                  opacity: 1,
+                }}
+                exit={{
+                  opacity: 0,
+                  transition: {
+                    duration: 0.05,
+                  },
+                }}
+                className="flex lg:hidden items-center justify-center bg-gray-300 rounded-full p-2 mx-auto"
+                onClick={() => setActive(null)}
+              >
+                <CloseIcon />
+              </motion.button>
             </motion.div>
           </div>
         ) : null}
@@ -194,7 +194,7 @@ export const CloseIcon = () => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="h-4 w-4 text-black"
+      className="h-8 w-8 text-black"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M18 6l-12 12" />

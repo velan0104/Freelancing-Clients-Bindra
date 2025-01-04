@@ -62,17 +62,17 @@ const page = () => {
   }, []);
 
   return (
-    <div className="font-[nb] overflow-hidden">
+    <div className={` overflow-hidden`}>
       <div
         ref={loaderRef}
         className="fixed bg-white h-[100vh] w-full flex justify-center items-center flex-wrap text-gold-1 font-semibold text-xl md:text-3xl gap-2 z-[999] overflow-y-hidden "
         style={{ WebkitScrollSnapType: "none" }}
       >
         <div className="flex gap-1 flex-wrap justify-center w-[90%]">
-          <h3 className="z-10"> Building </h3>
-          <h3 className="z-10"> Tommorow's </h3>
-          <h3 className="z-10"> Landmarks </h3>
-          <h3 className="z-10"> Today </h3>
+          <h3 className="z-10 p-[2px]"> Building </h3>
+          <h3 className="z-10 p-[2px]"> Tomorrow's </h3>
+          <h3 className="z-10 p-[2px]"> Landmarks </h3>
+          <h3 className="z-10 p-[2px]"> Today </h3>
         </div>
       </div>
       <section
@@ -81,14 +81,14 @@ const page = () => {
       >
         <video
           className="w-[100%] h-[100%] object-cover"
-          src="./videos/Landing.mp4"
+          src="./videos/Hero.mp4"
           autoPlay
           loop
           muted
         />
         <div className="h-full w-full bg-black/30 absolute top-0 left-0">
           <div className="title overflow-hidden absolute top-1/2 left-10 px-2 ">
-            <h1 className="hero text-[15vw] text-gold-1 font-bold ">
+            <h1 className="hero text-[15vw] text-gold-1 font-bold font-serif">
               LIFESTYLE
             </h1>
           </div>
@@ -130,7 +130,7 @@ const page = () => {
         </div>
         <div className="w-full lg:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 content-center items-center gap-x-10 page3-content gap-5">
           <div className=" box w-[350px] relative mx-auto">
-            <video src="/videos/project2.mp4" autoPlay loop muted />
+            <video src="/videos/Bindra_One.mp4" autoPlay loop muted />
             <Image
               src="/images/Bindra_One/bindra_one.jpg"
               alt=""
@@ -268,8 +268,8 @@ const page = () => {
             alt="hero8"
           />
           <div className="text-3xl font-bold text-gold-1 text-center">
-            <h1> Dream </h1>
-            <h1> Developers </h1>
+            <h1 className="p-[2px]"> Dream </h1>
+            <h1 className="p-[2px]"> Developers </h1>
           </div>
         </div>
       </section>

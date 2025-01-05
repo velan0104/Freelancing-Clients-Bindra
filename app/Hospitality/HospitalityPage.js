@@ -101,7 +101,7 @@ const HospitalityPage = () => {
 
   return (
     <div>
-      <section className="h-[100vh] w-[100vw] object-scale-down relative">
+      <section className="h-[80vh] md:h-[100vh] w-[100vw] object-scale-down relative">
         <Image
           src={"/images/Hotels/Aralia_Hero.jpg"}
           alt="HospitailyHeader"
@@ -111,7 +111,7 @@ const HospitalityPage = () => {
         />
         <div
           ref={headingRef}
-          className=" text-white py-10 top-0 flex flex-col justify-center absolute overflow-hidden leading-tight h-[100vh] w-[100vw] bg-black/30"
+          className=" text-white py-10 top-0 flex flex-col justify-center absolute overflow-hidden leading-tight h-full w-[100vw] bg-black/30"
         >
           <div className="title px-10 py-3 overflow-hidden">
             <h1 className="text-[12vw] md:text-[9vw] text-center md:text-left p-1">

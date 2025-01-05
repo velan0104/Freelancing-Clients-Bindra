@@ -29,7 +29,6 @@ const ResidentialPage = () => {
             background: "#daa520",
             padding: "15px 10px ",
             borderRadius: "5px",
-            zIndex: "10000",
           }}
         >
           <a href="/brochure/WING_C.pdf" download>
@@ -101,7 +100,6 @@ const ResidentialPage = () => {
               background: "#daa520",
               padding: "15px 10px ",
               borderRadius: "5px",
-              zIndex: "10000",
             }}
           >
             <a href="/brochure/WING_C.pdf" download>

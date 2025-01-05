@@ -43,7 +43,7 @@ export function ExpandableCardDemo({ cards }) {
       </AnimatePresence>
       <AnimatePresence>
         {active && typeof active === "object" ? (
-          <div className="fixed inset-0  grid place-items-center z-[100] overflow-y-hidden ">
+          <div className="fixed inset-0  grid place-items-center z-[1000] overflow-y-hidden max-h-[100vh]">
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}

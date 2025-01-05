@@ -45,35 +45,27 @@ gsap.registerPlugin(ScrollTrigger);
 const HospitalityPage = () => {
   const headingRef = useRef(null);
   const hotelRef = useRef([]);
-  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    if (hotelRef.current[0]?.content) {
-      setIsLoading(true);
-    }
-  }, [isLoading, hotelRef.current]);
-
-  useEffect(() => {
-    console.log(hotelRef.current);
     const ctx = gsap.context(() => {
       gsap.set(".title > h1", { yPercent: 100 });
 
       gsap.to(".title > h1", { yPercent: 0, stagger: 0.2, duration: 1.5 });
 
-      hotelRef.current.forEach((hotel) => {
+      hotelRef?.current.forEach((hotel) => {
         const mask = hotel.querySelector(".mask");
-        const content = hotel.querySelector(".content");
-        const p = content.querySelectorAll(".content > div");
+        const p = hotel.querySelectorAll(".content > div");
 
         gsap.from(p, {
           y: 50,
           stagger: 0.2,
           opacity: 0,
-          duration: 1.5,
+          duration: 1,
           ease: "power2.in",
           scrollTrigger: {
+            markers: true,
             trigger: hotel,
-            start: "top 70%",
+            start: "top 50%",
             end: "bottom bottom",
             toggleActions: "play none none reset",
           },
@@ -144,52 +136,55 @@ const HospitalityPage = () => {
       </section>
 
       <section>
-        {hotels.map((hotel, index) => (
-          <div
-            key={`hotel-${index}`}
-            ref={(el) => (hotelRef.current[index] = el)}
-            className="grid grid-cols-1 md:grid-cols-2 py-10 mx-auto content-center items-center gap-y-5"
-          >
+        {hotels.map((hotel, index) => {
+          console.log("Reached inside hotels. ", hotel.name);
+          return (
             <div
-              className={`content w-[70%] mx-auto space-y-5 overflow-hidden text-center md:text-left ${
-                index % 2 == 0 ? "order-2 md:order-1" : "order-2"
-              }
-                `}
-            >
-              <div className="text-gold-1 font-bold text-3xl p-1">
-                {" "}
-                {hotel.name}{" "}
-              </div>
-              <div>{hotel.description}</div>
-              <div>
-                <Link href={hotel.siteLink} target="_blank">
-                  <Button text={hotel.buttonText} />
-                </Link>
-              </div>
-            </div>
-
-            <div
-              className={`${
-                index % 2 == 0 ? "order-1 md:order-2" : "order-1"
-              } overflow-hidden `}
+              key={index}
+              ref={(el) => (hotelRef.current[index] = el)}
+              className="grid grid-cols-1 md:grid-cols-2 py-10 mx-auto content-center items-center gap-y-5"
             >
               <div
-                className="mask w-[80%] h-[90%] overflow-hidden mx-auto"
-                style={{
-                  clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
-                }}
+                className={`content w-[70%] mx-auto space-y-5 overflow-hidden text-center md:text-left ${
+                  index % 2 == 0 ? "order-2 md:order-1" : "order-2"
+                }
+                `}
               >
-                <Image
-                  src={hotel.img}
-                  alt={"img" + index + 1}
-                  height={400}
-                  width={400}
-                  className="img w-full aspect-auto rounded-md mx-auto overflow-hidden"
-                />
+                <div className=" text-gold-1 font-bold text-3xl p-1">
+                  {" "}
+                  {hotel.name}{" "}
+                </div>
+                <div>{hotel.description}</div>
+                <div>
+                  <Link href={hotel.siteLink} target="_blank">
+                    <Button text={hotel.buttonText} />
+                  </Link>
+                </div>
+              </div>
+
+              <div
+                className={`${
+                  index % 2 == 0 ? "order-1 md:order-2" : "order-1"
+                } overflow-hidden `}
+              >
+                <div
+                  className="mask w-[80%] h-[90%] overflow-hidden mx-auto"
+                  style={{
+                    clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+                  }}
+                >
+                  <Image
+                    src={hotel.img}
+                    alt={"img" + index + 1}
+                    height={400}
+                    width={400}
+                    className="img w-full aspect-auto rounded-md mx-auto overflow-hidden"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </section>
     </div>
   );

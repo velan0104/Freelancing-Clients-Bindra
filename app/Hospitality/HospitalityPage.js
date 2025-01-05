@@ -54,6 +54,7 @@ const HospitalityPage = () => {
   }, [isLoading, hotelRef.current]);
 
   useEffect(() => {
+    console.log(hotelRef.current);
     const ctx = gsap.context(() => {
       gsap.set(".title > h1", { yPercent: 100 });
 

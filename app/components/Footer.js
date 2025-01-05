@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="text-lg w-[90%] mx-auto ">
           <div className="flex gap-10 flex-wrap justify-center">
             <Image
-              className="h-[150px] w-[150px] md:h-[100px] md:w-[100px] rounded-md mix-blend-dark"
+              className="h-[150px] w-[150px] hidden md:block md:h-[100px] md:w-[100px] rounded-md mix-blend-dark"
               width={150}
               height={150}
               alt="hero8"

@@ -104,7 +104,6 @@ const Domain = () => {
               start: "top 90%",
               bottom: "bottom bottom",
               scurb: 1,
-              // markers: true,
               toggleActions: "play none none reset",
             },
           }

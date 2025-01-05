@@ -25,7 +25,6 @@ const BentroGrid = () => {
             start: "top 70%",
             end: "bottom bottom",
             toggleActions: "play none none reset",
-            // scrub: true,
           },
         }
       );

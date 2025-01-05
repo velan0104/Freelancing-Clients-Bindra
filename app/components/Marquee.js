@@ -18,10 +18,6 @@ const Marquee = () => {
       })
       .totalProgress(0.5);
 
-    // gsap.set(".marquee__inner", {
-    //   xPercent: -50,
-    // });
-
     function move() {
       if (this.window.pageYOffset > currentScroll) {
         setIsScrollingDown(true);

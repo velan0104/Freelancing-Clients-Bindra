@@ -63,7 +63,6 @@ const HospitalityPage = () => {
           duration: 1,
           ease: "power2.in",
           scrollTrigger: {
-            markers: true,
             trigger: hotel,
             start: "top 50%",
             end: "bottom bottom",
@@ -137,7 +136,6 @@ const HospitalityPage = () => {
 
       <section>
         {hotels.map((hotel, index) => {
-          console.log("Reached inside hotels. ", hotel.name);
           return (
             <div
               key={index}

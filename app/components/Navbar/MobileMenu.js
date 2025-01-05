@@ -15,7 +15,6 @@ export default function MobileMenu({ Menus }) {
   const toggleDrawer = () => {
     setIsOpen(!isOpen);
     setClicked(null);
-    // setOpenSubMenu(false);
   };
 
   const subMenuDrawer = {

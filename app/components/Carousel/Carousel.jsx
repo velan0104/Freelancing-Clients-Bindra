@@ -14,7 +14,6 @@ const Carousel = () => {
   ]);
 
   const handleNext = () => {
-    // Move the first item to the end
     setItems((prevItems) => [...prevItems.slice(1), prevItems[0]]);
   };
 
@@ -53,10 +52,6 @@ const Carousel = () => {
             />
           </div>
         ))}
-        {/* <div className="buttons absolute -bottom-0">
-          <span className="prev" onClick={handlePrev}></span>
-          <span className="next" onClick={handleNext}></span>
-        </div> */}
       </div>
     </div>
   );

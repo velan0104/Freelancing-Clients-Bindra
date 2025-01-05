@@ -10,9 +10,6 @@ import Carousel from "./components/Carousel/Carousel";
 import CountUp from "./components/CountUp";
 import { useRouter } from "next/navigation";
 
-// #dbc33b
-// Gold - #ecd27d
-
 const page = () => {
   gsap.registerPlugin(ScrollTrigger);
 

@@ -99,14 +99,14 @@ const Navbar = () => {
   return (
     <div className="relative">
       <header
-        className={`  h-16 w-full text-[15px] text-gold-1 fixed z-[999] bg-white/20 ${
+        className={`  h-16 w-full text-[15px] text-gold-1 fixed z-[9999] bg-white/20 ${
           scrollDirection === "scroll-down" ? "-translate-y-full" : ""
         }
         ${scrollDirection === "scroll-up" ? " bg-white/20" : ""}`}
       >
         <div className="absolute top-0 h-16 w-full backdrop-blur z-0" />
         <nav className="h-full flex justify-between items-center w-full px-6 md:px-8 lg:px-20 z-[999]">
-          <div className="flex items-center gap-x-3 z-[999]">
+          <div className="flex items-center gap-x-3 z-[9999]">
             {/* <h3 className="text-lg font-semibold">Bindra</h3> */}
             <Image
               src="/images/bindra_logo.jpg"

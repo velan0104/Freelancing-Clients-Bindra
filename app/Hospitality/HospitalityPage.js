@@ -12,7 +12,7 @@ const hotels = [
     description:
       "Altruist Andheri offers well-appointed rooms and exceptional hospitality in the heart of Andheri, making it a preferred choice for travelers seeking comfort and accessibility.",
     buttonText: "Visit →",
-    siteLink: "https://maps.app.goo.gl/bNCUuP9maCwAeBiV8",
+    siteLink: "https://maps.app.goo.gl/B9gRcfefskV71Rrp9",
     img: "/images/Hotels/Altruist.jpg",
   },
   {
@@ -176,7 +176,7 @@ const HospitalityPage = () => {
                     alt={"img" + index + 1}
                     height={400}
                     width={400}
-                    className="img w-full aspect-auto rounded-md mx-auto overflow-hidden"
+                    className="img w-full aspect-auto rounded-md mx-auto overflow-hidden h-[400px]"
                   />
                 </div>
               </div>

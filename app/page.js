@@ -62,7 +62,7 @@ const page = () => {
     <div className={` overflow-hidden`}>
       <div
         ref={loaderRef}
-        className="fixed bg-white h-[100vh] w-full flex justify-center items-center flex-wrap text-gold-1 font-semibold text-xl md:text-3xl gap-2 z-[999] overflow-y-hidden "
+        className="fixed bg-white h-[100vh] w-full flex justify-center items-center flex-wrap text-gold-1 font-semibold text-xl md:text-3xl gap-2 z-[10000] overflow-y-hidden "
         style={{ WebkitScrollSnapType: "none" }}
       >
         <div className="flex gap-1 flex-wrap justify-center w-[90%]">

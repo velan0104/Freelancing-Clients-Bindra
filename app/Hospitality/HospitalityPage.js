@@ -52,15 +52,17 @@ const HospitalityPage = () => {
 
       gsap.to(".title > h1", { yPercent: 0, stagger: 0.2, duration: 1.5 });
 
+      gsap.set(".content > div", { y: 50, opacity: 0 });
+
       hotelRef?.current.forEach((hotel) => {
         const mask = hotel.querySelector(".mask");
         const p = hotel.querySelectorAll(".content > div");
 
-        gsap.from(p, {
-          y: 50,
+        gsap.to(p, {
+          y: 0,
           stagger: 0.2,
-          opacity: 0,
           duration: 1,
+          opacity: 1,
           ease: "power2.in",
           scrollTrigger: {
             trigger: hotel,
@@ -176,7 +178,7 @@ const HospitalityPage = () => {
                     alt={"img" + index + 1}
                     height={400}
                     width={400}
-                    className="img w-full aspect-auto rounded-md mx-auto overflow-hidden h-[400px]"
+                    className="img w-full aspect-auto rounded-md mx-auto overflow-hidden h-[300px] md:h-[350px]"
                   />
                 </div>
               </div>

@@ -10,11 +10,12 @@ const page = () => {
     <div>
       <section className="w-[100vw] h-[100vh]">
         <video
-          className="w-[100%] h-[100%] object-cover"
+          className="w-[100vw] h-[100vh] object-cover"
           src="./videos/Bindra_logo.mp4"
           autoPlay
           loop
           muted
+          preload={true}
         />
       </section>
       <section className=" grid grid-cols-1 md:grid-cols-2 py-20 content-center items-center mx-auto gap-y-8 bg-gray-100 ">
@@ -75,7 +76,7 @@ const page = () => {
                 </p>
               </div>
               <Image
-                className="w-[80%] lg:w-full h-full rounded-xl md:order-2 mx-auto"
+                className="w-[80%] lg:w-full h-[300px] rounded-xl md:order-2 mx-auto"
                 src="/images/Residential.JPG"
                 width={400}
                 height={400}
@@ -84,7 +85,7 @@ const page = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-5 w-[90%] mx-auto">
               <Image
-                className="w-[80%] lg:w-full h-full rounded-xl md:order-2 lg:order-1 mx-auto"
+                className="w-[80%] lg:w-full h-[300px] rounded-xl md:order-2 lg:order-1 mx-auto"
                 src="/images/Commercial/Commercial.JPG"
                 width={400}
                 height={400}
@@ -99,7 +100,7 @@ const page = () => {
                 </p>
               </div>
               <Image
-                className="w-[80%] mx-auto lg:w-full h-full rounded-xl"
+                className="w-[80%] mx-auto lg:w-full h-[300px] rounded-xl"
                 src="/images/Clubhouse.jpg"
                 width={400}
                 height={400}

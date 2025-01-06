@@ -110,6 +110,7 @@ const HospitalityPage = () => {
           height={800}
           width={800}
           className="h-full w-full"
+          priority
         />
         <div
           ref={headingRef}

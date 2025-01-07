@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
@@ -107,7 +106,6 @@ const Navbar = () => {
         <div className="absolute top-0 h-16 w-full backdrop-blur z-0" />
         <nav className="h-full flex justify-between items-center w-full px-6 md:px-8 lg:px-20 z-[999]">
           <div className="flex items-center gap-x-3 z-[9999]">
-            {/* <h3 className="text-lg font-semibold">Bindra</h3> */}
             <Image
               src="/images/bindra_logo.jpg"
               alt="logo"

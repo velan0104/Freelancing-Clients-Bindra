@@ -26,15 +26,12 @@ const Footer = () => {
               <div className="flex justify-between gap-10 text-base md:text-lg flex-wrap items-center">
                 <div className="mx-auto text-center">
                   <h2 className="font-semibold text-xl"> Email: </h2>
-                  <a href="mailto:thevarvelan@gmail.com" className="text-lg">
+                  <a href="mailto:bindras@bindras.com" className="text-lg">
                     {" "}
                     bindras@bindras.com
                   </a>
                 </div>
-                <div className="mx-auto text-center">
-                  <h2 className="font-semibold text-xl"> Telephone No: </h2>
-                  <p className="text-lg">022-28360241</p>
-                </div>
+                <div className="mx-auto text-center">{/* Second Email */}</div>
               </div>
             </div>
           </div>
@@ -103,7 +100,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="rounded-xl mx-auto w-[90%] md:w-full">
-          <iframe
+          {/* <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15078.724588077195!2d72.8658487!3d19.121639!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c825e45d2b3b%3A0x273a6dbf1048d7a3!2sBindra%20Group!5e0!3m2!1sen!2sin!4v1732637399180!5m2!1sen!2sin"
             width="380"
             height="280"
@@ -111,7 +108,7 @@ const Footer = () => {
             allowFullScreen=""
             loading="lazy"
             className=" w-[500px] h-[300px] rounded-xl object-contain"
-          ></iframe>
+          ></iframe> */}
         </div>
       </div>
 

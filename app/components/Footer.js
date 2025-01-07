@@ -100,7 +100,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="rounded-xl mx-auto w-[90%] md:w-full">
-          {/* <iframe
+          <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15078.724588077195!2d72.8658487!3d19.121639!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c825e45d2b3b%3A0x273a6dbf1048d7a3!2sBindra%20Group!5e0!3m2!1sen!2sin!4v1732637399180!5m2!1sen!2sin"
             width="380"
             height="280"
@@ -108,7 +108,7 @@ const Footer = () => {
             allowFullScreen=""
             loading="lazy"
             className=" w-[500px] h-[300px] rounded-xl object-contain"
-          ></iframe> */}
+          ></iframe>
         </div>
       </div>
 

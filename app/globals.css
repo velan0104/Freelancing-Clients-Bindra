@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "nb";
-  src: url("/fonts/NBInternationalProBoo.woff2");
-}
-
 :root {
   --background: #ffffff;
   --foreground: #171717;

@@ -26,9 +26,9 @@ const Footer = () => {
               <div className="flex justify-between gap-10 text-base md:text-lg flex-wrap items-center">
                 <div className="mx-auto text-center">
                   <h2 className="font-semibold text-xl"> Email: </h2>
-                  <a href="mailto:bindras@bindras.com" className="text-lg">
+                  <a href="mailto:bindraent@gmail.com" className="text-lg">
                     {" "}
-                    bindras@bindras.com
+                    bindraent@gmail.com
                   </a>
                 </div>
                 <div className="mx-auto text-center">{/* Second Email */}</div>
@@ -108,6 +108,7 @@ const Footer = () => {
             allowFullScreen=""
             loading="lazy"
             className=" w-[500px] h-[300px] rounded-xl object-contain"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </div>

@@ -78,7 +78,7 @@ const page = () => {
       >
         <video
           className="w-[100%] h-[100%] object-cover"
-          src="./videos/Hero.mp4"
+          src="./videos/Hero.MP4"
           autoPlay
           loop
           muted

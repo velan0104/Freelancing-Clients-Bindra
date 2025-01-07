@@ -7,7 +7,7 @@ const Blogs = [
     title:
       " Transforming Andheri (E): A 29-Year Journey of Quality Construction",
     description: () => (
-      <p>
+      <div>
         For nearly three decades,{" "}
         <strong>Accord Land Developers Pvt. Ltd. </strong> has been a
         cornerstone in the transformation of Andheri (E). With a legacy spanning
@@ -17,7 +17,7 @@ const Blogs = [
           {" "}
           Read More{" "}
         </Link>
-      </p>
+      </div>
     ),
     para: [
       {

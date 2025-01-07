@@ -98,7 +98,7 @@ export default function MobileMenu({ Menus }) {
                     {menu?.subMenu.map((submenu) => (
                       <div key={submenu.name} className="group">
                         <li
-                          className=" p-2 flex items-center hover:bg-white/5 rounded-md gap-x-2 cursor-pointer"
+                          className=" p-2 flex items-center hover:bg-white/5 rharounded-md gap-x-2 cursor-pointer"
                           onClick={() => {
                             router.push(`${menu.link}${submenu.link}`);
                             toggleDrawer();

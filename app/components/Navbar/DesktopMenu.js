@@ -82,7 +82,7 @@ export default function DesktopMenu({ menu }) {
           </span>
         </div>
       ) : (
-        <Link href={menu.link}>
+        <Link href={menu.link} prefetch={true}>
           <div>
             <span
               className={`flex items-center gap-1 cursor-pointer px-3 py-1 overflow-y-hidden text-md font-semibold text-gold-1 ${

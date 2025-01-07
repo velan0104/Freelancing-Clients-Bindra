@@ -82,7 +82,7 @@ const page = () => {
           autoPlay
           loop
           muted
-          preload={true}
+          preload="auto"
         />
         <div className="h-full w-full bg-black/30 absolute top-0 left-0">
           <div className="title overflow-hidden absolute top-1/2 left-10 px-2 ">

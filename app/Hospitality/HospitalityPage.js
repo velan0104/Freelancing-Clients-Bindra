@@ -12,7 +12,7 @@ const hotels = [
     description:
       "Altruist Andheri offers well-appointed rooms and exceptional hospitality in the heart of Andheri, making it a preferred choice for travelers seeking comfort and accessibility.",
     buttonText: "Visit →",
-    siteLink: "https://maps.app.goo.gl/B9gRcfefskV71Rrp9",
+    siteLink: "https://thealtruistindia.com/andheri",
     img: "/images/Hotels/Altruist.jpg",
   },
   {
@@ -52,17 +52,14 @@ const HospitalityPage = () => {
 
       gsap.to(".title > h1", { yPercent: 0, stagger: 0.2, duration: 1.5 });
 
-      gsap.set(".content > div", { y: 50, opacity: 0 });
-
       hotelRef?.current.forEach((hotel) => {
         const mask = hotel.querySelector(".mask");
         const p = hotel.querySelectorAll(".content > div");
 
-        gsap.to(p, {
-          y: 0,
+        gsap.from(p, {
+          y: 50,
           stagger: 0.2,
           duration: 1,
-          opacity: 1,
           ease: "power2.in",
           scrollTrigger: {
             trigger: hotel,

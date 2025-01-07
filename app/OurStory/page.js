@@ -15,7 +15,7 @@ const page = () => {
           autoPlay
           loop
           muted
-          preload={true}
+          preload="auto"
         />
       </section>
       <section className=" grid grid-cols-1 md:grid-cols-2 py-20 content-center items-center mx-auto gap-y-8 bg-gray-100 ">

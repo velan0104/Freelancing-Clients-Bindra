@@ -7,7 +7,7 @@ const securityHeaders = [
       default-src 'self'; 
       script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://maps.googleapis.com; 
       style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
-      img-src 'self' https://maps.gstatic.com https://www.google.com; 
+      img-src 'self'; 
       frame-src 'self' https://www.google.com https://maps.google.com https://www.youtube.com; 
       font-src 'self' https://fonts.gstatic.com; 
       object-src 'none'; 

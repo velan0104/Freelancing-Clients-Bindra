@@ -23,6 +23,15 @@ const nextConfig = {
         source: "/:path*", // Match all paths
         headers: securityHeaders,
       },
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "Strict-Transport-Security",
+            value: "max-age=63072000; includeSubDomains; preload",
+          },
+        ],
+      },
     ];
   },
 };

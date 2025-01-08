@@ -4,12 +4,10 @@ import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import "./Domain.css";
 import Button from "../Button";
-import { useRouter } from "next/navigation";
 
 const Domain = () => {
   gsap.registerPlugin(ScrollTrigger);
   const domainRef = useRef([]);
-
   const imagesRef = useRef([]);
   const containerRef = useRef(null);
   const leftContainerRef = useRef([]);

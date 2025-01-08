@@ -9,14 +9,16 @@ const Marquee = () => {
     let arrows = document.querySelectorAll(".arrow");
     let isScrollingDown = true;
 
-    let tween = gsap
-      .to(".marquee__part", {
-        xPercent: -100,
-        repeat: -1,
-        duration: 5,
-        ease: "linear",
-      })
-      .totalProgress(0.5);
+    let tween = gsap.context(() => {
+      gsap
+        .to(".marquee__part", {
+          xPercent: -100,
+          repeat: -1,
+          duration: 5,
+          ease: "linear",
+        })
+        .totalProgress(0.5);
+    });
 
     function move() {
       if (this.window.pageYOffset > currentScroll) {

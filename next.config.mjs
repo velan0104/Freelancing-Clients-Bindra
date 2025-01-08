@@ -5,11 +5,11 @@ const securityHeaders = [
     key: "Content-Security-Policy",
     value: `
       default-src 'self'; 
-      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://maps.googleapis.com; 
-      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+      script-src 'self'; 
+      style-src 'self'; 
       img-src 'self'; 
-      frame-src 'self' https://www.google.com https://maps.google.com https://www.youtube.com; 
-      font-src 'self' https://fonts.gstatic.com; 
+      frame-src 'self' ; 
+      font-src 'self'; 
       object-src 'none'; 
     `.replace(/\n/g, ""), // Remove newlines
   },

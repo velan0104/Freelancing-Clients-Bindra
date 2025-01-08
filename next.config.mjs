@@ -6,9 +6,9 @@ const securityHeaders = [
     value: `
       Content-Security-Policy: 
       default-src 'self'; 
-      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://maps.googleapis.com https://cdnjs.cloudflare.com; 
-      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; 
-      img-src 'self' https://maps.gstatic.com https://www.google.com data:; 
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://maps.googleapis.com; 
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+      img-src 'self' https://maps.gstatic.com https://www.google.com; 
       frame-src 'self' https://www.google.com https://maps.google.com https://www.youtube.com; 
       font-src 'self' https://fonts.gstatic.com; 
       object-src 'none'; 

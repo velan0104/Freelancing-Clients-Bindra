@@ -70,12 +70,6 @@ const Navbar = () => {
               icon: CircleHelp,
               link: "Past",
             },
-            {
-              name: "Future Projects",
-              desc: "Mumbai",
-              icon: CircleHelp,
-              link: "Future",
-            },
           ],
         },
       ],

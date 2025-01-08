@@ -92,9 +92,9 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section className="w-[100vw] min-h-[100vh] mx-auto bg-white overflow-hidden pb-10">
+      <section className="w-[100vw] min-h-[100vh] mx-auto bg-white overflow-hidden pb-10  ">
         <Marquee />
-        <div className="h-auto grid grid-cols-1 lg:grid-cols-[1fr_2fr] content-center  items-center pt-12">
+        <div className="h-auto grid grid-cols-1 lg:grid-cols-[1fr_2fr] content-center  items-center pt-12 2xl:w-[90%] mx-auto">
           <div className="mx-auto w-[80%] flex flex-col gap-3 text-center lg:text-left order-2 lg:order-1 h-auto items-center md:items-start">
             <h1 className="text-[6vw] md:text-[4vw] font-bold"> Bindra One </h1>
             <p className="text-lg md:text-xl font-semibold">
@@ -119,14 +119,14 @@ const page = () => {
         </div>
       </section>
       <Domain />
-      <section className=" w-[100vw] h-auto bg-white space-y-5 py-10">
+      <section className=" w-[100vw] h-auto bg-white space-y-5 py-10 ">
         <div>
           <h1 className="text-4xl md:text-5xl text-gold-1 font-bold text-left p-5 border-b-2 italic border-b-gold-1 mx-3 md:mx-10">
             {" "}
             Reknown Projects{" "}
           </h1>
         </div>
-        <div className="w-full lg:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 content-center items-center gap-x-10 page3-content gap-5">
+        <div className="w-full lg:w-[90%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 content-center items-center gap-x-10 page3-content gap-5 2xl:w-[90%] mx-auto">
           <div className=" box w-[350px] relative mx-auto">
             <video src="/videos/Bindra_One.mp4" autoPlay loop muted />
             <Image
@@ -181,7 +181,7 @@ const page = () => {
         </div>
       </section>
       {/* Marquee Section */}
-      <section className="w-[100vw] h-auto">
+      <section className="w-[100vw] h-auto 2xl:w-[80%] mx-auto">
         <div className="border-b-2 border-gold-1 w-[90%] mx-auto ">
           <h1 className="text-4xl md:text-7xl text-gold-1 font-semibold italic overflow-y-hidden">
             {" "}
@@ -253,7 +253,7 @@ const page = () => {
           </div>
         </div>
       </div>
-      <section className="py-10 space-y-10">
+      <section className="py-10 space-y-10 2xl:w-[80%] mx-auto">
         <h1 className="text-center text-5xl text-gold-1 font-bold p-5">
           Our Brands
         </h1>
@@ -267,6 +267,13 @@ const page = () => {
           />
           <Image
             src="/images/Dream_developers.png"
+            className="h-[200px] w-[250px] rounded-md"
+            width={300}
+            height={200}
+            alt="hero8"
+          />
+          <Image
+            src="/images/Bindra_Cons.png"
             className="h-[200px] w-[250px] rounded-md"
             width={300}
             height={200}

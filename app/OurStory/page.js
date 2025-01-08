@@ -18,37 +18,40 @@ const page = () => {
           preload="auto"
         />
       </section>
-      <section className=" grid grid-cols-1 md:grid-cols-2 py-20 content-center items-center mx-auto gap-y-8 bg-gray-100 ">
-        <div>
-          <Image
-            className=" w-[80%] md:w-[70%] mx-auto rounded-lg  max-h-[350px]"
-            src="/images/Lotus.jpg"
-            width={300}
-            height={300}
-            alt="hero10"
-          />
-        </div>
-        <div className="w-[80%] mx-auto space-y-3">
-          <h3 className="text-gold-1 font-semibold text-3xl p-1">
-            About Bindra
-          </h3>
-          <h1 className="font-bold text-xl">
-            {" "}
-            29 Years of Excellence in Construction{" "}
-          </h1>
-          <p className="text-gray-950">
-            For nearly thirty years, we have been a cornerstone in the
-            transformation of Andheri (E) and its surrounding areas. Our journey
-            began 29 years ago with a vision to create spaces that stand the
-            test of time—whether they are residential buildings, commercial
-            complexes, clubhouses, or luxury hotels. Quality has been our
-            guiding principle as an ISO 9001:2000-certified firm. Every project
-            we undertake reflects our dedication to superior craftsmanship,
-            attention to detail, and unwavering commitment to excellence.
-          </p>
-        </div>
+      <section className="bg-gray-100">
+        <section className=" grid grid-cols-1 md:grid-cols-2 py-20 content-center items-center gap-y-8 2xl:w-[90%] mx-auto">
+          <div>
+            <Image
+              className=" w-[80%] md:w-[70%] mx-auto rounded-lg  max-h-[350px]"
+              src="/images/Lotus.jpg"
+              width={300}
+              height={300}
+              alt="hero10"
+            />
+          </div>
+          <div className="w-[80%] mx-auto space-y-3">
+            <h3 className="text-gold-1 font-semibold text-3xl p-1">
+              About Bindra
+            </h3>
+            <h1 className="font-bold text-xl">
+              {" "}
+              29 Years of Excellence in Construction{" "}
+            </h1>
+            <p className="text-gray-950">
+              For nearly thirty years, we have been a cornerstone in the
+              transformation of Andheri (E) and its surrounding areas. Our
+              journey began 29 years ago with a vision to create spaces that
+              stand the test of time—whether they are residential buildings,
+              commercial complexes, clubhouses, or luxury hotels. Quality has
+              been our guiding principle as an ISO 9001:2000-certified firm.
+              Every project we undertake reflects our dedication to superior
+              craftsmanship, attention to detail, and unwavering commitment to
+              excellence.
+            </p>
+          </div>
+        </section>
       </section>
-      <section className="w-full py-10 mx-auto ">
+      <section className="w-full py-10 mx-auto 2xl:w-[80%] ">
         <div className="text-center ">
           <div className="mb-10">
             <h1 className="font-semibold text-gold-1 text-2xl"> OUR STORY </h1>
@@ -119,29 +122,31 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section className="py-14 bg-gray-100">
-        <h1 className="text-center font-bold text-5xl pb-10">
-          {" "}
-          Building the Future
-        </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-y-5">
-          <Image
-            className="w-[80%] md:w-[70%] h-auto mx-auto rounded-lg max-h-[350px] object-cover object-bottom"
-            src="/images/Lotus.jpg"
-            width={300}
-            height={300}
-            alt="hero10"
-          />
-          <p className="w-[90%] font-medium text-lg md:text-xl text-center mx-auto">
-            Our work is more than just construction; it’s about building a
-            legacy that inspires trust and delivers value. With each project, we
-            aim to redefine what it means to be a reliable name in the industry,
-            contributing meaningfully to the development of Andheri (E) and its
-            vibrant community.
-          </p>
-        </div>
+      <section className="bg-gray-100">
+        <section className="py-14 bg-gray-100 2xl:w-[90%] mx-auto">
+          <h1 className="text-center font-bold text-5xl pb-10">
+            {" "}
+            Building the Future
+          </h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-y-5">
+            <Image
+              className="w-[80%] md:w-[70%] h-auto mx-auto rounded-lg max-h-[350px] object-cover object-bottom"
+              src="/images/Lotus.jpg"
+              width={300}
+              height={300}
+              alt="hero10"
+            />
+            <p className="w-[90%] font-medium text-lg md:text-xl text-center mx-auto">
+              Our work is more than just construction; it’s about building a
+              legacy that inspires trust and delivers value. With each project,
+              we aim to redefine what it means to be a reliable name in the
+              industry, contributing meaningfully to the development of Andheri
+              (E) and its vibrant community.
+            </p>
+          </div>
+        </section>
       </section>
-      <section className="w-full py-10 mx-auto space-y-10 relative">
+      <section className="w-full py-10 mx-auto space-y-10 relative 2xl:w-[80%]">
         <h1 className="text-center font-bold text-5xl text-gold-1 p-4">
           {" "}
           Who We Are{" "}

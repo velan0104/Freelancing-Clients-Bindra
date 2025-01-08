@@ -4,9 +4,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const BentroGrid = () => {
+  gsap.registerPlugin(ScrollTrigger);
   const gridRef = useRef();
 
   useEffect(() => {

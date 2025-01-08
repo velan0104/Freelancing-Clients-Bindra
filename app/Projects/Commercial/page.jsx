@@ -4,20 +4,24 @@ const Page = () => {
   const ImageSlider = [
     {
       img: "/images/Commercial/Commercial_3.JPG",
+      title: "",
     },
     {
       img: "/images/Commercial/Commercial_4.JPG",
+      title: "",
     },
     {
       img: "/images/Commercial/Commercial_5.JPG",
+      title: "",
     },
     {
       img: "/images/Commercial/Commercial_6.JPG",
+      title: "",
     },
   ];
 
   return (
-    <div className="">
+    <div className="w-[100vw]">
       <h1 className="mt-16 text-center text-5xl font-bold text-gold-1 p-5">
         {" "}
         Bindra's{" "}
@@ -26,7 +30,7 @@ const Page = () => {
         {" "}
         COMMERCIAL PROJECTS{" "}
       </h1>
-      <div className="">
+      <div className="2xl:w-[90%] mx-auto">
         <Slider ImageSlider={ImageSlider} />
       </div>
     </div>

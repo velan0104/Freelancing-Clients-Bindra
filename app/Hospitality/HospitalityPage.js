@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import Button from "../components/Button";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -41,8 +41,8 @@ const hotels = [
   },
 ];
 
-gsap.registerPlugin(ScrollTrigger);
 const HospitalityPage = () => {
+  gsap.registerPlugin(ScrollTrigger);
   const headingRef = useRef(null);
   const hotelRef = useRef([]);
 
@@ -54,20 +54,20 @@ const HospitalityPage = () => {
 
       hotelRef?.current.forEach((hotel) => {
         const mask = hotel.querySelector(".mask");
-        const p = hotel.querySelectorAll(".content > div");
+        // const p = hotel.querySelectorAll(".content > div");
 
-        gsap.from(p, {
-          y: 50,
-          stagger: 0.2,
-          duration: 1,
-          ease: "power2.in",
-          scrollTrigger: {
-            trigger: hotel,
-            start: "top 50%",
-            end: "bottom bottom",
-            toggleActions: "play none none reset",
-          },
-        });
+        // gsap.from(p, {
+        //   y: 50,
+        //   stagger: 0.2,
+        //   duration: 1,
+        //   ease: "power2.in",
+        //   scrollTrigger: {
+        //     trigger: hotel,
+        //     start: "top 50%",
+        //     end: "bottom bottom",
+        //     toggleActions: "play none none reset",
+        //   },
+        // });
 
         gsap.fromTo(
           mask,
@@ -100,7 +100,7 @@ const HospitalityPage = () => {
 
   return (
     <div>
-      <section className="h-[80vh] md:h-[100vh] w-[100vw] object-scale-down relative">
+      <section className="h-[70vh] md:h-[100vh] w-[100vw] object-scale-down relative">
         <Image
           src={"/images/Hotels/Aralia_Hero.jpg"}
           alt="HospitailyHeader"
@@ -134,7 +134,7 @@ const HospitalityPage = () => {
         </div>
       </section>
 
-      <section>
+      <section className="2xl:w-[90%] mx-auto">
         {hotels.map((hotel, index) => {
           return (
             <div
@@ -176,7 +176,7 @@ const HospitalityPage = () => {
                     alt={"img" + index + 1}
                     height={400}
                     width={400}
-                    className="img w-full aspect-auto rounded-md mx-auto overflow-hidden h-[300px] md:h-[350px]"
+                    className="img w-full aspect-auto rounded-md object-cover bg-center mx-auto overflow-hidden h-[300px] md:h-[350px]"
                   />
                 </div>
               </div>

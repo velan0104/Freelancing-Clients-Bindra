@@ -116,10 +116,10 @@ const Domain = () => {
   }, []);
   return (
     <div>
-      <section className="w-[100vw] ">
+      <section className="w-[100vw] bg-gray-100">
         <section
           ref={containerRef}
-          className="w-[100vw] h-[100vh] text-black bg-gray-100 hidden md:block"
+          className=" h-[100vh] text-black  hidden md:block w-[90%] mx-auto"
         >
           <h1 className="text-6xl font-bold text-left text-gold-1 mx-10 border-b-2 border-b-gold-1 pt-6 mb-5 p-2 italic">
             {" "}

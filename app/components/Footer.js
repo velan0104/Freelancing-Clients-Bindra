@@ -26,9 +26,19 @@ const Footer = () => {
               <div className="flex justify-between gap-10 text-base md:text-lg flex-wrap items-center">
                 <div className="mx-auto text-center">
                   <h2 className="font-semibold text-xl"> Email: </h2>
-                  <a href="mailto:bindraent@gmail.com" className="text-lg">
+                  <a
+                    href="mailto:bindraent@gmail.com"
+                    className="text-lg font-semibold md:px-5"
+                  >
                     {" "}
                     bindraent@gmail.com
+                  </a>
+                  <a
+                    href="mailto:directors@bindras.com"
+                    className="text-lg font-semibold md:px-5"
+                  >
+                    {" "}
+                    directors@bindras.com
                   </a>
                 </div>
                 <div className="mx-auto text-center">{/* Second Email */}</div>

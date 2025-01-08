@@ -81,7 +81,7 @@ const ResidentialPage = () => {
   };
 
   return (
-    <div className="">
+    <div className="w-[100vw]">
       <h1 className="mt-16 text-center text-5xl font-bold text-gold-1 p-5">
         {" "}
         Bindra's{" "}
@@ -91,7 +91,7 @@ const ResidentialPage = () => {
           {" "}
           PRESENT PROJECTS{" "}
         </h1>
-        <div className="">
+        <div className="2xl:w-[90%] mx-auto">
           <Slider ImageSlider={ImageSlider} />
         </div>
         <div className="md:hidden flex flex-col justify-center items-center gap-2 text-white">
@@ -119,12 +119,12 @@ const ResidentialPage = () => {
           </button>
         </div>
       </section>
-      <section ref={pastRef} className="h-auto mx-auto w-[95%]">
-        <h1 className="my-10 mx-5 text-3xl font-bold border-b-4 border-gold-1 text-gold-1 inline-block w-[90%] py-5">
+      <section ref={pastRef} className="h-auto w-[100vw]">
+        <h1 className="my-10 text-3xl font-bold border-b-4 border-gold-1 text-gold-1 w-[90%] py-5 mx-auto">
           {" "}
           PAST PROJECTS{" "}
         </h1>
-        <div className="mx-2">
+        <div className="mx-2 2xl:w-[90%] 2xl:mx-auto">
           <ExpandableCardDemo cards={PastCard} />
         </div>
       </section>

@@ -44,11 +44,11 @@ const Directors = [
       return (
         <div>
           <p>
-            Mr. P.S. Bindra, the founder of Bindra Group, is a visionary builder
-            and a highly respected social and cultural contributor. Over the
-            years, he has actively participated in numerous community-driven
-            initiatives, establishing a legacy of service and leadership. Some
-            of his notable contributions include:
+            Mr. P.S. Bindra, the founder of Bindra Group, was a visionary
+            builder and a highly respected social and cultural contributor.
+            Throughout his life, he actively participated in numerous
+            community-driven initiatives, leaving behind a legacy of service and
+            leadership. Some of his notable contributions included:
           </p>
           <ul
             style={{
@@ -64,30 +64,30 @@ const Directors = [
             </li>
             <li>
               Being Trustee and Honorary Secretary of Sher-e-Punjab Gymkhana and
-              Health Club for 12+ years, leading its completion under his
-              guidance.
+              Health Club for over 12 years, under whose guidance the project
+              was successfully completed.
             </li>
             <li>
               Acting as Chairman of Gurunanak English High School, Sher-e-Punjab
-              for 20 years, with plans to expand the institution for better
-              education.
+              for 20 years, during which he laid plans to expand the institution
+              for better education.
             </li>
             <li>
               Conceptualizing and establishing the Matoshree Sports Complex at
-              JV Link Road, Andheri (E), recognized for its superior amenities
-              and architectural design.
+              JV Link Road, Andheri (E), renowned for its superior amenities and
+              architectural design.
             </li>
             <li>
-              Leading as Chairman of Sher-e-Punjab Society, overseeing 305
+              Leading as Chairman of Sher-e-Punjab Society, where he oversaw 305
               buildings.
             </li>
           </ul>
           <p>
-            Mr. Bindra’s dedication to social welfare has earned him numerous
+            Mr. Bindra’s dedication to social welfare earned him numerous
             awards, including the Rashtriya Nirman Ratn Award, Gaurav of India
-            Award, Best Citizen Award, and Sikh Pride Award. His belief in
-            helping others is captured in his guiding principle: “GOD HELPS
-            THOSE WHO HELP OTHERS.”
+            Award, Best Citizen Award, and Sikh Pride Award. His unwavering
+            belief in helping others was captured in his guiding principle: “GOD
+            HELPS THOSE WHO HELP OTHERS.
           </p>
         </div>
       );

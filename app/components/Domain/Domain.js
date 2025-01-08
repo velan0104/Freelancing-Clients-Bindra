@@ -53,7 +53,9 @@ const Domain = () => {
           );
           setProgressIndex(() => progress);
           imagesRef.current.forEach((img, index) => {
-            img.style.opacity = index === progress ? 1 : 0;
+            if (img) {
+              img.style.opacity = index === progress ? 1 : 0;
+            }
           });
 
           leftContainerRef.current.forEach((div, index) => {

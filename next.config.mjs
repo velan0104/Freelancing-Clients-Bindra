@@ -11,6 +11,7 @@ const securityHeaders = [
       frame-src 'self' https://www.google.com https://maps.google.com https://www.youtube.com; 
       font-src 'self' https://fonts.gstatic.com; 
       object-src 'none'; 
+      base-uri 'self';
     `.replace(/\n/g, ""), // Remove newlines
   },
 ];

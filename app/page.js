@@ -182,7 +182,7 @@ const page = () => {
       </section>
       {/* Marquee Section */}
       <section className="w-[100vw] h-auto 2xl:w-[80%] mx-auto">
-        <div className="border-b-2 border-gold-1 w-[90%] mx-auto ">
+        <div className="border-b-2 border-gold-1 mx-auto ">
           <h1 className="text-4xl md:text-7xl text-gold-1 font-semibold italic overflow-y-hidden">
             {" "}
             Our Works{" "}

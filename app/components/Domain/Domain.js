@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import "./Domain.css";
 import Button from "../Button";
+import { useRouter } from "next/navigation";
 
 const Domain = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -12,6 +13,7 @@ const Domain = () => {
   const containerRef = useRef(null);
   const leftContainerRef = useRef([]);
   const [progressIndex, setProgressIndex] = useState(0);
+  const router = useRouter();
 
   const domains = [
     {
@@ -143,6 +145,7 @@ const Domain = () => {
                     </p>
                     <button
                       className={`bg-gold-1 px-2 py-3 rounded-lg text-md text-white w-fit h-fit `}
+                      onClick={() => router.push(cta)}
                     >
                       {" "}
                       Know More{" "}

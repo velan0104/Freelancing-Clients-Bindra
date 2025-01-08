@@ -25,7 +25,7 @@ const Footer = () => {
               </h1>
               <div className="flex justify-between gap-10 text-base md:text-lg flex-wrap items-center">
                 <div className="mx-auto text-center">
-                  <h2 className="font-semibold text-xl"> Email: </h2>
+                  <h2 className="font-semibpold text-xl"> Email: </h2>
                   <a
                     href="mailto:bindraent@gmail.com"
                     className="text-lg font-semibold md:px-5"
@@ -127,7 +127,11 @@ const Footer = () => {
         <div className="flex justify-between md:justify-end items-center px-10 pt-3 border-t-4 border-black">
           <div className="">
             <div className="flex mx-auto justify-evenly md:justify-end gap-4 items-center pb-1">
-              <a href="#" className="text-black hover:text-gray-900">
+              <a
+                href="https://www.facebook.com/bindrarealestate?mibextid=ZbWKwL"
+                className="text-black hover:text-gray-900"
+                target="_blank"
+              >
                 <svg
                   className="w-8 h-8"
                   aria-hidden="true"

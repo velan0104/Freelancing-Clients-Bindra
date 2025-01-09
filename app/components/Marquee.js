@@ -3,47 +3,52 @@ import { ArrowBigDownIcon } from "lucide-react";
 import React, { useEffect, useState } from "react";
 
 const Marquee = () => {
-  const [isScrollingDown, setIsScrollingDown] = useState(true);
   useEffect(() => {
     let currentScroll = 0;
-    let arrows = document.querySelectorAll(".arrow");
     let isScrollingDown = true;
 
-    let tween = gsap.context(() => {
-      gsap
-        .to(".marquee__part", {
-          xPercent: -100,
-          repeat: -1,
-          duration: 5,
-          ease: "linear",
-        })
-        .totalProgress(0.5);
+    const arrows = document.querySelectorAll(".arrow");
+
+    // Initialize GSAP animation
+    const tween = gsap.to(".marquee__part", {
+      xPercent: -100,
+      repeat: -1,
+      duration: 5,
+      ease: "linear",
+      paused: false,
     });
 
+    // Scroll event handler
     function move() {
-      if (this.window.pageYOffset > currentScroll) {
-        setIsScrollingDown(true);
+      // Check scroll direction
+      if (window.pageYOffset > currentScroll) {
+        isScrollingDown = true;
       } else {
-        setIsScrollingDown(false);
+        isScrollingDown = false;
       }
 
+      // Reverse animation direction based on scroll direction
       gsap.to(tween, {
         timeScale: isScrollingDown ? 1 : -1,
       });
+
       currentScroll = window.pageYOffset;
     }
 
+    // Add scroll event listener
     window.addEventListener("scroll", move);
 
+    // Cleanup function for cleanup on unmount
     return () => {
       window.removeEventListener("scroll", move);
-      tween.revert();
+      tween.kill(); // Stop and clean up GSAP animations
     };
   }, []);
+
   return (
     <div className="w-[100vw]">
       <section className="marquee relative bg-gold-1 text-[#eee] px-2 md:px-8 font-semibold text-xl md:text-4xl uppercase overflow-hidden">
-        <div className="marquee__inner flex w-full flex-auto ">
+        <div className="marquee__inner flex w-full flex-auto">
           {[
             "Current Project",
             "Current Project",

@@ -147,3 +147,21 @@
 .no-scrollbar {
   overscroll-behavior: contain;
 }
+
+.bold-text {
+  font-weight: bold;
+}
+
+.custom-button {
+  background: #daa520;
+  padding: 15px 10px;
+  border-radius: 5px;
+}
+
+.body-hidden {
+  overflow: hidden;
+}
+
+.mask {
+  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}

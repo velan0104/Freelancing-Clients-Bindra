@@ -50,13 +50,7 @@ const Directors = [
             community-driven initiatives, leaving behind a legacy of service and
             leadership. Some of his notable contributions included:
           </p>
-          <ul
-            style={{
-              listStyle: "inside",
-              padding: "10px",
-              lineHeight: "1.6",
-            }}
-          >
+          <ul className="list-inside list-disc p-2 leading-6">
             <li>
               Serving as Vice President of Gurudwara Guru Nanak Darbar,
               Sher-e-Punjab Society, Andheri (E) for over a decade, with a

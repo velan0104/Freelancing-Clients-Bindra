@@ -85,3 +85,7 @@
   height: 50rem;
   object-fit: cover;
 }
+
+.mask-clipped {
+  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}

@@ -18,7 +18,7 @@ const page = () => {
           preload="auto"
         />
       </section>
-      <section className="bg-gray-100">
+      <section className="bg-gray-100 w-[100vw]">
         <section className=" grid grid-cols-1 md:grid-cols-2 py-20 content-center items-center gap-y-8 2xl:w-[90%] mx-auto">
           <div>
             <Image
@@ -51,7 +51,7 @@ const page = () => {
           </div>
         </section>
       </section>
-      <section className="w-full py-10 mx-auto 2xl:w-[80%] ">
+      <section className="w-full py-10 mx-auto 2xl:w-[90%] ">
         <div className="text-center ">
           <div className="mb-10">
             <h1 className="font-semibold text-gold-1 text-2xl"> OUR STORY </h1>
@@ -123,7 +123,7 @@ const page = () => {
         </div>
       </section>
       <section className="bg-gray-100">
-        <section className="py-14 bg-gray-100 2xl:w-[90%] mx-auto">
+        <section className="py-14 bg-gray-100 2xl:w-[9re0%] mx-auto">
           <h1 className="text-center font-bold text-5xl pb-10">
             {" "}
             Building the Future

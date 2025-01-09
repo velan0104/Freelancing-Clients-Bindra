@@ -1,25 +1,9 @@
+"use client";
+
 import Slider from "../../components/Slider/Slider";
+import { CommercialSlider } from "../data";
 
 const Page = () => {
-  const ImageSlider = [
-    {
-      img: "/images/Commercial/Commercial_3.JPG",
-      title: "",
-    },
-    {
-      img: "/images/Commercial/Commercial_4.JPG",
-      title: "",
-    },
-    {
-      img: "/images/Commercial/Commercial_5.JPG",
-      title: "",
-    },
-    {
-      img: "/images/Commercial/Commercial_6.JPG",
-      title: "",
-    },
-  ];
-
   return (
     <div className="w-[100vw]">
       <h1 className="mt-16 text-center text-5xl font-bold text-gold-1 p-5">
@@ -31,7 +15,7 @@ const Page = () => {
         COMMERCIAL PROJECTS{" "}
       </h1>
       <div className="2xl:w-[90%] mx-auto">
-        <Slider ImageSlider={ImageSlider} />
+        <Slider ImageSlider={CommercialSlider} />
       </div>
     </div>
   );

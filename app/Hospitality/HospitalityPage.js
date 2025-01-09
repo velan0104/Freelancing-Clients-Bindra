@@ -165,12 +165,7 @@ const HospitalityPage = () => {
                   index % 2 == 0 ? "order-1 md:order-2" : "order-1"
                 } overflow-hidden `}
               >
-                <div
-                  className="mask w-[80%] h-[90%] overflow-hidden mx-auto"
-                  style={{
-                    clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
-                  }}
-                >
+                <div className="mask w-[80%] h-[90%] overflow-hidden mx-auto">
                   <Image
                     src={hotel.img}
                     alt={"img" + index + 1}

@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 import { ExpandableCardDemo } from "../../components/AnimatedCard";
 import Slider from "../../components/Slider/Slider";
+import { ResidentialSlider } from "../data";
 
 const ResidentialPage = () => {
   const presentRef = useRef(null);
@@ -10,60 +11,7 @@ const ResidentialPage = () => {
   const futureRef = useRef(null);
   const params = useSearchParams();
 
-  const ImageSlider = [
-    {
-      img: "/images/Bindra_One/bindra_one_5.jpeg",
-      title: "Bindra One",
-      description: () => (
-        <div style={{ fontWeight: "bold" }}>
-          <strong>Currently C and D Wing work is going on</strong>
-        </div>
-      ),
-    },
-    {
-      img: "/images/Bindra_One/bindra_one_4.JPG",
-      title: "Bindra One",
-      description: () => (
-        <button
-          style={{
-            background: "#daa520",
-            padding: "15px 10px ",
-            borderRadius: "5px",
-          }}
-        >
-          <a href="/brochure/WING_C.pdf" download>
-            WING C Floor Plan →
-          </a>
-        </button>
-      ),
-    },
-    {
-      img: "/images/Bindra_One/bindra_one_1.jpg",
-      title: "Bindra One",
-      description: () => (
-        <button
-          style={{
-            background: "#daa520",
-            padding: "15px 10px ",
-            borderRadius: "5px",
-          }}
-        >
-          <a href="/brochure/WING_D.pdf" download>
-            WING D Floor Plan →
-          </a>
-        </button>
-      ),
-    },
-    {
-      img: "/images/Bindra_One/bindra_one_3.jpg",
-      title: "Bindra One",
-      description: () => (
-        <div>
-          <strong> Soon E-Wing work will also start</strong>
-        </div>
-      ),
-    },
-  ];
+  console.log(ResidentialSlider);
 
   useEffect(() => {
     const param = params.get("section");
@@ -92,7 +40,7 @@ const ResidentialPage = () => {
           PRESENT PROJECTS{" "}
         </h1>
         <div className="2xl:w-[90%] mx-auto">
-          <Slider ImageSlider={ImageSlider} />
+          <Slider ImageSlider={ResidentialSlider} />
         </div>
         <div className="md:hidden flex flex-col justify-center items-center gap-2 text-white">
           <button

@@ -10,6 +10,19 @@ export function ExpandableCardDemo({ cards }) {
   const id = useId();
   const ref = useRef(null);
 
+  //   const useEscapeKey = (callback) => {
+  //   useEffect(() => {
+  //     const handleKeyDown = (event) => {
+  //       if (event.key === "Escape") {
+  //         callback();
+  //       }
+  //     };
+
+  //     window.addEventListener("keydown", handleKeyDown);
+  //     return () => window.removeEventListener("keydown", handleKeyDown);
+  //   }, [callback]);
+  // };
+
   useEffect(() => {
     function onKeyDown(event) {
       if (event.key === "Escape") {
@@ -18,9 +31,9 @@ export function ExpandableCardDemo({ cards }) {
     }
 
     if (active && typeof active === "object") {
-      document.body.style.overflow = "hidden";
+      document.body.classList.add("body-hidden");
     } else {
-      document.body.style.overflow = "auto";
+      document.body.classList.remove("body-hidden");
     }
 
     window.addEventListener("keydown", onKeyDown);

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import "./Blog.css";
 
 const Blogs = [
   // Blog 1
@@ -43,13 +44,7 @@ const Blogs = [
             <div>
               Our journey began in the early 1980s with a vision to redefine the
               skyline of Mumbai. Over the years, we have successfully delivered:
-              <ul
-                style={{
-                  listStyle: "inside",
-                  padding: "10px",
-                  lineHeight: "1.6",
-                }}
-              >
+              <ul className="list-style-custom">
                 <li>
                   <strong>Model Town: </strong> A residential society comprising
                   24 buildings, marking the start of our impactful journey.
@@ -84,13 +79,7 @@ const Blogs = [
               development. Spanning over 6 lakh square feet of sanctioned FSI,
               this mixed-use development combines residential buildings, IT
               offices, and commercial spaces. Key milestones include:
-              <ul
-                style={{
-                  listStyle: "inside",
-                  padding: "10px",
-                  lineHeight: "1.6",
-                }}
-              >
+              <ul className="list-style-custom">
                 <li>
                   <strong>
                     Rose Apartments, Lotus Apartments, and Tulip Apartments:
@@ -131,13 +120,7 @@ const Blogs = [
             <div>
               Our legacy is not just about the buildings we’ve constructed but
               the lives we’ve impacted. Looking ahead, we aim to:
-              <ul
-                style={{
-                  listStyle: "inside",
-                  padding: "10px",
-                  lineHeight: "1.6",
-                }}
-              >
+              <ul className="list-style-custom">
                 <li> Develop innovative residential and commercial spaces. </li>
                 <li>
                   {" "}
@@ -158,13 +141,7 @@ const Blogs = [
         content: () => {
           return (
             <div>
-              <ul
-                style={{
-                  listStyle: "inside",
-                  padding: "10px",
-                  lineHeight: "1.6",
-                }}
-              >
+              <ul className="list-style-custom">
                 <li>
                   <strong> 29 Years of Experience:</strong> A deep understanding
                   of the construction industry.
@@ -255,13 +232,7 @@ const Blogs = [
               Bindra Complex offers a range of residential apartments that blend
               modern design with functional layouts. Completed and ongoing
               residential projects within the complex include:
-              <ul
-                style={{
-                  listStyle: "inside",
-                  padding: "10px",
-                  lineHeight: "1.6",
-                }}
-              >
+              <ul className="list-style-custom">
                 <li>
                   <strong>Rose Apartments (C-1):</strong> Elegant homes,
                   completed in phases from 2002 to 2004.
@@ -295,13 +266,7 @@ const Blogs = [
               Bindra Corporate, a cornerstone of Bindra Complex, features
               state-of-the-art commercial spaces designed to meet the needs of
               IT companies and businesses. Notable features include:
-              <ul
-                style={{
-                  listStyle: "inside",
-                  padding: "10px",
-                  lineHeight: "1.6",
-                }}
-              >
+              <ul className="list-style-custom">
                 <li>
                   A hotel facility leased to
                   <strong> Tata Group's Ginger Hotels, </strong>
@@ -327,13 +292,7 @@ const Blogs = [
             <div className="">
               Bindra Complex continues to evolve, with exciting projects on the
               horizon:
-              <ul
-                style={{
-                  listStyle: "inside",
-                  padding: "10px",
-                  lineHeight: "1.6",
-                }}
-              >
+              <ul className="list-style-custom">
                 <li>
                   {" "}
                   A residential cum commercial building,{" "}
@@ -358,14 +317,7 @@ const Blogs = [
         content: () => {
           return (
             <div className="">
-              <ul
-                style={{
-                  listStyle: "inside",
-                  listStyleType: "decimal",
-                  padding: "10px",
-                  lineHeight: "1.6",
-                }}
-              >
+              <ul className="list-style-decimal">
                 <li>
                   <strong> Strategic Location: </strong> Situated on Mahakali
                   Road, Andheri (E), with seamless access to transport hubs and
@@ -461,13 +413,7 @@ const Blogs = [
             <div className="">
               ISO 9001:2000 is an internationally acclaimed standard for quality
               management systems. It focuses on key aspects such as:
-              <ul
-                style={{
-                  listStyle: "inside",
-                  padding: "10px",
-                  lineHeight: "1.6",
-                }}
-              >
+              <ul className="list-style-custom">
                 <li>
                   <strong> Customer Satisfaction: </strong> Meeting and
                   exceeding client expectations.
@@ -496,14 +442,7 @@ const Blogs = [
               Construction is not just about creating buildings—it’s about
               creating spaces that stand the test of time. Here’s why quality is
               non-negotiable:
-              <ul
-                style={{
-                  listStyle: "inside",
-                  listStyleType: "decimal",
-                  padding: "10px",
-                  lineHeight: "1.6",
-                }}
-              >
+              <ul className="list-style-decimal">
                 <li>
                   <strong> Durability </strong> High-quality materials and
                   construction processes ensure longevity.
@@ -534,14 +473,7 @@ const Blogs = [
             <div className="">
               Our ISO 9001:2000 certification plays a crucial role in
               maintaining quality across all stages of our projects, including:
-              <ul
-                style={{
-                  listStyle: "inside",
-                  padding: "10px",
-                  lineHeight: "1.6",
-                  listStyleType: "decimal",
-                }}
-              >
+              <ul className="list-style-decimal">
                 <li>
                   <strong> Design Phase: </strong>
                   Focus on innovative, efficient, and customer-centric designs.
@@ -576,13 +508,7 @@ const Blogs = [
               <strong> Rose Apartments </strong>
               to <strong> Bindra One</strong>, has been constructed with
               meticulous attention to detail, ensuring:
-              <ul
-                style={{
-                  listStyle: "inside",
-                  padding: "10px",
-                  lineHeight: "1.6",
-                }}
-              >
+              <ul className="list-style-custom">
                 <li>Structural integrity for long-term durability.</li>
                 <li>
                   Functional layouts that meet the diverse needs of residents
@@ -604,13 +530,7 @@ const Blogs = [
             <div className="">
               Selecting an ISO-certified developer like Accord Land Developers
               offers several advantages:
-              <ul
-                style={{
-                  listStyle: "inside",
-                  padding: "10px",
-                  lineHeight: "1.6",
-                }}
-              >
+              <ul className="list-style-custom">
                 <li>
                   <strong> Trust: </strong> ISO certification guarantees
                   adherence to internationally recognized standards.
@@ -690,14 +610,7 @@ const Blogs = [
             <div className="">
               The success of commercial real estate in Andheri East is driven by
               several key factors:
-              <ul
-                style={{
-                  listStyle: "inside",
-                  padding: "10px",
-                  lineHeight: "1.6",
-                  listStyleType: "decimal",
-                }}
-              >
+              <ul className="list-style-decimal">
                 <li>
                   <strong> Strategic Location: </strong> Proximity to the Mumbai
                   International Airport, Western Express Highway, and metro
@@ -732,13 +645,7 @@ const Blogs = [
               <strong> Bindra Complex, Bindra Corporate </strong> is designed to
               meet the needs of modern businesses. Here’s what makes it stand
               out:
-              <ul
-                style={{
-                  listStyle: "inside",
-                  padding: "10px",
-                  lineHeight: "1.6",
-                }}
-              >
+              <ul className="list-style-custom">
                 <li>
                   <strong> Prime Location: </strong> Situated on Mahakali Road,
                   it offers unparalleled connectivity and visibility.
@@ -766,14 +673,7 @@ const Blogs = [
           return (
             <div className="">
               Investing in commercial properties here offers long-term benefits:
-              <ul
-                style={{
-                  listStyle: "inside",
-                  padding: "10px",
-                  lineHeight: "1.6",
-                  listStyleType: "decimal",
-                }}
-              >
+              <ul className="list-style-decimal">
                 <li>
                   <strong> High ROI: </strong>
                   With constant demand from businesses, property values and
@@ -803,13 +703,7 @@ const Blogs = [
             <div className="">
               The future of commercial real estate in Andheri East looks
               promising, with projects like:
-              <ul
-                style={{
-                  listStyle: "inside",
-                  padding: "10px",
-                  lineHeight: "1.6",
-                }}
-              >
+              <ul className="list-style-custom">
                 <li>
                   <strong> A 65-room hotel at Bindra Complex: </strong>{" "}
                   Perfectly positioned to cater to business travelers.
@@ -831,13 +725,7 @@ const Blogs = [
         content: () => {
           return (
             <div className="">
-              <ul
-                style={{
-                  listStyle: "inside",
-                  padding: "10px",
-                  lineHeight: "1.6",
-                }}
-              >
+              <ul className="list-style-custom">
                 <li>
                   <strong> 29 Years of Expertise: </strong> A proven track
                   record in delivering high-quality projects.
@@ -920,14 +808,7 @@ const Blogs = [
               Sustainable urban living focuses on minimizing environmental
               impact while maximizing quality of life. Key principles include:
               <br />
-              <ul
-                style={{
-                  listStyle: "inside",
-                  padding: "10px",
-                  lineHeight: "1.6",
-                  listStyleType: "decimal",
-                }}
-              >
+              <ul className="list-style-decimal">
                 <li>
                   <strong> Energy Efficiency: </strong> Reducing energy
                   consumption through smart designs and technology.
@@ -958,24 +839,11 @@ const Blogs = [
           return (
             <div className="">
               <br />
-              <ul
-                style={{
-                  listStyle: "inside",
-                  padding: "10px",
-                  lineHeight: "1.6",
-                  listStyleType: "decimal",
-                }}
-              >
+              <ul className="list-style-decimal">
                 <li>
                   <strong>Energy-Efficient Buildings: </strong>
                 </li>
-                <ul
-                  style={{
-                    listStyle: "inside",
-                    padding: "10px",
-                    lineHeight: "1.6",
-                  }}
-                >
+                <ul className="list-style-custom ">
                   <li>Use of energy-saving lighting systems and appliances.</li>
                   <li>
                     Thoughtful architectural designs that maximize natural light
@@ -986,13 +854,7 @@ const Blogs = [
                   {" "}
                   <strong> Green Spaces:</strong>{" "}
                 </li>
-                <ul
-                  style={{
-                    listStyle: "inside",
-                    padding: "10px",
-                    lineHeight: "1.6",
-                  }}
-                >
+                <ul className="list-style-custom ">
                   <li>
                     Landscaped areas within the complex provide residents with a
                     refreshing environment.
@@ -1005,13 +867,7 @@ const Blogs = [
                 <li>
                   <strong> Rainwater Harvesting:</strong>
                 </li>
-                <ul
-                  style={{
-                    listStyle: "inside",
-                    padding: "10px",
-                    lineHeight: "1.6",
-                  }}
-                >
+                <ul className="list-style-custom ">
                   <li>
                     A system to collect and reuse rainwater, reducing reliance
                     on municipal water supplies.
@@ -1021,13 +877,7 @@ const Blogs = [
                   {" "}
                   <strong> Waste Management: </strong>{" "}
                 </li>
-                <ul
-                  style={{
-                    listStyle: "inside",
-                    padding: "10px",
-                    lineHeight: "1.6",
-                  }}
-                >
+                <ul className="list-style-custom ">
                   <li>
                     Implementation of efficient waste segregation and recycling
                     mechanisms.
@@ -1047,13 +897,7 @@ const Blogs = [
             <div className="">
               Living in a sustainable community like Bindra Complex offers
               numerous advantages:
-              <ul
-                style={{
-                  listStyle: "inside",
-                  padding: "10px",
-                  lineHeight: "1.6",
-                }}
-              >
+              <ul className="list-style-custom">
                 <li>
                   <strong> Lower Utility Costs: </strong>
                   Energy-efficient systems reduce electricity and water bills.
@@ -1100,13 +944,7 @@ const Blogs = [
               Bindra Complex is more than a residential and commercial hub—it’s
               a model for sustainable urban development in Andheri East. By
               integrating eco-friendly practices, we:
-              <ul
-                style={{
-                  listStyle: "inside",
-                  padding: "10px",
-                  lineHeight: "1.6",
-                }}
-              >
+              <ul className="list-style-custom">
                 <li>
                   Contribute to reducing the environmental impact of
                   urbanization.
@@ -1131,13 +969,7 @@ const Blogs = [
             <div className="">
               As part of our future projects, we plan to expand our sustainable
               initiatives, including:
-              <ul
-                style={{
-                  listStyle: "inside",
-                  padding: "10px",
-                  lineHeight: "1.6",
-                }}
-              >
+              <ul className="list-style-custom">
                 <li>Incorporating solar power systems.</li>
                 <li>
                   Introducing smart technologies for energy and water
@@ -1213,13 +1045,7 @@ const Blogs = [
               One of the key reasons to live and work in Andheri East is its
               <strong> unmatched connectivity </strong>. The area is
               well-connected by:
-              <ul
-                style={{
-                  listStyle: "inside",
-                  padding: "10px",
-                  lineHeight: "1.6",
-                }}
-              >
+              <ul className="list-style-custom">
                 <li>
                   <strong> Western Express Highway: </strong> Ensuring quick
                   access to other parts of Mumbai, including the western
@@ -1249,13 +1075,7 @@ const Blogs = [
             <div className="">
               Andheri East has become a prominent business district in Mumbai,
               attracting a wide range of industries, including:
-              <ul
-                style={{
-                  listStyle: "inside",
-                  padding: "10px",
-                  lineHeight: "1.6",
-                }}
-              >
+              <ul className="list-style-custom">
                 <li>
                   <strong> IT and Tech: </strong>
                   With the presence of several IT parks and office spaces like
@@ -1292,13 +1112,7 @@ const Blogs = [
               spacious residential complexes like{" "}
               <strong> Bindra Complex </strong> to luxury apartments, the area
               caters to a wide range of budgets. Key advantages include:
-              <ul
-                style={{
-                  listStyle: "inside",
-                  padding: "10px",
-                  lineHeight: "1.6",
-                }}
-              >
+              <ul className="list-style-custom">
                 <li>
                   <strong> Variety of Options: </strong>
                   Whether you want a cozy 1BHK or a luxurious 3BHK, Andheri East
@@ -1325,13 +1139,7 @@ const Blogs = [
               Andheri East offers an excellent array of amenities and
               entertainment options that make it an ideal location to live and
               work:
-              <ul
-                style={{
-                  listStyle: "inside",
-                  padding: "10px",
-                  lineHeight: "1.6",
-                }}
-              >
+              <ul className="list-style-custom">
                 <li>
                   <strong> Shopping and Dining: </strong>
                   Malls, restaurants, and cafes are abundant, offering
@@ -1362,13 +1170,7 @@ const Blogs = [
               Andheri East is a{" "}
               <strong> family-friendly and vibrant community </strong>, making
               it an ideal place for both work and living. Key factors include:
-              <ul
-                style={{
-                  listStyle: "inside",
-                  padding: "10px",
-                  lineHeight: "1.6",
-                }}
-              >
+              <ul className="list-style-custom">
                 <li>
                   <strong> Green Spaces: </strong>
                   Parks, playgrounds, and community areas are integrated into

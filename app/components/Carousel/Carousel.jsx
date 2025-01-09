@@ -34,18 +34,22 @@ const Carousel = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // Function to return classes for the Image
+  const getImageClasses = (item) => {
+    if (item === "/images/Bindra_One.png") {
+      return "max-h-[90%] aspect-auto max-w-[90%] m-[5%]";
+    }
+    return "p-0";
+  };
+
   return (
-    <div className=" flex flex-col gap-10">
-      <div className="box h-[45vh] md:h-[75vh] ">
+    <div className="flex flex-col gap-10">
+      <div className="box h-[45vh] md:h-[75vh]">
         {items.map((item, index) => (
-          <div key={index} className={` item `}>
+          <div key={index} className="item">
             <Image
               src={item}
-              className={`${
-                item === "/images/Bindra_One.png"
-                  ? "max-h-[90%] aspect-auto max-w-[90%]  m-[5%]c"
-                  : "p-0"
-              }`}
+              className={getImageClasses(item)}
               alt={`img-${index + 1}`}
               width={400}
               height={400}

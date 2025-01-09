@@ -118,18 +118,19 @@ const Domain = () => {
       ctx.revert();
     };
   }, []);
+
   return (
     <div>
       <section className="w-[100vw] bg-gray-100">
         <section
           ref={containerRef}
-          className=" h-[100vh] text-black  hidden md:block w-[90%] mx-auto"
+          className="h-[100vh] text-black hidden md:block w-[90%] mx-auto"
         >
           <h1 className="text-6xl font-bold text-left text-gold-1 mx-10 border-b-2 border-b-gold-1 pt-6 mb-5 p-2 italic">
             {" "}
             What we do{" "}
           </h1>
-          <div className="hidden md:grid md:grid-cols-[3fr_2fr] content-center items-center mx-10 ">
+          <div className="hidden md:grid md:grid-cols-[3fr_2fr] content-center items-center mx-10">
             <div>
               <div className="">
                 {domains.map((domain, idx) => (
@@ -138,16 +139,15 @@ const Domain = () => {
                     ref={(el) => (leftContainerRef.current[idx] = el)}
                     className="mr-6 py-5 rounded-xl flex flex-col space-y-3 px-10 w-[90%]"
                   >
-                    <h1 className="lg:font-bold lg:text-3xl md:font-semibold md:text-xl  p-[2px] ">
+                    <h1 className="lg:font-bold lg:text-3xl md:font-semibold md:text-xl p-[2px]">
                       {domain.title}
                     </h1>
                     <p className="font-medium lg:text-xl md:text-lg">
-                      {" "}
-                      {domain.description}{" "}
+                      {domain.description}
                     </p>
                     <button
-                      className={`bg-gold-1 px-2 py-3 rounded-lg text-md text-white w-fit h-fit `}
-                      onClick={() => router.push(cta)}
+                      className="bg-gold-1 px-2 py-3 rounded-lg text-md text-white w-fit h-fit"
+                      onClick={() => router.push(domain.cta)}
                     >
                       {" "}
                       Know More{" "}
@@ -187,8 +187,7 @@ const Domain = () => {
                 }`}
               >
                 <p className="text-gold-1 font-bold text-3xl p-2">
-                  {" "}
-                  {domain.title}{" "}
+                  {domain.title}
                 </p>
                 <p>{domain.description}</p>
                 <p>
@@ -198,14 +197,9 @@ const Domain = () => {
               <div
                 className={`${
                   index % 2 == 0 ? "order-1 md:order-2" : "order-1"
-                } overflow-hidden `}
+                } overflow-hidden`}
               >
-                <div
-                  className="mask w-[80%] h-[90%] overflow-hidden mx-auto"
-                  style={{
-                    clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
-                  }}
-                >
+                <div className="mask mask-clipped w-[80%] h-[90%] overflow-hidden mx-auto">
                   <Image
                     src={domain.img}
                     alt={"img" + index + 1}

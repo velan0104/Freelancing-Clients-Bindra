@@ -1,0 +1,12 @@
+.list-style-custom {
+  list-style: inside;
+  padding: 10px;
+  line-height: 1.6;
+}
+
+.list-style-decimal {
+  list-style: inside;
+  padding: 10px;
+  line-height: 1.6;
+  list-style-type: decimal;
+}

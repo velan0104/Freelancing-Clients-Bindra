@@ -2,6 +2,7 @@ import { Lora } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer";
+import Head from "next/head";
 
 const lora = Lora({
   subsets: ["latin"],
@@ -9,24 +10,38 @@ const lora = Lora({
   style: ["normal", "italic"],
 });
 
-// export const metadata = {
-//   title: {
-//     default: "Bindra",
-//     template: "%s - Bindra",
-//   },
-//   description:
-//     "Explore affordable 1BHK flats in Mahakali with Bindra Developers. Modern amenities, great location, and value for money. Contact us today!",
-// };
+export const metadata = {
+  title: "Bindra - Affordable 1BHK Flats in Mahakali",
+  description:
+    "Explore affordable 1BHK flats in Mahakali with Bindra Developers. Modern amenities, great location, and value for money. Contact us today!",
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* <head>
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="keywords"
+          content="1BHK, Mahakali, Flats, Bindra Developers, Affordable Housing"
+        />
+        <meta name="author" content="Bindra Developers" />
+        <meta property="og:title" content={metadata.title} />
+        <meta property="og:description" content={metadata.description} />
+        <meta property="og:image" content="/images/og-image.png" />
+        <meta property="og:url" content="https://bindra-developers.com" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={metadata.title} />
+        <meta name="twitter:description" content={metadata.description} />
+        <meta name="twitter:image" content="/images/twitter-image.png" />
         <meta
           httpEquiv="Content-Security-Policy"
           content={`default-src 'self'; script-src 'self' https://www.google.com https://maps.googleapis.com; style-src 'self' https://fonts.googleapis.com; img-src 'self' https://maps.gstatic.com https://www.google.com; frame-src 'self' https://www.google.com https://maps.google.com https://www.youtube.com; font-src 'self' https://fonts.gstatic.com; object-src 'none'; base-uri 'self';`}
         />
-      </head> */}
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <body className={`${lora.className} antialiased`}>
         <Navbar />
         {children}

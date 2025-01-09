@@ -60,7 +60,7 @@ const Domain = () => {
 
           leftContainerRef.current.forEach((div, index) => {
             div.style.backgroundColor =
-              index == progress ? "#fcecc2" : "transparent";
+              index === progress ? "#fcecc2" : "transparent";
           });
         },
       })

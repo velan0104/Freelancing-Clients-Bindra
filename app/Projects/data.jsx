@@ -44,7 +44,7 @@ export const ResidentialSlider = [
 export const CommercialSlider = [
   {
     img: "/images/Commercial/Commercial_3.JPG",
-    title: "New India Chameber",
+    title: "New India Chamber",
     description: () => (
       <button className="custom-button">
         <a href="/brochure/WING_C.pdf" download>

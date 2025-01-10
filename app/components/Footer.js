@@ -34,11 +34,11 @@ const Footer = () => {
                     bindraent@gmail.com
                   </a>
                   <a
-                    href="mailto:directors@bindras.com"
+                    href="mailto:director@bindras.com"
                     className="text-lg font-semibold md:px-5"
                   >
                     {" "}
-                    directors@bindras.com
+                    director@bindras.com
                   </a>
                 </div>
               </div>

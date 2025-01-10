@@ -162,38 +162,6 @@ const Footer = () => {
                   ></path>
                 </svg>
               </a>
-              <a href="#" className="text-black hover:text-gray-900">
-                <svg
-                  // enableBackground="new 0 0 1668.56 1221.19"
-                  viewBox="0 0 1668.56 1221.19"
-                  id="twitter-x"
-                  className="w-11 h-11"
-                >
-                  <circle
-                    cx="834.28"
-                    cy="610.6"
-                    r="481.33"
-                    stroke="#fff"
-                    strokeMiterlimit="10"
-                  ></circle>
-                  <path
-                    fill="#fff"
-                    d="M485.39,356.79l230.07,307.62L483.94,914.52h52.11l202.7-218.98l163.77,218.98h177.32
-			L836.82,589.6l215.5-232.81h-52.11L813.54,558.46L662.71,356.79H485.39z M562.02,395.17h81.46l359.72,480.97h-81.46L562.02,395.17
-			z"
-                    transform="translate(52.39 -25.059)"
-                  ></path>
-                </svg>
-              </a>
-              <a href="#" className="text-black hover:text-gray-900">
-                <svg className=" w-8 h-8" viewBox="0 0 24 24">
-                  <path
-                    fillRule="evenodd"
-                    d="M21 5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5zm-2.5 8.2v5.3h-2.79v-4.93a1.4 1.4 0 0 0-1.4-1.4c-.77 0-1.39.63-1.39 1.4v4.93h-2.79v-8.37h2.79v1.11c.48-.78 1.47-1.3 2.32-1.3 1.8 0 3.26 1.46 3.26 3.26zM6.88 8.56a1.686 1.686 0 0 0 0-3.37 1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68zm1.39 1.57v8.37H5.5v-8.37h2.77z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </a>
             </div>
             <p className="text-center">
               © 1980 Bindra, Inc. All rights reserved.

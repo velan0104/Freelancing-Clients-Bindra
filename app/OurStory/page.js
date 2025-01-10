@@ -3,6 +3,7 @@ import BentroGrid from "../components/BentroGrid";
 
 export const metadata = {
   title: "Our Story",
+  description: "0"
 };
 
 const page = () => {

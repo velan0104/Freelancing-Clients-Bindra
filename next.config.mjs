@@ -1,9 +1,5 @@
 /** @type {import('next').NextConfig} */
 
-const nextConfig = {
-  experimental: {
-    polyfillsOptimization: true, // Ensures unnecessary polyfills are removed.
-  },
-};
+const nextConfig = {};
 
 export default nextConfig;

@@ -44,7 +44,6 @@ const hotels = [
 const HospitalityPage = () => {
   gsap.registerPlugin(ScrollTrigger);
   const headingRef = useRef(null);
-  const hotelRef = useRef([]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -52,48 +51,48 @@ const HospitalityPage = () => {
 
       gsap.to(".title > h1", { yPercent: 0, stagger: 0.2, duration: 1.5 });
 
-      hotelRef?.current.forEach((hotel) => {
-        const mask = hotel.querySelector(".mask");
-        // const p = hotel.querySelectorAll(".content > div");
+      // hotelRef?.current.forEach((hotel) => {
+      //   const mask = hotel.querySelector(".mask");
+      //   // const p = hotel.querySelectorAll(".content > div");
 
-        // gsap.from(p, {
-        //   y: 50,
-        //   stagger: 0.2,
-        //   duration: 1,
-        //   ease: "power2.in",
-        //   scrollTrigger: {
-        //     trigger: hotel,
-        //     start: "top 50%",
-        //     end: "bottom bottom",
-        //     toggleActions: "play none none reset",
-        //   },
-        // });
+      //   // gsap.from(p, {
+      //   //   y: 50,
+      //   //   stagger: 0.2,
+      //   //   duration: 1,
+      //   //   ease: "power2.in",
+      //   //   scrollTrigger: {
+      //   //     trigger: hotel,
+      //   //     start: "top 50%",
+      //   //     end: "bottom bottom",
+      //   //     toggleActions: "play none none reset",
+      //   //   },
+      //   // });
 
-        gsap.fromTo(
-          mask,
-          {
-            clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
-            opacity: 0,
-          },
-          {
-            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-            opacity: 1,
-            duration: 1.5,
-            ease: "power1.in",
-            scrollTrigger: {
-              trigger: hotel,
-              start: "top 70%",
-              bottom: "bottom bottom",
-              scurb: 1,
-              toggleActions: "play none none reset",
-            },
-          }
-        );
-      });
+      //   gsap.fromTo(
+      //     mask,
+      //     {
+      //       clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+      //       opacity: 0,
+      //     },
+      //     {
+      //       clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+      //       opacity: 1,
+      //       duration: 1.5,
+      //       ease: "power1.in",
+      //       scrollTrigger: {
+      //         trigger: hotel,
+      //         start: "top 70%",
+      //         bottom: "bottom bottom",
+      //         scurb: 1,
+      //         toggleActions: "play none none reset",
+      //       },
+      //     }
+      //   );
+      // });
     });
 
     return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      // ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
       ctx.revert();
     };
   }, []);
@@ -139,7 +138,6 @@ const HospitalityPage = () => {
           return (
             <div
               key={index}
-              ref={(el) => (hotelRef.current[index] = el)}
               className="grid grid-cols-1 md:grid-cols-2 py-10 mx-auto content-center items-center gap-y-5"
             >
               <div
@@ -165,7 +163,7 @@ const HospitalityPage = () => {
                   index % 2 == 0 ? "order-1 md:order-2" : "order-1"
                 } overflow-hidden `}
               >
-                <div className="mask w-[80%] h-[90%] overflow-hidden mx-auto">
+                <div className=" w-[80%] h-[90%] overflow-hidden mx-auto">
                   <Image
                     src={hotel.img}
                     alt={"img" + index + 1}

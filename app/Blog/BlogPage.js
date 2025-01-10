@@ -22,7 +22,7 @@ const BlogPage = () => {
             onClick={() => router.push(`${currentUrl}/${index + 1}`)}
           >
             <Image
-              alt=""
+              alt={`{Blog-${index + 1}}`}
               src={blog.img}
               width={400}
               height={300}

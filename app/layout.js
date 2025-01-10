@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
         <meta property="og:title" content={metadata.title} />
         <meta property="og:description" content={metadata.description} />
         <meta property="og:image" content="/images/og-image.png" />
-        <meta property="og:url" content="https://bindra-developers.com" />
+        <meta property="og:url" content="https://bindra-developers.c4om" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={metadata.title} />
         <meta name="twitter:description" content={metadata.description} />
@@ -44,6 +44,32 @@ export default function RootLayout({ children }) {
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin" />
         <link rel="icon" href="/favicon.ico" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "RealEstateAgent",
+              name: "Bindra Group",
+              url: "https://bindras.com",
+              logo: "https://bindras.com/images/bindra_logo.jpg",
+              description:
+                "Explore premium 1 BHK flats in Mahakali by Bindra Group. Modern amenities and prime locations designed for your lifestyle.",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Mahakali Caves Road",
+                addressLocality: "Mumbai",
+                postalCode: "400093",
+                addressCountry: "IN",
+              },
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+91-9876543210",
+                contactType: "customer service",
+              },
+            }),
+          }}
+        />
       </Head>
       <body className={`${lora.className} antialiased`}>
         <Navbar />

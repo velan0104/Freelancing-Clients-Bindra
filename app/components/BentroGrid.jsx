@@ -52,7 +52,7 @@ const BentroGrid = () => {
             src={"/images/Marquee_5.avif"}
             height={400}
             width={300}
-            alt="img1"
+            alt="img2"
             className="w-full h-full"
           />
         </div>
@@ -61,7 +61,7 @@ const BentroGrid = () => {
             src={"/images/Marquee_2.jpg"}
             height={400}
             width={300}
-            alt="img1"
+            alt="img3"
             className="w-full h-full"
           />
         </div>
@@ -70,7 +70,7 @@ const BentroGrid = () => {
             src={"/images/Lotus.jpg"}
             height={400}
             width={300}
-            alt="img1"
+            alt="img4"
             className="w-full h-full"
           />
         </div>
@@ -82,7 +82,7 @@ const BentroGrid = () => {
             src={"/images/Pentunia.JPG"}
             height={400}
             width={300}
-            alt="img1"
+            alt="img5"
             className="w-full h-full"
           />
         </div>
@@ -91,7 +91,7 @@ const BentroGrid = () => {
             src={"/images/Clubhouse.jpg"}
             height={400}
             width={300}
-            alt="img1"
+            alt="img6"
             className="w-full h-full"
           />
         </div>
@@ -100,7 +100,7 @@ const BentroGrid = () => {
             src={"/images/Commercial/Commercial_1.JPG"}
             height={400}
             width={300}
-            alt="img1"
+            alt="img7"
             className="w-full h-full"
           />
         </div>
@@ -110,7 +110,7 @@ const BentroGrid = () => {
               src={"/images/Bindra_One/bindra_one_4.JPG"}
               height={400}
               width={300}
-              alt="img1"
+              alt="img8"
               className="h-[260px] w-full object-cover"
             />
           </div>

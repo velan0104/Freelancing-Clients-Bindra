@@ -131,7 +131,7 @@ const page = () => {
             <video src="/videos/Bindra_One.mp4" autoPlay loop muted />
             <Image
               src="/images/Bindra_One/bindra_one.jpg"
-              alt=""
+              alt="Bindra_One"
               width={400}
               height={500}
               className="img "
@@ -145,7 +145,7 @@ const page = () => {
             <video src="/videos/Lotus.mp4" autoPlay loop muted />
             <Image
               src="/images/Lotus.jpg"
-              alt=""
+              alt="Lotus"
               width={400}
               height={500}
               className="img"
@@ -263,21 +263,21 @@ const page = () => {
             className="h-[200px] w-[250px] rounded-md"
             width={300}
             height={200}
-            alt="hero8"
+            alt="hero9"
           />
           <Image
             src="/images/Dream_developers.png"
             className="h-[200px] w-[250px] rounded-md"
             width={300}
             height={200}
-            alt="hero8"
+            alt="hero10"
           />
           <Image
             src="/images/Bindra_Cons.png"
             className="h-[200px] w-[250px] rounded-md"
             width={300}
             height={200}
-            alt="hero8"
+            alt="hero12"
           />
         </div>
       </section>

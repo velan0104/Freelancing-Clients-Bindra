@@ -20,7 +20,7 @@ const hotels = [
     description:
       "Located in Andheri East, Mumbai, Bindra's Supremacy offers cozy rooms ideal for both business and leisure travelers, with close proximity to Chhatrapati Shivaji Maharaj International Airport.",
     buttonText: "Visit →",
-    siteLink: "#",
+    siteLink: "https://hotelbindrasupremacy.com/",
     img: "/images/Hotels/Bindra_Supremacy.jpg",
   },
   {

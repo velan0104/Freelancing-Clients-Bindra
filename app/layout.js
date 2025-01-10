@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
         <meta property="og:description" content={metadata.description} />
         <meta property="og:image" content="/images/bindra_logo.jpg" />
         <meta property="og:image:alt" content="Bindra developers" />
-        <meta property="og:url" content="https://bindras.com" />
+        <meta property="og:url" content="https://www.bindras.com" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={metadata.title} />
         <meta name="twitter:description" content={metadata.description} />
@@ -52,8 +52,8 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "RealEstateAgent",
               name: "Bindra Group",
-              url: "https://bindras.com",
-              logo: "https://bindras.com/images/bindra_logo.jpg",
+              url: "https://www.bindras.com",
+              logo: "https://www.bindras.com/images/bindra_logo.jpg",
               description:
                 "Explore premium 1 BHK flats in Mahakali by Bindra Group. Modern amenities and prime locations designed for your lifestyle.",
               address: {

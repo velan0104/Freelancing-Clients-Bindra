@@ -43,7 +43,7 @@ export default function RootLayout({ children }) {
         />
         <meta http-equiv="X-Frame-Options" content="DENY" />
         <meta name="referrer" content="no-referrer" />
-        <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin" />
+        <meta http-equiv="Cross-Origin-Opener-Policy" content="origin" />
         <link rel="icon" href="/favicon.ico" />
         <script
           type="application/ld+json"

@@ -11,7 +11,7 @@ const lora = Lora({
 });
 
 export const metadata = {
-  title: "Bindra - Affordable 1BHK Flats in Mahakali",
+  title: "Bindra - Affordable Flats at Mahakali",
   description:
     "Explore affordable 1BHK flats in Mahakali with Bindra Developers. Modern amenities, great location, and value for money. Contact us today!",
 };

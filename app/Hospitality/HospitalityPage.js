@@ -141,7 +141,7 @@ const HospitalityPage = () => {
               className="grid grid-cols-1 md:grid-cols-2 py-10 mx-auto content-center items-center gap-y-5"
             >
               <div
-                className={`content w-[70%] mx-auto space-y-5 overflow-hidden text-center md:text-left ${
+                className={` w-[70%] mx-auto space-y-5 overflow-hidden text-center md:text-left ${
                   index % 2 == 0 ? "order-2 md:order-1" : "order-2"
                 }
                 `}

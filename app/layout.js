@@ -2,7 +2,6 @@ import { Lora } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer";
-import Head from "next/head";
 
 const lora = Lora({
   subsets: ["latin"],
@@ -19,7 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
+      <head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,10 +36,10 @@ export default function RootLayout({ children }) {
         <meta name="twitter:title" content={metadata.title} />
         <meta name="twitter:description" content={metadata.description} />
         <meta name="twitter:image" content="/images/bindra_logo.jpg" />
-        <meta
+        {/* <meta
           httpEquiv="Content-Security-Policy"
-          content={`default-src 'self'; script-src 'self' https://www.google.com https://maps.googleapis.com; style-src 'self' https://fonts.googleapis.com; img-src 'self' https://maps.gstatic.com https://www.google.com; frame-src 'self' https://www.google.com https://maps.google.com https://www.youtube.com; font-src 'self' https://fonts.gstatic.com; object-src 'none'; base-uri 'self';`}
-        />
+          content={`default-src 'self'; script-src 'self' https://www.google.com https://maps.googleapis.com ; style-src 'unsafe-inline'; img-src 'self' https://maps.gstatic.com https://www.google.com; frame-src 'self' https://www.google.com https://maps.google.com https://www.youtube.com; font-src 'self' https://fonts.gstatic.com; object-src 'none'; base-uri 'self';`}
+        /> */}
         <meta http-equiv="X-Frame-Options" content="DENY" />
         <meta name="referrer" content="no-referrer" />
         <meta http-equiv="Cross-Origin-Opener-Policy" content="origin" />
@@ -71,7 +70,7 @@ export default function RootLayout({ children }) {
             }),
           }}
         />
-      </Head>
+      </head>
       <body className={`${lora.className} antialiased`}>
         <Navbar />
         {children}

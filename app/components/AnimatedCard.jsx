@@ -10,18 +10,18 @@ export function ExpandableCardDemo({ cards }) {
   const id = useId();
   const ref = useRef(null);
 
-  //   const useEscapeKey = (callback) => {
-  //   useEffect(() => {
-  //     const handleKeyDown = (event) => {
-  //       if (event.key === "Escape") {
-  //         callback();
-  //       }
-  //     };
+  const useEscapeKey = (callback) => {
+    useEffect(() => {
+      const handleKeyDown = (event) => {
+        if (event.key === "Escape") {
+          callback();
+        }
+      };
 
-  //     window.addEventListener("keydown", handleKeyDown);
-  //     return () => window.removeEventListener("keydown", handleKeyDown);
-  //   }, [callback]);
-  // };
+      window.addEventListener("keydown", handleKeyDown);
+      return () => window.removeEventListener("keydown", handleKeyDown);
+    }, [callback]);
+  };
 
   useEffect(() => {
     function onKeyDown(event) {
